@@ -1,709 +1,2395 @@
 
-<!DOCTYPE html><html lang="en"><head>
-<link rel="manifest" href="assets/manifest.f301b294.json"><script id="frvr-sdk" src="frvr-sdk14.15.0e.min.js"></script><script id="frvr-channel-web" src="frvr-channel-web14.15.0e.min.js"></script><script>function getSubchannelName(){return this.is=window.__FRVR.platformIs,this.is.microsoftPwa?"microsoftPwa":this.is.crazyGames?"crazyGames":this.is.game8||this.is.harman||this.is.huaweiquickapp?void 0:"default"}function setupAdConfigsForXS(){FRVRConfig.ads.subchannels&&(Config.ads={web:{microsoftPwa:{interstitial:{maxfrequency:3e4,providers:{"microsoft-interstitial":{timeout:500,priority:1},"frvr-sdk-interstitial":{placementIds:{interstitial:"frvr.com_videoad_interstitial",reward:"frvr.com_videoad_rewarded"},propertyId:"frvr.com",timeout:500,priority:1}}},reward:{providers:{"microsoft-reward":{timeout:500,priority:1},"frvr-sdk-reward":{placementIds:{interstitial:"frvr.com_videoad_interstitial",reward:"frvr.com_videoad_rewarded"},propertyId:"frvr.com",timeout:500,priority:1}}},banner:{}},crazyGames:{interstitial:{maxfrequency:3e4,providers:{"crazygames-interstitial":{timeout:500,priority:1}}},reward:{providers:{"crazygames-reward":{timeout:500,priority:1}}},banner:{}},default:{interstitial:{maxfrequency:3e4,providers:{"frvr-sdk-interstitial":{placementIds:{interstitial:"frvr.com_videoad_interstitial",reward:"frvr.com_videoad_rewarded"},propertyId:"frvr.com",timeout:500,priority:1}}},reward:{providers:{"frvr-sdk-reward":{placementIds:{interstitial:"frvr.com_videoad_interstitial",reward:"frvr.com_videoad_rewarded"},propertyId:"frvr.com",timeout:500,priority:1}}},banner:{}}}[getSubchannelName()]})}function setupAdConfigsForSDK(){if(FRVRConfig.ads.subchannels){var r=FRVRConfig.ads.subchannels[getSubchannelName()];r&&(r.providers&&(FRVR.config.ads.providers=r.providers,FRVR.config.ads.remote=r.remote),r.throttling&&(FRVR.config.ads.throttling=r.throttling))}}</script><script>window.frvrEnv="prod",window.FRVRConfig={gameId:"cricket",cloudStorage:{playerStorage:{gameId:"GR3QDNH"}},social:{syncFriendsOnLogin:!1},iap:{},ads:{autoInit:!1,throttling:{maxfrequency:2e4},providers:[],subchannels:{microsoftPwa:{providers:[{name:"microsoft",type:"interstitial",priority:1,remote:!1,config:{timeout:500,priority:1}},{name:"adsbygoogle-interstitial",type:"interstitial",priority:1,remote:!1,config:{placementIds:{interstitial:"frvr.com_videoad_interstitial",reward:"frvr.com_videoad_rewarded"},propertyId:"frvr.com",alias:"GR3QDNH",timeout:500,priority:1}},{name:"microsoft",type:"reward",priority:1,remote:!1,config:{timeout:500,priority:1}},{name:"adsbygoogle-reward",type:"reward",priority:1,remote:!1,config:{placementIds:{interstitial:"frvr.com_videoad_interstitial",reward:"frvr.com_videoad_rewarded"},propertyId:"frvr.com",alias:"GR3QDNH",timeout:500,priority:1}}],throttling:{maxfrequency:3e4,initTimeBlock:3e4},remote:!1},crazyGames:{providers:[{name:"crazygames",type:"interstitial",priority:1,remote:!1,config:{timeout:500,priority:1}},{name:"crazygames",type:"reward",priority:1,remote:!1,config:{timeout:500,priority:1}}],remote:!1},default:{providers:[{name:"adsbygoogle-interstitial",type:"interstitial",priority:1,remote:!1,config:{placementIds:{interstitial:"frvr.com_videoad_interstitial",reward:"frvr.com_videoad_rewarded"},propertyId:"frvr.com",alias:"GR3QDNH",timeout:500,priority:1}},{name:"adsbygoogle-reward",type:"reward",priority:1,remote:!1,config:{placementIds:{interstitial:"frvr.com_videoad_interstitial",reward:"frvr.com_videoad_rewarded"},propertyId:"frvr.com",alias:"GR3QDNH",timeout:500,priority:1}}],remote:!1}}},auth:{enableAnonymousLogin:!0,facebookSdk:{permissions:"gaming_profile,gaming_user_picture"}},features:{gameId:"GR3QDNH"},shop:{gameId:"GR3QDNH"}};</script>
-    <script></script>
-    <script>window.__FRVR=window.__FRVR||{},window.__FRVR.startTime=Date.now(),window.__FRVR.gameIsLoaded=!1,window.__FRVR.createErrorHandler=function(n){return function(o){console.error(n,o)}};</script>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<!DOCTYPE html>
 
-    <!--
-    /**
-    * @author Chris Benjaminsen http://chrisbenjaminsen.com/ @benjaminsen
-    */
-    /** @license
-    Cricket FRVR 1.1.14
-    More info at http://frvr.com
 
-    Copyright (c) 2013+ FRVR Limited
 
-    All Rights Reserved!
-    FRVR is a registered trademark of FRVR Limited
-    */
-    /**
-    Well hello there!
 
-    I see you are interested in the details of how this game was made!
-    It's written using a custom HTML5 engine built around PixiJS.
 
-    While I can't tell you more on the how, there is much more on the why to be find at 
-    http://blog.chrisbenjaminsen.com where I write frequent status updates on the games I build
-    under the FRVR brand - - including a 100% honest track record of money earned and spend.
 
-    Hack on!
-    Chris Benjaminsen
-    chrisbenjaminsen.com
 
-    - - - - - - - - - - - - - -
+<!-- 404 Redirect -->
+<html lang="en-US" prefix="og: https://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="manifest" href="/pwa/manifest.json">
+<meta name="description" content="
+Play the online free game Cricket World Cup at cricketgamesatme.com ! We have selected this games for best excitement and thrill in you!">
+<meta name="keywords" content="Cricket World Cup, Play Free Games, Play Online Free Games, Cricket Games, Online Cricket Games, Cricket Games Online">
 
-    Cricket FRVR would not be possible without the following open source projects:
+<link rel="preload" fetchpriority="high" as="image" href="https://slides.cricketgamesatme.com/slide/5210_slide.jpg">
+<link rel="preload" fetchpriority="high" type="text/css" href="https://www.cricketgamesatme.com/css/style.css" as="style">
+<link rel="preload" fetchpriority="high" type="text/css" href="/css/mainStyle.css" as="style">
+<link rel="preload" fetchpriority="high" type="text/css" 
+href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style">
+<link rel="preload" href="https://www.cricketgamesatme.com/lazysizes.min.js" as="script"/>
+<link rel="preload" href="https://code.jquery.com/jquery-2.2.0.min.js" as="script"/>
 
-    pixi.js - v2.2.3
-    Copyright (c) 2012-2014, Mat Groves
-    http://goodboydigital.com/
-    pixi.js is licensed under the MIT License.
-    http://www.opensource.org/licenses/mit-license.php
-    Mat Groves http://matgroves.com/ @Doormat23
-    */
-    -->
+                <link rel="preload" fetchpriority="high" type="text/css" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" as="style">
 
-      
+        <link rel="preload" href="https://code.jquery.com/jquery-1.10.1.min.js" as="script"/>
+        <link rel="preload" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js" as="script"/>
+        <link rel="preload" fetchpriority="high" type="text/css" href="/css_new/mobile_css.css" as="style">
+        <link rel="preload" fetchpriority="low" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style">
+  <meta property="fb:app_id" content="2046789315460328"/>
+    <title>Cricket World Cup Game, Cricket Games - Play Online Free</title>
+    <link rel="stylesheet" href="https://www.cricketgamesatme.com/css/style.css" />
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="4eaaa7005eb6b59442c0723f-text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/css/mainStyle.css" as="style"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<style> 
+  .blur-up { -webkit-filter: blur(5px) !important;filter: blur(5px) !important;transition: filter 400ms, -webkit-filter 400ms !important;}
+  .blur-up.lazyloaded {-webkit-filter: blur(0) !important;filter: blur(0) !important;}
+  .bannerInner{  flex-direction: column;  width: 64%;}
+  .error { color: red; }
 
-    <link rel="canonical" href="https://cricket.frvr.com/">
-
-        <link rel="alternate" hreflang="ko" href="https://cricket.frvr.com/ko/">
-
-        <link rel="alternate" hreflang="ru" href="https://cricket.frvr.com/ru/">
-
-        <link rel="alternate" hreflang="zh-Hans" href="https://cricket.frvr.com/zh-Hans/">
-
-      <link rel="icon" type="image/png" href="/assets/favicon.517262c5.png">
-
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Cricket FRVR">
-<meta name="theme-color" content="#202020">
-<meta name="HandheldFriendly" content="true">
-<meta name="format-detection" content="telephone=no">
-<meta name="msapplication-tap-highlight" content="no">
-<meta name="google" content="notranslate">
-
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/icon60x60.71a50394.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/icon76x76.27256bfd.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/icon120x120.76d85ce8.png">
-    <link rel="apple-touch-icon" sizes="196x196" href="/assets/icon196x196.2bbb0930.png">
-    <link rel="apple-touch-icon" sizes="256x256" href="/assets/icon256x256.7c60a26e.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="/assets/icon1024x1024.774bf256.png">
-
-    <link rel="me" href="https://twitter.com/FRVRGames">
-
-        <meta name="facebook_label" content="Cricket FRVR - Play Free Online Cricket Reflex Game">
-
-        <meta property="og:title" content="Cricket FRVR">
-        <meta property="og:description" content="Play Cricket FRVR online for free! Putt the ball on time and reach the high score. Play in your browser - no download or installation required!">
-        <meta property="og:site_name" content="Cricket FRVR">
-        <meta property="og:url" content="https://cricket.frvr.com/">
-        <meta property="og:type" content="game">
-        <meta property="og:locale" content="en">
-        <meta property="og:image" content="/assets/facebook01.1d0584cd.png">
-        <meta property="fb:app_id" content="288520292089248">
-
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@FRVRGames">
-        <meta name="twitter:creator" content="@Benjaminsen">
-        <meta name="twitter:title" content="Cricket FRVR - Play Free Online Cricket Reflex Game">
-        <meta name="twitter:image" content="/assets/twitter01.06807781.png">
-        <meta name="twitter:description" content="Play Cricket FRVR online for free! Putt the ball on time and reach the high score. Play in your browser - no download or installation required!">
-
-        <meta name="twitter:app:name:iphone" content="Cricket FRVR">
-        <meta name="twitter:app:id:iphone" content="1537809480">
-        <meta name="twitter:app:name:ipad" content="Cricket FRVR">
-        <meta name="twitter:app:id:ipad" content="1537809480">
-
-        <meta name="twitter:app:name:googleplay" content="Cricket FRVR">
-        <meta name="twitter:app:id:googleplay" content="com.frvr.cricket">
-
-    <meta name="description" content="Play Cricket FRVR online for free! Putt the ball on time and reach the high score. Play in your browser - no download or installation required!">
-    <meta name="keywords" content="cricketer,bat,batting,hit,ball,score,baseball,wicket,india,championship,shot,pitch,bowlers,cup,hindi">
-
-    <title>Cricket FRVR - Play Free Online Cricket Reflex Game</title>
-
-    <style>
-
-body {
-    background:#c8c8c8;
-    overflow:hidden;
-    position:fixed;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    border:0px;padding:0px;margin:0px;
-    width:100%;
-    height:100%;
-    padding-top: constant(safe-area-inset-top);
-    overscroll-behavior: none;
+  /*#arrow-controls{
+  position: fixed;              
+  left: 16px;
+  top: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 99999;
+}*/
+.space {
+    bottom: 4.2em !important;
+    left: -12.5em !important;
+    padding: 14px !important;
+    border-radius: 50% !important;
+}
+/*#arrow-controls {
+  display: flex;
+  flex-direction: row;
+  column-gap: var(--gap, 16px);
+  align-items: center;
+}*/
+#arrow-controls {
+  position: fixed;
+  display: flex;
+  flex-direction: row;      
+  align-items: center;
+  gap: var(--gap, 16px);
+  z-index: 9999;
+}
+#arrow-controls {
+   display: flex;
+  align-items: center;
+  gap: 0; /* NEVER animate this */
 }
 
-preloader{
-    display:block;
-    width:100%;
-    height:100%;
-    background: #FEFEFE;
-    position:fixed;
-    z-index:5;
-}
-preloader.dark {
-    background: #1C1C1C;
+/* HORIZONTAL joystick */
+.right-joystick {
+  transform: translateX(var(--right-offset));
+  transition: transform 0.3s ease;
 }
 
-preloader canvas, preloader img{
-    position: fixed;
+
+/* VERTICAL joystick */
+.left-joystick {
+  transform: translateX(var(--left-offset));
+  transition: transform 0.3s ease;
 }
 
-preloader loadbar{
-    display:none;
-    position:fixed;
-    border:1px solid #A4A4A4;
-    border-radius: 3px;
-    overflow: hidden;
+/*#arrow-controls {
+  --gap: 16px; 
+}*/
+
+/* horizontal joystick */
+.arrow-group.horizontal {
+   display: flex;
+  flex-direction: row;
+  gap: var(--gap);
 }
 
-preloader loadbar div{
-    display:block;
-    width:0%;
-    height:100%;
-    background-color:#02BDFF;
+/* vertical joystick */
+.arrow-group.vertical {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: var(--gap);
 }
 
-#gameCanvas{
-    position: fixed;
-    top:0px;
-    left:0px;
-    width:0px;
-    height:0px;
-    background-color:#000000
+.arrow-group {
+  gap: var(--gap, 16px);
 }
 
-#overlay{
-    position:absolute;
-    z-index:3;
-    left:50%;
-    transform: translate(-50%, -50%);
-    visibility:hidden;
-    bottom:3px;
-    overflow:hidden;
-    text-align: center;
+.arrow-group.horizontal {
+  transform: translateX(var(--gap));
 }
 
-#overlay div{
-    float:left;
+.arrow-group.vertical {
+  transform: translateX(calc(-1 * var(--gap)));
 }
 
-#overlay.cn {
-    margin-left: -190px;
+#drag-handle {
+  width: 36px;
+  height: 36px;
+  background: #1e88e5;
+  border-radius: 50%;
+  cursor: grab;
+  touch-action: none; /* IMPORTANT for mobile */
+}
+#drag-handle::after {
+    content: "≡";
+    top: 7px;
+    position: absolute;
+    left: 13px;
+} /* 3-line grip */
+#drag-handle:active {
+  cursor: grabbing;
 }
 
-/* Google+ share button */
-#overlay.cn div#___plusone_0 {
-    width: 68px !important;
+@media screen and (orientation: landscape) {
+    #arrow-controls {
+        position: fixed;
+        left: 10.5em;
+        top: 70%;
+        display: flex;
+        align-items: center;
+        pointer-events: auto;
+      }
+
+    #arrow-controls {
+      position: absolute;        /* REQUIRED for dragging */
+      display: flex;
+      align-items: center;
+      touch-action: none;
+      pointer-events: auto;
+    }
+    #arrow-controls {
+      --joystick-gap: 26px;
+    }
+  /* joystick containers */
+    .arrow-group {
+      pointer-events: auto;
+    }
+    .joystick-wrapper {
+      transition: transform 0.25s ease;
+    }
+      .arrow-group.vertical,
+    .arrow-group.horizontal {
+      gap: 16px; /* CONSTANT – never animate */
+    }
+ 
+  #arrow-controls {
+    position: absolute;        /* REQUIRED for dragging */
+    touch-action: none;        /* Prevent browser gestures */
+  }
+
+  #drag-handle {
+    width: 36px;
+    height: 36px;
+    background: #1e88e5;
+    border-radius: 50%;
+    cursor: grab;
+    touch-action: none;
+    pointer-events: auto;
+    z-index: 100000;
+  }
+
+    #drag-handle:active {
+      cursor: grabbing;
+    }
+    #arrow-controls[data-state="expand"] .left {
+      transform: translateX(calc(-1.1 * var(--joystick-gap)));
+    }
+
+    #arrow-controls[data-state="expand"] .right {
+      transform: translateX(calc(1.1 * var(--joystick-gap)));
+    }
+
+    #arrow-controls[data-state="squeeze"] .left {
+      transform: translateX(calc(-0.6 * var(--joystick-gap)));
+    }
+
+    #arrow-controls[data-state="squeeze"] .right {
+      transform: translateX(calc(-0.6 * var(--joystick-gap)));
+    }
 }
 
-#overlay.cn div#___plusone_0 iframe {
-    position: relative !important;
-    top: -4px !important;
+@media screen and (orientation: portrait) {
+    #arrow-controls {
+        position: fixed;
+        left: 10.5em;
+        top: 70%;
+        display: flex;
+        align-items: center;
+        pointer-events: auto;
+      }
+
+    #arrow-controls {
+      position: absolute;        /* REQUIRED for dragging */
+      display: flex;
+      align-items: center;
+      touch-action: none;
+      pointer-events: auto;
+    }
+    #arrow-controls {
+      --joystick-gap: 18px;  /* CLOSER joysticks */
+    }
+
+    #arrow-controls .joystick-wrapper.left {
+      transform: translateX(var(--joystick-center-pull));
+    }
+
+    #arrow-controls .joystick-wrapper.right {
+      transform: translateX(calc(-1 * var(--joystick-center-pull)));
+    }
+  /* joystick containers */
+    .arrow-group {
+      pointer-events: auto;
+    }
+    .arrow-group {
+      gap: var(--key-gap, 16px);
+    }
+    .joystick-wrapper {
+      transition: transform 0.25s ease;
+    }
+      .arrow-group.vertical,
+    .arrow-group.horizontal {
+      gap: 16px; /* CONSTANT – never animate */
+    }
+ 
+  #arrow-controls {
+    position: absolute;        /* REQUIRED for dragging */
+    touch-action: none;        /* Prevent browser gestures */
+  }
+
+  #drag-handle {
+    width: 36px;
+    height: 36px;
+    background: #1e88e5;
+    border-radius: 50%;
+    cursor: grab;
+    touch-action: none;
+    pointer-events: auto;
+    z-index: 100000;
+  }
+
+    #drag-handle:active {
+      cursor: grabbing;
+    }
+    #arrow-controls[data-state="expand"] .left {
+      transform: translateX(calc(-0.9 * var(--joystick-center-pull)));
+    }
+
+    #arrow-controls[data-state="expand"] .right {
+      transform: translateX(calc(0.9 * var(--joystick-center-pull)));
+    }
+    #arrow-controls[data-state="squeeze"] .joystick-wrapper.left {
+      transform: translateX(25vw); /* move right */
+    }
+
+    #arrow-controls[data-state="squeeze"] .joystick-wrapper.right {
+      transform: translateX(-25vw); /* move left */
+    }
+   /* #arrow-controls[data-state="squeeze"] .left {
+      transform: translateX(calc(-0.45 * var(--joystick-center-pull)));
+    }
+
+    #arrow-controls[data-state="squeeze"] .right {
+      transform: translateX(calc(-0.45 * var(--joystick-center-pull)));
+    }*/
 }
 
-/* Sina Weibo share button */
-#overlay wb\:share-button iframe {
-    width: 105px !important;
-}
+/* a tiny handle you drag, not the buttons */
 
-/* QZone share button */
-#overlay iframe[version="1.0"] {
-    position: relative !important;
-    top: -2px;
-}
+/*#drag-handle{
+  position: absolute;
+  left: 50%;
+  top: -48px;
+  transform: translateX(-50%);
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(33,150,243,.95);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; line-height: 1;
+  cursor: grab;
+  touch-action: none;  
+  user-select: none;
+  font-size: 26px;
+  background: linear-gradient(270deg, rgb(66 170 255) 0%, rgb(34 130 209) 35%, #006bc0f2 100% 100%);
+}*/
 
-@-ms-viewport{width:100%}
+#drag-handle::after {
+    content: "≡";
+    top: 7px;
+    position: absolute;
+    left: 13px;
+} /* 3-line grip */
 
-content{
-    background-color:#ffffff;
+.playButton2{
+    padding: 4px;
+    position: absolute;
     display: block;
-    padding:20px;
-    height:100%;
-    overflow:scroll;
-}
-
-content metadata{
-    float:right;
-    margin-left:10px;
-    text-align:center;
-}
-
-h1{
-    margin:0px;
-    font-weight:100;
-    font-size:50px;
-}
-a{
-    line-height:2em;
-}
-h3{
-    margin-bottom:0px;
-}
-
-#pwa_prompt {
-    height: 100%;
-    width: 100%;
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background-color: rgba(0,0,0,0.85);
-    text-align: center;
+    margin-left: 5em;
+    z-index: 999;
+    bottom: 4em;
+    right: 4.8em;
+    border-radius: 50%;
+    background: grey;
     color: white;
+    cursor: pointer;
+    background: rgb(2,0,36);
+    background: linear-gradient(20deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(0 169 255) 100%);
+    height: 34px;
+    width: 34px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, rgb(213 29 0) 0%, rgb(216 37 0) 35%, rgb(255 179 86) 100%);
+    border: 2px solid #ffffff;
 }
 
-#pwa_prompt.hidden {
+.playButton2:hover, .playButton2:focus, .playButton2:active{
+  background: rgb(2,0,36);
+    background: linear-gradient(20deg, rgba(0 169 255) 0%, rgba(0 169 255) 35%, rgb(9,9,121,1) 100%);
+}
+
+.arrow{
+  padding: 0.2em 0.3em;
+    position: absolute;
+    display: block;
+    margin-left: 5em;
+    border-radius: 50px 20px;
+    z-index: 999;
+    color: #fff;
+    cursor: pointer;
+    background: rgb(2,0,36);
+    background: linear-gradient(20deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(0 169 255) 100%);
+    background: linear-gradient(270deg, rgb(213 29 0) 0%, rgb(216 37 0) 35%, rgb(255 179 86) 100%);
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+}
+
+.arrow:hover, .arrow:focus, .arrow:active {
+  padding: 0.3em 0.5em;
+    position: absolute;
+    display: block;
+    margin-left: 5em;
+    border-radius: 50px 20px;
+    z-index: 999;
+    color: #fff;
+    cursor: pointer;
+    background: rgb(2,0,36);
+    background: linear-gradient(20deg, rgba(0 169 255) 0%, rgba(0 169 255) 35%, rgb(9,9,121,1) 100%);
+}
+
+.arrowleft{
+    bottom: 4.5em;
+    left: -18em;
+}
+.control {
+    bottom: 4.6em;
+    left: -32em !important;
+}
+.keyL{
+  bottom: 1.6em;
+    left: -32em !important;
+}
+.arrowright{
+    bottom: 4.6em;
+    left: -6.4em;
+}
+
+.keyW{
+  bottom: 7.4em;
+  right: 5em;
+}
+
+.keyA{
+     bottom: 4.5em;
+    right: 8.4em;
+}
+.keyQ{
+     bottom: 6.5em;
+    right: 8.4em;
+    rotate: 45deg;
+}
+.keyE{
+    bottom: 6.5em;
+    right: 2.1em;
+    rotate: -45deg;
+}
+.keyS{
+  bottom: 1.4em;
+  right: 5em;
+}
+
+.keyD{
+    bottom: 4.5em;
+    right: 2.1em;
+}
+
+.material-symbols-outlined{
+  font-size: 18px !important;
+}
+
+#maximizeimg:first-child{
+  display:none;
+}
+
+       /* #game_img_btn{ display: none; position: relative;z-index: 998 } */
+    #game_center_id{ display: block; position: relative;z-index: 995 }
+    @media (max-width: 768px) { .gameHeading {bottom: 272px;} }
+
+  .overlay{top: -208px;}
+        /* Standard */
+        ruffle-player:fullscreen {
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          width: 100% !important;
+          height: 100% !important;
+          background: #000 !important;
+        }
+
+        /* Chrome / Safari / iOS */
+        ruffle-player:-webkit-full-screen {
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          width: 100% !important;
+          height: 100% !important;
+          background: #000 !important;
+        }
+
+        /* Firefox */
+        ruffle-player:-moz-full-screen {
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          width: 100% !important;
+          height: 100% !important;
+          background: #000 !important;
+        }
+
+        /* Canvas inside fullscreen */
+        ruffle-player:fullscreen canvas,
+        ruffle-player:-webkit-full-screen canvas,
+        ruffle-player:-moz-full-screen canvas {
+          max-width: 100% !important;
+          max-height: 100% !important;
+          width: auto !important;
+          height: auto !important;
+          margin: auto !important;
+          display: block !important;
+          object-fit: contain !important;
+        }
+    
+  /* #play_button{ display: block; position: relative;z-index: 10000} */
+  .gameDetails{ width: 100% }
+  .gameDetails_100 {
+      margin: 0;
+      background: #000;
+      width: 100%;
+      border-radius: 30px;
+      min-height: 400px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: rgba(27, 30, 36, 0.1) 0px 8px 16px 0px;
+  }
+  .gameDetails_100 {
+        width: 100%;
+        min-height: 240px;
+        border-radius: 16px;
+        margin-bottom: 24px;
+  }
+</style>
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Cricket World Cup Game, Cricket Games - Play Online Free" />
+<meta property="og:description" content="
+Play the online free game Cricket World Cup at cricketgamesatme.com ! We have selected this games for best excitement and thrill in you!"/>
+<meta property="og:url" content="https://www.cricketgamesatme.com/games/cricket-world-cup" />
+<meta property="og:site_name" content="cricketgamesatme.com" />
+<meta property="og:image" content="https://slides.cricketgamesatme.com/slide/5210_slide.jpg" />
+ 
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://www.cricketgamesatme.com/games/cricket-world-cup" />
+<meta name="twitter:description" content="
+Play the online free game Cricket World Cup at cricketgamesatme.com ! We have selected this games for best excitement and thrill in you!"/>
+<meta name="twitter:title" content="Cricket World Cup Game, Cricket Games - Play Online Free" />
+<meta name="twitter:site" content="cricketgamesatme.com" />
+<meta name="twitter:image" content="https://slides.cricketgamesatme.com/slide/5210_slide.jpg" />
+<meta name="twitter:creator" content="@PlOnlineGames" />
+
+<meta content="362528583948002" property="fb:pages">
+<meta content="100009165479651" property="fb:admins">
+<meta name="robots" content="noodp, noydir"/>
+<meta name="author" content="Apay Marketing" />
+<meta name="copyright" content="Copyright © 2017 by Apay Marketing, All rights reserved." />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta http-equiv="Cache-control" content="public" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--<meta property="Last-Modified" content="Mon Apr 24 11:19:14 IST 2017" />-->
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//apis.google.com" />
+<link rel="dns-prefetch" href="https://accounts.google.com" />
+<link rel="dns-prefetch" href="https://www.gstatic.com" />
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+<link rel="preconnect" href="//ajax.googleapis.com" />
+<link rel="preconnect" href="//apis.google.com" />
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="preconnect" href="//fonts.googleapis.com" />
+
+<!-- site speed (SEO) -->
+<link rel="preconnect" href="//image.cricketgamesatme.com" />
+<link rel="preconnect" href="//flash.cricketgamesatme.com" />
+<link rel="preconnect" href="//slides.cricketgamesatme.com" />
+
+<link rel="dns-prefetch" href="//image.cricketgamesatme.com" />
+<link rel="dns-prefetch" href="//slides.cricketgamesatme.com" />
+<!-- /site speed (SEO) -->
+
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+<link rel="preconnect" href="https://www.google-analytics.com" />
+<link rel="preconnect" href="https://www.google.com" />
+<link rel="preconnect" href="https://www.googleadservices.com" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://accounts.google.com" />
+<link rel="preconnect" href="https://www.gstatic.com" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+
+<link rel="icon" href="https://www.cricketgamesatme.com/images/bat_stump_ball.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://www.cricketgamesatme.com/images/bat_stump_ball.png" />
+<link rel="shortcut icon" type="image/x-icon" href="https://www.cricketgamesatme.com/images/bat_stump_ball.png" />
+
+<!-- Google tag GA4- (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BGSTYF2NT8" type="4eaaa7005eb6b59442c0723f-text/javascript"></script>
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BGSTYF2NT8');
+</script>
+    <script type="4eaaa7005eb6b59442c0723f-text/javascript">
+      $(document).on("ready", function () {
+        $(".variable").slick({
+          dots: false,
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1.2, // Show 1.5 slides
+                slidesToScroll: 1,
+                centerMode: false, // Optional: set to true if you want center alignment
+                infinite: false, // Optional: prevents repeating at end
+              },
+            },
+          ],
+        });
+
+        $(".searchIcon").on("click", function (e) {
+          e.stopPropagation();
+          $(".topNav").addClass("active").show();
+        });
+
+        $(".searchWrapper").on("click", function (e) {
+          e.stopPropagation();
+        });
+
+        $(document).on("click", function () {
+          if ($(".topNav").hasClass("active")) {
+            $(".topNav").removeClass("active").hide();
+          }
+        });
+
+        $(".share").on("click", function (e) {
+          e.stopPropagation();
+          $(".shareBox").toggleClass("toggleShare");
+        });
+        $(document).on("click", function () {
+          if ($(".shareBox").hasClass("toggleShare")) {
+            $(".shareBox").removeClass("toggleShare");
+          }
+        });
+
+        //  $(document).on("click", function () {
+        //   alert("hiiiiiiiii");
+        //   $('.gameBody').addClass('overflow');
+        // });
+      });
+
+//       $(window).load(function() {
+//  alert("window is loaded");
+// });
+
+      // document.getElementById("#gameplay").addEventListener("click", function() {
+      //    alert("hiiiiiiiii");
+      //   document.body.style.overflow = "hidden";
+
+      // });
+
+    </script>
+  </head>
+  <body class="gameBody">
+    <div class="main">
+      <header class="header">
+        <div class="container">
+          <div class="headerInner">
+            <div class="logo">
+              <a id="toplogo" href="https://www.cricketgamesatme.com/" onClick="if (!window.__cfRLUnblockHandlers) return false; ga('send', 'event', { eventCategory: 'Home-Widget', eventAction: 'click', eventLabel: 'home-logo', eventValue: 2});" title="Play Free Online Cricket Games - Cricketgamesatme" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
+                <img
+                  width="400"
+                  height="50"
+                  fetchpriority="high"
+                  src="/images/atmeCricket_logo.png"
+                  alt="Play Free Online Cricket Games - Cricketgamesatme"
+                  title="Play Free Online Cricket Games - Cricketgamesatme"
+                />
+              </a>
+              <div class="searchBox">
+                <img
+                  src="/images/search_black.svg"
+                  width="20"
+                  height="20"
+                  alt="Search"
+                  class="searchIcon"
+                />
+                <!-- <a href="#">
+                  <img
+                    width="30"
+                    height="30"
+                    fetchpriority="high"
+                    src="/images/userIcon.png"
+                    alt="User Icon"
+                    title="User Icon"
+                    class="userIcon"
+                  />
+                </a> -->
+              </div>
+            </div>
+            <script src="//code.jquery.com/jquery-1.12.4.min.js" type="4eaaa7005eb6b59442c0723f-text/javascript"></script>
+<a name="scrollbottomtotop"></a>
+  
+									<style>
+						.to-top { position: fixed; bottom: 20px;right: 20px; text-decoration: none; color: #fff;z-index: 999; 
+							background: #ff7914;padding: 19px 24px;display: none;border-radius: 50%; box-shadow: 0 0 10px #888;
+						}
+						.to-top:hover{ color: #151f28; background: #fff; }
+						@media screen and (max-width: 768px) and (min-width: 300px){
+							.fa-chevron-up:before{  font-size: 20px; }
+							.to-top{  padding: 13px 15px;  }
+						}
+					</style>
+					<a href="#" class="to-top"><i class="fa fa-chevron-up"></i></a>
+					<script type="4eaaa7005eb6b59442c0723f-text/javascript">            
+						$(document).ready(function() {
+							var duration = 500;
+							jQuery(window).scroll(function() {
+								if (jQuery(this).scrollTop() > 200) {
+									jQuery('.to-top').fadeIn(duration);
+								} else {
+									jQuery('.to-top').fadeOut(duration);
+								}
+							});
+
+							function scrollToAnchorTOP(aid){
+							    var aTag2 = $("a[name='"+ aid +"']");
+							    $('html,body').animate({scrollTop: aTag2.offset().top},'slow');
+							}
+							$(".to-top").click(function() { 
+							   scrollToAnchorTOP('scrollbottomtotop');
+							});
+						});
+					</script>
+			
+
+</script>
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+   
+</script>
+		
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+var filesadded="" //list of files already added
+
+var isFirebaseLoaded = false;
+var appLoaded = false;
+var messagingLoaded = false;
+
+function lazyscriptload(file) {
+    var scriptTag = document.createElement('script');
+    scriptTag.src = file;
+    scriptTag.type = 'text/javascript';
+    scriptTag.async = true;
+
+    scriptTag.onload = function() {
+        // detect firebase-app.js
+        if (file === "https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js") {
+            appLoaded = true;
+        }
+
+        // detect firebase-messaging.js
+        if (file === "https://www.gstatic.com/firebasejs/5.7.2/firebase-messaging.js") {
+            messagingLoaded = true;
+        }
+
+        // when both are loaded
+        if (appLoaded && messagingLoaded) {
+            isFirebaseLoaded = true;
+            console.log("Firebase fully loaded (app + messaging)");
+        }
+    };
+
+    document.head.appendChild(scriptTag);
+}
+
+/*let isFirebaseLoaded = false;
+function lazyscriptload(file) {
+    var scriptTag = document.createElement('script'); 
+    scriptTag.src = file; // set the src attribute
+    scriptTag.type = 'text/javascript'; // if you have an HTML5 website you may want to comment this line out
+    scriptTag.async = true; // the HTML5 async attribute
+    var headTag = document.getElementsByTagName('head')[0];
+    headTag.appendChild(scriptTag);
+    if(file == "https://www.gstatic.com/firebasejs/5.7.2/firebase.js")
+    {   isFirebaseLoaded = true;    }
+}*/
+ 
+function loadjscssfile(filename, filetype){
+    if (filetype=="js"){ //if filename is a external JavaScript file
+        var fileref=document.createElement('script')
+        fileref.setAttribute("type","text/javascript")
+        fileref.setAttribute("src", filename)
+    }
+    else if (filetype=="css"){ //if filename is an external CSS file
+        var fileref=document.createElement("link")
+        fileref.setAttribute("rel", "stylesheet")
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", filename)
+    }
+    if (typeof fileref!="undefined")
+        document.getElementsByTagName("head")[0].appendChild(fileref)
+}
+
+function checkloadjscssfile(filename, filetype){
+    if (filesadded.indexOf("["+filename+"]")==-1){
+        loadjscssfile(filename, filetype)
+        filesadded+="["+filename+"]" //List of files added in the form "[filename1],[filename2],etc"
+    }
+    else
+    {    console.log("file already added!");   }  
+}
+</script>
+<style>
+body{
+	font-family: 'Lato',Calibri,Arial,sans-serif  !important;
+	}
+
+</style>
+			<nav class="topNav">
+              <ul>
+                <li class="backArrow">
+                  <img
+                    width="30"
+                    height="30"
+                    fetchpriority="high"
+                    src="/images/backArrowWhite.svg"
+                    alt="Back Arrow"
+                    title="Back Arrow"
+                  />
+                </li>
+                <li class="searchWrapper">
+                  <form method="post" id="search">
+                    <input id="search1" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" tabindex="0" aria-autocomplete="list" class="search" aria-label="Search" name="search1" type="text" placeholder="Search Games" onblur="if (!window.__cfRLUnblockHandlers) return false; return blurfunc()" data-cf-modified-4eaaa7005eb6b59442c0723f-="" />
+                    <div id="srbdisp"></div>
+                  </form>
+                </li>
+                <!-- <li class="dextopUserIcon">
+                  <a href="#">
+                    <img
+                      width="30"
+                      height="30"
+                      fetchpriority="high"
+                      src="/images/userIcon.png"
+                      alt="User Icon"
+                      title="User Icon"
+                    />
+                  </a>
+                </li> -->
+              </ul>
+            </nav>
+	
+<style>
+	#srb{ display: none; }
+	div#srbdisp {   top: 1em;  position: fixed;   left: 1em; display: none;
+    /*width: calc(300px - 0px) !important;
+    margin-top: 0 !important;
+    border: none;
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    font-size: 12pt;
+    font-weight: 600;
+    z-index: 99999999;
+    position: absolute;
+    top: 52px !important;
+    box-shadow: 0px 1px 8px #88888899 !important;
+    padding: 8px 8px !important;*/
+  }
+	
+.search{background:#ffffff;	color: #888; }
+/*
+li#icon_search_btn:hover { background: #066ca3; border-radius: 50%; padding: 8px 9px 5px 9px !important;}
+div#gamenameh1 { background: transparent; padding: 30px 1em; }
+#closesearch{ font-size: 22px;padding: 4px 8px;position: absolute;right: 0.3em;cursor: pointer;color:white; }
+.notransition{ background: #ffffff; color: #888; border-radius: 5px; font-size: 13px; padding: 13px; box-shadow: 0 0 3px #07496d;margin-right: 0;
+    width: 98%; box-sizing: content-box;}
+::placeholder {
+  color: #888;
+  font-weight: bold;
+  opacity: 1; // Firefox 
+}
+:-ms-input-placeholder { // Internet Explorer 10-11 
+ color: #888;font-weight: bold;
+}
+::-ms-input-placeholder { // Microsoft Edge 
+ color: #888;font-weight: bold;
+}
+div#mobile_searchpanel {  background: #168ed1;  width: 100%;  height: 1em;  z-index: +10000000;  position: fixed; top: 0; left: 0; padding: 1.5em 3em 4.22em 2em; box-shadow: 3px 2px 3px #07496d; display: none; }*/
+
+/*@media screen and (orientation:landscape){
+		.notransition{	background: #ffffff; color: #888; border-radius: 5px; font-size: 13px; padding: 13px; box-shadow: 0 0 3px #07496d;
+		    margin-right: 0; width: 98%;  box-sizing: content-box;	}
+	}
+#closesearch{ font-size: 16px; padding: 4px 8px; position: absolute; right: 1em;  cursor: pointer; }
+.searchgame img { 	width: 49px; height: 40px; object-fit: cover; border-radius: 4px; margin-right: 4px; }
+.searchdisplay { width: 290px; margin-top: -8pt; padding: 0px; border: none; border-radius: 0; background: #f2f2f2; font-size: 12pt;
+    font-weight: 600; z-index: 99999999;  position: absolute; top: 3.7em; box-shadow: 0 0 10px #888; }
+.searchgame {   padding:0; background: #1a89cc; }
+.searchgame a:hover{  color: #dcd9fc; background: #514a9d; padding: 6px 5px 6px 10px; }
+.searchgame a {    color: #fff; display: block; font-size: 0.999rem; font-family: Montserrat,Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-weight: 700; line-height: 2.43; padding: 6px 5px 6px 10px; }
+*/
+		
+
+/*#mask1 {position: fixed;}
+//styles for Privacy Dialog 
+@media all and (max-width: 400px) and (min-width: 300px) {
+	.policy-validation { width: 76% !important;left:  50% !important; }
+	.policy-validation .content {
+		display: inline-block !important;
+		padding: 0 20px 0 15px !important;
+		font-size: 11px !important;
+	}
+	.policy-validation .actions {
+	    display: inline-block !important;
+		margin: 1em auto !important;
+		width: 100% !important;
+	}
+}
+@media all and (max-width: 800px) and (min-width: 400px) {
+	.policy-validation .content {
+		display: inline-block !important;
+		padding: 0 20px 0 15px !important;
+		font-size: 11px !important;
+	}
+	.policy-validation .actions {
+	     display: inline-block !important;
+		margin: 1em auto !important;
+		width: 100% !important;
+	}
+	.policy-validation { width: 76% !important;left:  50% !important; }
+}
+.policy-validation {
+    margin-left: -25%;
+    width: 50%;
+}
+.policy-validation {
+    -webkit-box-shadow: 0 3px 10px 0 rgba(0,0,0,0.34);
+    -moz-box-shadow: 0 3px 10px 0 rgba(0,0,0,0.34);
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.34);
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    bottom: 20px;
+    display: table;
+    left: 63%;
+    margin-left: -38%;
+    padding: 10px;
+    position: fixed;
+    vertical-align: middle;
+    width: 50%;
+    z-index: 100000;
     display: none;
 }
-
-#pwa_prompt .close {
-    display: block;
-    position: absolute;
-    top: 5px;
-    right: 2%;
-    cursor: pointer;
-    height: 48px;
-    width: 48px;
-    background-color: white;
+.policy-validation .logo {
+    display: table-cell;
+    padding: 5px 10px 0 6px;
+    vertical-align: middle;
+    width: 250px;
+}
+.policy-validation .content {
+    color: #000;
+    display: table-cell;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0 5px 10px;
+    vertical-align: middle;
+}
+.policy-validation .content {
+    padding: 0 5px;
+}
+.policy-validation .actions {
+    box-sizing: border-box;
+    display: table-row;
+    padding: 0 10px;
     text-align: center;
-    line-height: 48px;
-    color: black;
-    font-size: 32px;
-    border-radius: 50%;
-
+    vertical-align: middle;
+    width: 90px;
 }
-
-#pwa_prompt img {
-    display: block;
-    max-width: 60%;
-    max-height: 33%;
-    margin: 20px auto;
-    margin-top: 30px;
+.policy-validation .actions {
+    display: table-cell;
+    padding: 0 5px;
 }
-
-#pwa_prompt span.copy {
+.policy-validation .actions a {
+    background: #514A9D;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
     display: block;
     font-weight: bold;
-    font-size: 32px;
+    letter-spacing: .4px;
+    margin: 10px auto 0;
+    padding: 5px 8px;
+    width: 70px;
 }
-
-#pwa_prompt span.copy.arrow {
-    font-size: 64px;
+.policy-validation .actions a {
+    margin: 0;
+    width: auto;
 }
-
-@media screen and (max-height: 400px) {
-    #pwa_prompt img {
-        margin-bottom: 10px;
-    }
-    #pwa_prompt span.copy {
-        font-size: 24px;
-    }
-    #pwa_prompt span.copy.arrow {
-        font-size: 48px;
-    }
+.policy-validation .content a {
+    color: #514A9D;
+    font-weight: bold;
 }
-
-@keyframes w{0%{transform:rotate(0deg);}20%{transform:rotate(-3deg) scale(1.4) translate(0px,-5px);}50%{transform:rotate(3deg) scale(1.4) translate(0px,-5px);}80%{transform:rotate(-3deg) scale(1.4) translate(0px,-5px);}100%{transform:rotate(0deg);}}
-.w {animation:w 1.5s 1;}
+// privacy dialog ends here 
+nav #login-content1 {    width: 12em;right: 4px; padding: 0;top: 2.2em; }
+nav #login-content1 a {			
+    color: #003d53;
+    padding: 0.6em 1.3em;
+    display: inline-block;
+    width: 100%;
+}
+nav #login-content1 a:hover {
+    background: #514A9D;
+    color: #fff;
+}
+nav #login1 span {color: #fff;font-size: 12px;}
+nav.menu ul {
+    padding: 0;
+    margin: 0;
+}
+nav.menu li {
+    list-style-type: none;
+    margin: 0;
+    display: inline-block;
+    padding: 0 8px;
+}
+nav #login-trigger, nav #signup a, nav #login-trigger1, nav #signup1 a{ background:transparent; }
+.zerogrid .wrap-col{margin:0px;}*/
 
 </style>
 
-    <style>
-.ad-window {
-    position: absolute;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+/******** Code to stop search box animation when ajax request doing *******/
+$(function(){
+	});	
+
+$(document).ready(function() {
+  $('#search').submit(function(e) {
+    var searchitem = $('#search1').val().trim();
+    // STOP submit if empty or only spaces
+    if (searchitem.length === 0) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Build final search URL (limit to 3 words)
+    var words = searchitem.split(/\s+/);  // handles multiple spaces
+    var fwords = [];
+    var words_length = (words.length > 3) ? 3 : words.length;
+
+    for (var i = 0; i < words_length; i++) {
+        fwords[i] = words[i];
+    }
+    var finalsearch = fwords.join("-");
+    // Set form action
+    $(this).attr('action', 'https://www.cricketgamesatme.com/search/' + finalsearch);
+    return true;
+  });
+});
+/*$(document).ready(function() {
+  $('#search').submit(function(e) { 
+  	var finalsearch = "";
+  	var searchitem = $('#search1').val();
+	var words = searchitem.split(" "); var fwords = new Array();
+	var words_length = (words.length > 3 )? 3 : words.length;
+	for (var i = 0; i < words_length ; i++) {
+	    fwords[i] = words[i];
+	}
+	finalsearch = fwords.join("-");
+    $(this).attr('action', 'https://www.cricketgamesatme.com/search/' + finalsearch);  
+    return true;
+  });
+});*/
+</script>
+
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+	</script>
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+let ajaxReq = null;
+let ajaxBusy = false;
+
+function ajaxmail(form1) {
+    if (ajaxBusy) {
+        // Abort previous request
+        if (ajaxReq) ajaxReq.abort();
+    }
+
+    ajaxBusy = true;
+
+    ajaxReq = $.ajax({
+        url: "https://www.cricketgamesatme.com/searchgames.php",
+        type: "POST",
+        data: {
+            sr: form1.search1.value
+        },
+        timeout: 5000
+    })
+    .done(function (response) {
+        if (response) {
+            $('#srbdisp').empty().show().append(response);
+        }
+    })
+    .fail(function (xhr, status) {
+        if (status !== "abort") {
+            console.error("AJAX error:", status);
+        }
+    })
+    .always(function () {
+        ajaxBusy = false;
+    });
+
+    return false;
 }
 
-.ad-header-base {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    background: #FFFFFF;
-    z-index: 2;
+
+/*function ajaxmail(form1)
+  {
+    $.ajax({
+	  url: "/searchgames.php",
+	  type: 'post',
+	  data: 'sr='+form1.search1.value,
+	  }).done(function(response) {
+      if (response != null) {
+    	  $('#srbdisp').empty().show().append(response);
+      }
+	});
+
+    return false;
+  }*/
+</script>
+
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+  let searchAjax = null;
+let debounceTimer = null;
+
+$(document).ready(function () {
+
+    $("#search1").on("keyup", function (e) {
+
+        // ESC key clears search
+        if (e.keyCode === 27) {
+            $(this).val("");
+        }
+
+        const sr1 = $(this).val().trim();
+
+        // Hide results if empty
+        if (sr1.length === 0) {
+            $("#srbdisp").hide().removeAttr("style").empty();
+            if (searchAjax) searchAjax.abort();
+            return;
+        }
+
+        // Debounce typing (IMPORTANT)
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            runSearch(sr1);
+        }, 400); // 400ms delay
+    });
+
+});
+
+/**
+ * SINGLE search function
+ * No duplicate AJAX calls
+ */
+function runSearch(sr1) {
+
+    // Abort previous request
+    if (searchAjax) {
+        searchAjax.abort();
+    }
+
+    searchAjax = $.ajax({
+        url: "https://www.cricketgamesatme.com/search.php",
+        type: "POST",
+        data: { sr: sr1 },
+        timeout: 5000
+    })
+    .done(function (response) {
+        if (response) {
+            $("#srbdisp").empty().show().html(response);
+        }
+    })
+    .fail(function (xhr, status) {
+        if (status !== "abort") {
+            console.error("Search AJAX error:", status);
+        }
+    });
 }
-
-.ad-header-portrait-sm {
-    height: 28px;
-}
-
-.ad-header-portrait-md {
-    height: 28px;
-}
-
-.ad-header-portrait-lg {
-    height: 48px;
-}
-
-.ad-header-landscape-sm {
-    height: 42px;
-}
-
-.ad-header-landscape-md {
-    height: 42px;
-}
-
-.ad-header-landscape-lg {
-    height: 42px;
-}
-
-.ad-footer-base {
-    position: absolute;
-    background-color: white;
-    width: 100%;
-    bottom: 0px;
-    z-index: 2;
-}
-
-.ad-footer-portrait-sm {
-    height: 99px;
-}
-
-.ad-footer-portrait-md {
-    height: 118px;
-}
-
-.ad-footer-portrait-lg {
-    height: 155px;
-}
-
-.ad-footer-landscape-sm {
-    height: 80px;
-}
-
-.ad-footer-landscape-md {
-    height: 96px;
-}
-
-.ad-footer-landscape-lg {
-    height: 128px;
-}
-
-.ad-close-button-base {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-
-    position: absolute;
-    border: none;
-    outline: none;
-
-    background: #FF0029;
-
-    color: #FFFFFF;
-
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
-    border-radius: 99px;
-    z-index: 3;
-}
-
-.ad-close-button-portrait-sm {
-    width: 40px;
-    height: 40px;
-    right: 32px;
-    top: 8px;
-
-    font-size: 20px; 
-}
-
-.ad-close-button-portrait-md {
-    width: 40px;
-    height: 40px;
-    right: 32px;
-    top: 8px;
-
-    font-size: 20px; 
-}
-
-.ad-close-button-portrait-lg {
-    width: 40px;
-    height: 40px;
-    right: 32px;
-    top: 8px;
-
-    font-size: 20px; 
-}
-
-.ad-close-button-landscape-sm {
-    width: 60px;
-    height: 60px;
-    right: 64px;
-    top: 12px;
-
-    font-size: 35px; 
-}
-
-.ad-close-button-landscape-md {
-    width: 60px;
-    height: 60px;
-    right: 64px;
-    top: 12px;
-
-    font-size: 35px; 
-}
-
-.ad-close-button-landscape-lg {
-    width: 60px;
-    height: 60px;
-    right: 64px;
-    top: 12px;
-
-    font-size: 35px; 
-}
-
-.ad-play-button-base {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-
-    position: absolute;
-    z-index: 3;
-
-    font-family: 'Poppins Arial';
-    font-style: normal;
-    font-weight: 700;
-
-    color: #FFFFFF;
-
-    background: linear-gradient(90deg, #E8913D, #D83839, #E8913D);
-    border-radius: 99px;
-    border: none;
-    outline: none;
-
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-.ad-portrait-play-button-sm {
-    width: 234px;
-    height: 62px;
-    left: calc(50% - 234px/2);
-    bottom: 68px;
-
-    font-size: 26px;
-    line-height: 39px;
-
-    animation-name: portrait-play-button-anim-sm;
-}
-
-.ad-portrait-play-button-md {
-    width: 256px;
-    height: 68px;
-    left: calc(50% - 256px/2);
-    bottom: 84px;
-
-    font-size: 32px;
-    line-height: 48px;
-
-    animation-name: portrait-play-button-anim-md;
-}
-
-.ad-portrait-play-button-lg {
-    width: 374px;
-    height: 104px;
-    left: calc(50% - 374px/2);
-    bottom: 103px;
-
-    font-size: 48px;
-    line-height: 72px;
-
-    animation-name: portrait-play-button-anim-lg;
-}
-
-.ad-landscape-play-button-sm {
-    width: 301px;
-    height: 80px;
-    left: 128px;
-    bottom: 40px;
-
-    font-size: 36px;
-    line-height: 54px;
-
-    animation-name: landscape-play-button-anim-sm;
-}
-
-.ad-landscape-play-button-md {
-    width: 384px;
-    height: 96px;
-    left: 128px;
-    bottom: 48px;
-
-    font-size: 48px;
-    line-height: 572px;
-
-    animation-name: landscape-play-button-anim-md;
-}
-
-.ad-landscape-play-button-lg {
-    width: 384px;
-    height: 96px;
-    left: 128px;
-    bottom: 80px;
-
-    font-size: 48px;
-    line-height: 572px;
-
-    animation-name: landscape-play-button-anim-md;
-}
-
-@keyframes portrait-play-button-anim-sm {
-   from {background-position-x: 0px;}
-   to {background-position-x: 234px;}
-}
-
-@keyframes portrait-play-button-anim-md {
-   from {background-position-x: 0px;}
-   to {background-position-x: 256px;}
-}
-
-@keyframes portrait-play-button-anim-lg {
-   from {background-position-x: 0px;}
-   to {background-position-x: 374px;}
-}
-
-@keyframes landscape-play-button-anim-sm {
-   from {background-position-x: 0px;}
-   to {background-position-x: 301px;}
-}
-
-@keyframes landscape-play-button-anim-md {
-   from {background-position-x: 0px;}
-   to {background-position-x: 384px;}
-}
-
-.ad-logo-base {
-    position: absolute;
-    z-index: 3;
-}
-
-.ad-portrait-logo-sm {
-    width: 52px;
-    height: 52px;
-    left: calc(50% - 52px/2);
-    bottom: 8px;
-}
-
-.ad-portrait-logo-md {
-    width: 64px;
-    height: 64px;
-    left: calc(50% - 64px/2);
-    bottom: 13px;
-}
-
-.ad-portrait-logo-lg {
-    width: 64px;
-    height: 64px;
-    left: calc(50% - 64px/2);
-    bottom: 24px;
-}
-
-.ad-landscape-logo-sm {
-    width: 182px;
-    height: 42px;
-    right: 128px;
-    bottom: 19px;
-}
-
-.ad-landscape-logo-md {
-    width: 213px;
-    height: 48px;
-    right: 128px;
-    bottom: 24px;
-}
-
-.ad-landscape-logo-lg {
-    width: 213px;
-    height: 48px;
-    right: 128px;
-    bottom: 40px;
-}
-
-.ad-image-sm {
-    position: absolute;
-    margin: auto;
-    display: block;
-    z-index: 1;
-}
-
-</style>
-
-    <script type="application/json" class="cohort">{"version":"1.1.14","name":"cricket","gaPath":"cricket/1.1.14/","vpath":"./","spath":"assets/index.f30c6a07.js","legacyCoords":false,"configJs":{"id":"cricket","version":"1.1.14","build":"251211528","gaId":"UA-54081731-1","gaGameId":"UA-54081731-50"},"moreJson":{"ab_tests":{"ab_fbinstant_banner_ads":{"cohorts":["ab_fbinstant_banner_ads_off_control","ab_fbinstant_banner_ads_on"]}},"track-gma":{"currencies":"coin","itemtypes":"unknown","channelMapping":{"web_safari_ios,web_chrome_ios,web_edge,web_firefox,web_opera,web_safari,web_chrome,":"web"},"customDimensions01":"android,ios,samsung_galaxy_store,facebook_instant,facebook_rooms,bixby,samsung_instant_play,huawei_quick_app,crazy_games,discord,microsoft_pwa,frvr,other","events":{"game_loaded":"'addProgressionEvent','Complete',name,,,loading_time","game_play_start":"'addProgressionEvent','Start',level_id","game_continue_used":"'addProgressionEvent','Start',level_id","game_end":"'addProgressionEvent','Complete',level_id,,,value","game_end-lose":"'addProgressionEvent','Fail',level_id,,,value","tutorial_step_completed":"'addDesignEvent',name:value","fps":"'addDesignEvent',name,value"}},"track-ga":{"gaIds":{"all":"G-8CR3QVSC2J","cricket":"UA-54081731-50"},"state":"{appId=app_id,appName=app_name,appVersion=app_version,metric1=play_session_count,dimension2=cohort,dimension4=play_session_id,dimension3=device_id,metric2=days_elapsed,metric3=days_played,dimension5=channel,dimension6=entry_point,dimension7=utm_string,dimension8=screen,dimension9=facebook_context,metric4=currency_amount,metric5=missions_completed,metric6=progression,metric7=games_played}","events":{"default":"name,,value,_params","options_change":"name,option_name:option_value","game_end":"name,level_id,game_duration","game_play_start,game_continue_used":"name,level_id","keepalive,new_user,mission_success":"name","coin_spent,tutorial_step_completed,session_start":"name,,value","game_loaded":"name,,loading_time","social_engage,engage":"'engage',engage_id:button_placement,1","play_with_friend":"name,,1","share,invite":"name,button_placement,1","cross_promotion_show":"name,button_placement,1","cross_promotion_click,cross_promotion_success,cross_promotion_failure":"name,target_game,1","ad_mandatory_request":"name,,value,{_merge=_params,dimension13=provider}","ad_mandatory_response":"name,ad_response,value,{_merge=_params,dimension13=provider}","ad_mandatory_show":"name,,value,{_merge=_params,dimension13=provider}","ad_mandatory_finish":"name,ad_result,value,{_merge=_params,dimension13=provider}","ad_mandatory_blocked":"name,,value,{_merge=_params,dimension13=provider}","ad_mandatory_pass":"name,,value,{_merge=_params,dimension13=provider}","ad_mandatory_throttled":"name,throttle_type,value,{_merge=_params,dimension13=provider}","ad_rewarded_request":"name,,value,{_merge=_params,dimension13=provider}","ad_rewarded_response":"name,ad_response,value,{_merge=_params,dimension13=provider}","ad_rewarded_show":"name,,value,{_merge=_params,dimension13=provider}","ad_rewarded_finish":"name,ad_result,value,{_merge=_params,dimension13=provider}","ad_rewarded_blocked":"name,,value,{_merge=_params,dimension13=provider}","ad_rewarded_pass":"name,,value,{_merge=_params,dimension13=provider}","ad_rewarded_throttled":"name,throttle_type,value,{_merge=_params,dimension13=provider}","chatbot_noshow,chatbot_show,chatbot_success,chatbot_issubscribed,chatbot_useraborted":"name,,","chatbot_error":"name,reason,"}},"track-frvr":{"state":"{app_version,engine_version,app_build,cohort,channel,development,games_played,play_session_id,play_session_count,days_elapsed,facebook_player_id,facebook_context_type,facebook_entrypoint,utm_source,utm_medium,utm_campaign,utm_term,utm_content,facebook_referral_player_id,remote_user_id,non_interaction,device_width,device_height,global_user_id,web_url,script_version,social_session_id,ab_exp,ab_cohort_name,ab_cohort_weight,page_session_id,fb_instant_game_ad_id,fb_segment}","events":{"default":"name,value,{_merge=state,_merge=_params}"}},"track-facebook_events":{"blacklist":"iap_request_payment,iap_request_payment_success","events":{"default":"name,{_merge=state,_merge=_params}","ftue":"'COMPLETED_TUTORIAL',{SUCCESS=completed,STEP_NUMBER=step_number,STEP_NAME=step_name,STEP_NUMBER=ftue_step_number,STEP_NAME=ftue_step_name}","ad_rewarded_finish":"'AD_IMPRESSION',{AD_TYPE='rewarded_video',SUCCESS=value}","ad_mandatory_finish":"'AD_IMPRESSION',{AD_TYPE='interstitial',SUCCESS=value}","coin_spent":"'SPENT_CREDITS',{AMOUNT=amount,DESCRIPTION='coins',CONTENT=product}","gem_spent":"'SPENT_CREDITS',{AMOUNT=amount,DESCRIPTION='gems',CONTENT=product}","gem_get":"'UNLOCKED_ACHIEVEMENT',{QUANTITY=value,DESCRIPTION='gem_get'}","popup_claim_reward":"'UNLOCKED_ACHIEVEMENT',{DESCRIPTION='claim_reward'}","levelup_newlevel":"'ACHIEVED_LEVEL',{LEVEL=level}","iap_request_payment":"'INITIATED_CHECKOUT',{CONTENT_ID=productId,NUM_ITEMS='1'}","iap_request_payment_success":"'PURCHASED',{CONTENT_ID=productId,NUM_ITEMS='1'}","iap_request_payment_failed":"'CHECKOUT_CANCELED',{CONTENT_ID=productId,NUM_ITEMS='1'}","rate":"'RATED',{MAX_RATING_VALUE=max_rating_value,RATE=rate_value}"}}},"jsSize":500000,"supportedLanguages":["ko","ru","zh-Hans"],"buildJson":{"buildTime":"Thu Dec 11 2025 17:36:03 GMT+0000 (Western European Standard Time)","fsxBuildId":"251211528","repos":{"game-cricket":{"branch":"master","hash":"002916d8a95327a7e3dc82b037c7c1fc742f9d9e","dirty":false,"dir":"$HOME/frvr/game-cricket"},"@frvraps/frvr-xs-builder":{"branch":"master","hash":"4cf33d3eac32987d516093fa76d9a0c3798984b1","dirty":false,"dir":"$HOME/frvr/frvr-tools/packages/frvr-xs-builder","repository":"git://github.com/frvraps/frvr-tools.git"},"@frvraps/frvr-xs":{"branch":"master","hash":"4cf33d3eac32987d516093fa76d9a0c3798984b1","dirty":false,"dir":"$HOME/frvr/frvr-tools/packages/frvr-xs","repository":"git://github.com/frvraps/frvr-tools.git"},"@frvraps/frvr-sdk":{"branch":"feat/bytebrew-sdk","hash":"1379c2d130543b20659968c26cf73efe44c5665c","dirty":true,"dir":"$HOME/frvr/frvr-sdk/packages/frvr-sdk","repository":{"type":"git","url":"https://github.com/frvraps/frvr-sdk.git"}}},"options":{"gameName":"cricket","verbose":false,"vitejsVerbose":false,"reheatCache":false,"unsloppify":{"hoistBlockFunctions":true,"importify":true,"declareVars":true,"unclashReserved":true,"correctOctals":true,"replaceTopLevelthis":false},"embedImages":["svgoatlas"],"open":false,"vconsole":false,"emptyOutDir":true,"platform":"web","debug":false,"sizeProfiler":false,"minify":true,"beautify":false,"externalJsSync":false,"inlineJs":false,"localizationStyle":"alc","zipFile":false,"zipPwd":"","preview":false,"https":true,"sprinkle":[{"from":"adstxt/ads.txt","to":"ads.txt"}],"strictMode":false,"babelify":true,"screenshot":false,"buildId":false,"removeOldStyleCp":false,"dictionaries":["$HOME/frvr/game-cricket/game/languages/ko.json","$HOME/frvr/game-cricket/game/languages/ru.json","$HOME/frvr/game-cricket/game/languages/zh-cn.json","$HOME/frvr/game-cricket/game/languages/zh-Hans.json"],"outDir":"$HOME/frvr/frvr-out/Builds/cricket/cricket.web"},"timeStamp":1765474563662,"argv":["$HOME/.local/share/nvm/v21.2.0/bin/node","$HOME/.local/share/nvm/v21.2.0/bin/fsx","build","--platform=web","cricket"]}}</script>
+/*$(document).ready(function(){
+  $("#search1").keyup(function(d){
+    blurfunc();
+    var sr = document.getElementById("search1");
+	var sr1 = sr.value
+	if(d.keyCode==27)
+	{
+		sr1 = "";
+	}
+	if(sr1=="'")
+	{
+		sr1 = "";
+	}
+	sr1 = sr1.replace(/'/g, "&#146;");
+	console.log('search:', sr1);
+
+  if (sr1.length === 0) {
+        $("#srbdisp").hide().removeAttr("style").empty();
+        return; // stop here (no ajax)
+    }
+
+	$.ajax({
+	  url: "/search.php",
+	  type: 'post',
+	  data: {sr: sr1,},
+	  }).done(function(response) {
+      if (response != null) {
+    	  $('#srbdisp').empty().show().append(response);
+      }
+	});
+
+	
+  });
+});*/
+/*function blurfunc() {
+    var sr1 = $("#search1").val().trim(); // remove spaces from both ends
+
+    console.log("search:", sr1); // debug
+
+    // If input is empty or only spaces → hide and reset results
+    if (sr1.length === 0) {
+      console.log('removeing results div:'+ sr1.length);
+        $("#srbdisp").hide().removeAttr("style").empty();
+        return false;  // do not run AJAX
+    }
+
+    // Otherwise → run AJAX search
+    $.ajax({
+        url: "https://www.cricketgamesatme.com/search.php",
+        type: "post",
+        data: { sr: sr1 }
+    }).done(function(response) {
+        if (response) {
+            $("#srbdisp").show().html(response);
+        }
+    });
+
+    return false;
+}*/
+/*function blurfunc() {
+    var blogName = document.getElementById("search1");
+    var sr1 = blogName.value.trim(); // take current text
+
+    // If the textbox is empty → clear styles + hide box
+    if (sr1.length === 0) {
+
+        // Remove inline styles applied to div#srbdisp
+        $("#srbdisp").removeAttr("style");   // removes display:block, padding, etc
+        $("#srbdisp").hide();                // hide results box
+        $('#srbdisp').empty();               // also clear old search results
+
+        return false; // no AJAX call required
+    }
+
+    // Otherwise → perform AJAX search
+    $.ajax({
+        url: "https://www.cricketgamesatme.com/search.php",
+        type: 'post',
+        data: { sr: sr1 }
+    }).done(function(response) {
+        if (response !== null && response !== undefined) {
+            $('#srbdisp').show().empty().append(response);
+        }
+    });
+
+    return false;
+}*/
+/*function blurfunc()
+{
+	var blogName = document.getElementById("search1");
+	sr1 = "";
+	
+	$.ajax({
+	  url: "https://www.cricketgamesatme.com/search.php",
+	  type: 'post',
+	  data: {sr: sr1,},
+	  }).done(function(response) {
+      alert('res:'+response);
+      if (response != null) {
+        $('#srbdisp').empty().show().append(response);
+      }
+      else{
+        $('#srbdisp').hide();
+        $('.searchdisplay').hide();
+      }
+	});
+	
+	return false;
+}*/
+</script>
+
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+	 
+$(function(){ 
+	$('.scrollcontainer2').mouseover(function(){
+		$('.overlay2').css('opacity','1');
+	});
+	$('.scrollcontainer2').mouseout(function(){
+		$('.overlay2').css('opacity','0');
+	});
   
-</head>
-  <body>
+});
+</script>
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+	</script>
+	
+             </div>
+        </div>
+      </header>
+      <div class="googleAd">          <!-- ADD Code-->          
+          <font id="topadd1"></font>
+            
+          <!-- /ADD Code-->
+      </div>
+      <section class="banner">
+        <div class="container">
+          <div style="justify-content: space-between;">
+          <div class="bannerInner">
 
-    <!-- TODO debugcode, move me to provider -->
-    <div id="debug" style="position:absolute; color:red; left:40px; z-index: 9999999"></div>
+            <ul class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+              <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a id="breadcrumbid" href="https://www.cricketgamesatme.com/" itemprop="item"><span itemprop="name">Games</span></a><meta itemprop="position" content="1" /></li>
+              <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Cricket World Cup</span><meta itemprop="position" content="4" /></li>
+            </ul>
+              <meta itemprop="url" content="https://www.cricketgamesatme.com/games/cricket-world-cup">
+             
+                          
+                        
+                              <!-- <img src="/images/games/slide/5211_slide.jpg" alt="Game 1" /> -->
+                
+                                                        <link rel="preload" as="image" href="https://slides.cricketgamesatme.com/slide/5210_slide.jpg">
+                      <link rel="preload" type="text/css" href="https://www.cricketgamesatme.com/css_new/game_url_responsive.css" as="style">
+                        <link rel="stylesheet" href="https://www.cricketgamesatme.com/css_new/game_url_responsive.css" media="all"/>
+                        <style>
+                          .button {
+                            width: 96.9%;
+                            max-width: 18em;
+                                min-width: 8em;
+                          }
+                          p img#game_img_btn {                              
+                              width: auto;
+                              min-width: 27em;
+                              min-height: 20em;
+                              margin: 0 auto;
+                            display: block;
+                              }
+                               .container2 {
+                              position: relative;
+                              width: 100%;
+                              max-width: 400px;
+                            }
 
-      <script>window.__antialias=!1;</script>
+                            .container2 img {
+                              width: 100%;
+                              height: auto;
+                            }
 
-      <script>(window.__FRVR.buildTimePlatform="web",function(){var e;window.__FRVR.getChannel=function(){var r="frvr",n={chromeWrapper:"chromeos",androidWrapper:"android",iOSWrapper:"ios",rcs:"rcs",samsungAppStore:"samsung_galaxy_store",facebookInstant:"facebook_instant",facebookRooms:"facebook_rooms",facebookAppWeb:"facebook_canvasweb",facebookApp:"facebook_canvas",samsungBixby:"bixby",samsungGameLauncher:"samsung_game_launcher",samsungInstantPlay:"samsung_instant_play",spilGamesWrapper:"spil",vkru:"vkru",okru:"okru",kik:"kik",twitter:"twitter",twitch:"twitch",hago:"hago",oppoGlobal:"oppo_global",tMobile:"tmobile",huawei:"huawei",huaweiquickapp:"huawei_quick_app",yandex:"yandex",crazyGames:"crazy_games",lgtv:"lg_tv",jioStb:"jio_stb",myJio:"jio_my",jioGameslite:"jio_gameslite",rocketChat:"rocket_chat",ufone:"ufone",game8:"game8",snapchat:"snapchat",mailonline:"mail_online",discord:"discord",harman:"harman",microsoftPwa:"microsoft_pwa",aaos:"aaos"};if(e)return e;var t=window.__FRVR.platformIs;for(var o in n)t[o]&&(r=n[o]);if(window.__FRVR.getGoogleAdSenseGameChannelId){var a={7978894035:"samsung_game_launcher",7640790291:"bixby",3704760038:"legacy_samsung_daily",4056808137:"frvr",3238562380:"samsung_instant_play",5374938192:"frvr",5362404538:"frvr",9165482691:"frvr",1661744930:"frvr",1781508157:"frvr",1526015108:"legacy_samsung_browser_us",9152813246:"legacy_samsung_gl_fallback",1570234097:"bixby",6159024522:"telenorpk",9547456458:"huawei_quick_app",4901070532:"frvr",5509479103:"frvr",4687607673:"frvr",7772201439:"frvr",5781080938:"frvr",7859627468:"bixby",6225636036:"frvr",9257964653:"frvr",9997971842:"legacy_samsung_gl_pwa",1810535265:"frvr",6879406107:"frvr",5664912848:"frvr",7871893264:"oppo_global",6905222938:"1001spill",1074763396:"frvr",4822698373:"huawei",3917207338:"frvr",3091839955:"frvr",9511672440:"frvr",9609759920:"frvr",8846287731:"frvr",1912410415:"frvr",3463089052:"frvr",3138478138:"spil",3609613151:"frvr",7259516105:"frvr",8260783143:"frvr",4791934430:"frvr",5304245228:"frvr",4196077731:"frvr",7517011737:"ga",1420430092:"frvr",6341560802:"frvr",3188724532:"frvr",7430391555:"samsung_galaxy_store_pwa",6142190935:"frvr",2410146e3:"spil",6238202936:"frvr",2165771095:"frvr",7169566203:"frvr",7116648941:"frvr",9484119302:"frvr",8289067739:"crazy_games",4942292965:"frvr",4111954147:"samsung_instant_daily",9508446909:"mozilla_lite",6581072258:"frvr",6305391737:"frvr",7721350107:"frvr",5689634745:"frvr",4407671492:"frvr",8793151713:"mynet",6701854007:"frvr",8166612510:"frvr",1204043211:"frvr",8540348735:"frvr",8092992494:"frvr",3050063345:"frvr",6105016100:"frvr",5383746593:"frvr",2155121367:"frvr",4481639214:"frvr",9167804042:"frvr",2633738716:"frvr",5732840388:"frvr",1136474154:"frvr",3868538934:"frvr",6791411817:"frvr",4001058104:"spil",8323344707:"frvr",1511956590:"frvr",5337609782:"frvr",7647348124:"frvr",9465676615:"frvr",8699389853:"frvr",8288405339:"ga",1601204168:"frvr",6738957149:"frvr",3143968130:"spil",3660984936:"legacy_all_samsung_browser",6672071330:"ga",9944902462:"frvr",4216099801:"ga",9810477030:"frvr",4127083129:"frvr",9831349735:"mediatrust",1651142765:"frvr",2402315798:"frvr",3217022605:"rcs",8209630496:"frvr",7348809119:"frvr",1907949320:"frvr",7711130568:"frvr",6682900564:"frvr",8220757253:"frvr",9226003469:"frvr",6459119768:"ga",3297429215:"frvr",2066412442:"frvr",9610826637:"spil",5428378892:"frvr",3718604937:"ga",7010263033:"frvr",5533541335:"spil",5393940535:"spil",6680931602:"frvr",8135642444:"frvr",5195338130:"ga",2443106993:"frvr",9841433446:"frvr",9471076165:"spil",8645981334:"clickjogos",9750454053:"spil",5496116299:"spil",9095657336:"spil",5196972230:"frvr",1711991335:"spil",1463804937:"plonga",6650691459:"frvr",7854536931:"spil",4185858062:"frvr",1559694722:"frvr",4196397436:"ga",5791200697:"frvr",8838890658:"frvr",6592001260:"frvr",8990371880:"rocketchat",3078524176:"frvr",1414057592:"spil",1721816412:"spil",7627870781:"samsung_instant_browser_us",7257814137:"spil",6687910134:"mfogs",6388800833:"frvr",6794212012:"mailonline",2719344539:"spil",6005657456:"frvr",4761469737:"spil",8260978605:"frvr",4899645641:"frvr",5570875049:"tron",3275762232:"spil",1433925895:"spil",7925670440:"taboola",3587369568:"squid",3982547231:"frvr",4388062450:"spil",8471269857:"bixby",1323020937:"spil",3605255281:"bixby",9085283107:"frvr",1873844328:"legacy_samsung_browser_m4s",8924310391:"bixby",7269966843:"tmobile",1075554580:"adsenseforgamestest2",1098459098:"frvr",8199816817:"xiaomi"}[window.__FRVR.getGoogleAdSenseGameChannelId()];a&&(r=a)}return e=r,r};var r=window.location.href;window.__FRVR.getQueryString=function(e){var n=r;e=e.replace(/[\[\]]/g,"\\$&");var t=new RegExp("[?&]"+e+"(=([^&#]*)|&|#|$)","i").exec(n);return t?t[2]?decodeURIComponent(t[2].replace(/\+/g," ")):"":null},window.__FRVR.platformIs=new function(e,r,n,t){var o,a=this;a[window.__FRVR.buildTimePlatform]=!0,a.android=/(android)/i.test(n)&&!/(Windows)/i.test(n),a.androidVersion=(o=navigator.userAgent.toLowerCase().match(/android\s([0-9\.]*)/),parseFloat(o?o[1]:0)),a.aaos="car"==window.__FRVR.getQueryString("aaos"),a.ci="1"==window.__FRVR.getQueryString("ci_run"),a.firefoxMobile=/(Mobile)/i.test(n)&&/(Firefox)/i.test(n),a.slow=a.android&&a.androidVersion<6,a.iOS=/(ipod|iphone|ipad)/i.test(n)||/(Macintosh)/i.test(n)&&"ontouchend"in document,a.windowsMobile=/(IEMobile)/i.test(n),a.silk=/(silk)/i.test(n),a.clay=/(clay\.io)/i.test(t),a.facebookApp=/(fb_canvas)/i.test(t),a.facebookAppWeb=/(fb_canvas_web)/i.test(t),a.iframed=e.top!==e.self,a.standalone="standalone"in r&&r.standalone,a.mobileiOSDevice=n.match(/iPhone/i)||n.match(/iPod/i),a.kongregate=/(kongregateiframe)/i.test(t),a.kik=/(kik_canvas)/i.test(t),a.twitter=/(twitter)/gi.test(n),a.chrome=/Chrome\//.test(n),a.safari=!!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/),a.badWebkit=/AppleWebKit\/605\.1\.15/i.test(n)&&/iPhone OS 15_[0|1|2]/i.test(n),a.secureConnection=0==window.location.protocol.indexOf("https"),a.facebookInstant=!!window.FBInstant,a.facebookRooms=window.isFacebookRooms,a.spilGamesWrapper=/(spilgames)/i.test(t),a.social="on"==window.__FRVR.getQueryString("social"),a.advertisementIsDisabled="off"==window.__FRVR.getQueryString("ads"),a.advertisementInterstitialDisabled="off"==window.__FRVR.getQueryString("int"),a.advertisementOverlayEnabled=!a.iframed||a.spilGamesWrapper||window.__FRVR.getQueryString("partnerid"),a.nosoc="1"==window.__FRVR.getQueryString("nosoc"),a.development=null!=window.__FRVR.getQueryString("development")?"true"==window.__FRVR.getQueryString("development"):null,a.facebookAd=/(\/\?fb)/i.test(t),a.mobile=a.android||a.windowsMobile||a.iOS||a.silk||a.firefoxMobile,a.mobileWrapper=e.iOSWrapper||e.androidWrapper||!1,a.iOSWrapper=e.iOSWrapper||!1,a.iPhoneXOrLater="true"==window.__FRVR.getQueryString("iPhoneXOrLater"),a.iMessageContext="true"==window.__FRVR.getQueryString("iMessage"),a.androidWrapper=e.androidWrapper||!1,a.chromeWrapper=e.isChromeWrapper||!1,a.samsungAppStore="samsung"==window.__FRVR.getQueryString("androidStore"),a.appWrapper=e.iOSWrapper||e.androidWrapper||a.samsungAppStore,a.usingWebGLRenderer=!1,a.usingCanvasRenderer=!1,a.jioStb=!!a["jio-stb"],a.myJio=!!a.myjio,a.jioGameslite=!!a["jio-gameslite"],a.jio=a.jioStb||a.myJio||a.jioGameslite,a.twitch=""==window.__FRVR.getQueryString("twitch"),a.vkru=""==window.__FRVR.getQueryString("vkru"),a.okru=""==window.__FRVR.getQueryString("okru"),a.tMobile=""==window.__FRVR.getQueryString("tmobile"),a.pwa=""==window.__FRVR.getQueryString("pwa"),a.windowsApp=""==window.__FRVR.getQueryString("windowsapp"),a.microsoftPwa=window.document&&window.document.referrer&&-1!==document.referrer.indexOf("app-info://platform/microsoft-store")||""==window.__FRVR.getQueryString("mspwa")||window.__FRVR.getQueryString("msstart_sdk_init"),a.enableAppStoreLinks=!0,a.samsungGalaxyStorePWA=""==window.__FRVR.getQueryString("samsung")&&"galaxystore"==window.__FRVR.getQueryString("source"),a.samsungGameLauncherPWA=(""==window.__FRVR.getQueryString("pwa")||""==window.__FRVR.getQueryString("samsung"))&&"gamelauncher"==window.__FRVR.getQueryString("source"),a.samsungGameLauncher=!!window.FRVRInstant||(""==window.__FRVR.getQueryString("gamelauncher")||"gamelauncher"==window.__FRVR.getQueryString("source")),a.samsungBixby=""==window.__FRVR.getQueryString("samsung")&&!a.samsungGalaxyStorePWA,a.samsungBrowserUK=""==window.__FRVR.getQueryString("samsungbuk"),a.samsungBrowserUS=""==window.__FRVR.getQueryString("samsungbus"),a.samsungBrowserSEA=""==window.__FRVR.getQueryString("samsungbsea"),a.samsungBrowser=""==window.__FRVR.getQueryString("samsungbrowser"),a.samsungGLFallback=""==window.__FRVR.getQueryString("gl_fallback"),a.samsungInstantPlay=!!window.GSInstant,a.samsung=a.samsungGalaxyStorePWA||a.samsungGameLauncherPWA||a.samsungGameLauncher||a.samsungBixby||a.samsungBrowserUK||a.samsungBrowserUK||a.samsungBrowserUS||a.samsungBrowserSEA||a.samsungBrowser||a.samsungGLFallback||a.samsungInstantPlay,a.rcs=window.__FRVR.getQueryString("rcsid"),a.snapchat=!!window.sc,a.rcsKr=""==window.__FRVR.getQueryString("rcskr"),a.huaweiquickapp=""==window.__FRVR.getQueryString("huaweiquickapp"),a.huawei=""==window.__FRVR.getQueryString("huawei")||a.huaweiquickapp,a.mozilla=""==window.__FRVR.getQueryString("mozilla"),a.miniclip=""==window.__FRVR.getQueryString("miniclip"),a.chromeOSDevice="true"==window.__FRVR.getQueryString("isChromeOSDevice"),a.opera=!!e.opr&&!!e.opr.addons||!!e.opera||n.indexOf(" OPR/")>=0,a.yandex=!!window.YaGames,a.firefox=void 0!==e.InstallTrigger,a.edge=/(edge|edgios|edga)\/((\d+)?[\w\.]+)/i.test(n),a.oppoGlobal=""==window.__FRVR.getQueryString("oppo"),a.lgtv=""==window.__FRVR.getQueryString("lgtv"),a.crazyGames="8289067739"==window.__FRVR.getQueryString("partnerid"),a.mynet=""==window.__FRVR.getQueryString("mynet"),a.ufone="8416254215"==window.__FRVR.getQueryString("partnerid"),a.game8=""==window.__FRVR.getQueryString("game8"),a.mailonline="6794212012"==window.__FRVR.getQueryString("partnerid"),a.disableNativeBridge=""==window.__FRVR.getQueryString("disableNativeBridge"),a.partnerWrapper=!a.disableNativeBridge&&(a.mynet||a.tMobile||a.ufone||a.mailonline)&&(a.iOS||a.android),a.rocketChat=""==window.__FRVR.getQueryString("rocketchat"),a.discord="discord"===window.__FRVR.buildTimePlatform,a.harman=""==window.__FRVR.getQueryString("harman"),a.progressiveWebAppEnabled=!(a.chromeOSDevice||a.iframed||a.appWrapper||a.twitch||a.vkru||a.okru||a.facebookInstant||a.partnerWrapper),a.tv=a.jioStb||a.lgTV}(window,navigator,navigator.userAgent,document.location)}(),function(){var e=document.getElementById("ab-experiment"),r=e&&JSON.parse(e.innerHTML);function n(e,n){var t=JSON.parse(e.innerHTML);t.cohortName=e.getAttribute("data-cohort-name"),t.cohortWeight=e.__weight,t.cohortIdx=parseInt(e.getAttribute("data-cohort-idx")),t.selectionReason=n,t.experiment=r,window.__FRVR.cohort=function(){return t}}var t=document.getElementsByClassName("cohort");if(1===t.length)return n(t[0],"single");for(var o=0,a=URLSearchParams&&new URLSearchParams(window.location.search),i=a&&a.get("force-cohort"),s=0;s<t.length;s++){var d=t[s].getAttribute("data-weight");t[s].__weight=d&&parseInt(d)||100;var l=t[s].getAttribute("data-cohort-name");if(i&&l===i)return window.__FRVR.keepurl=!0,n(t[s],"forced");o+=t[s].__weight}var c=r.name+":"+window.__FRVR.globalUserId(),u=Math.abs(function(e){for(var r=e.length-1,n=5381;r;r--)n=e.charCodeAt(r)+(n<<5)+n;return n}(c))%o;for(s=0;s<t.length;s++){var g=t[s].__weight;if(u<g)return n(t[s],"user-id-random");u-=g}}(),window.FRVR)&&((FRVR=window.FRVR).config=JSON.parse(JSON.stringify(FRVRConfig)));if(function(){var e=window.FRVR,r=2,n=256|1024,t=128,o=16;const a=(e=>{const r=["127.0.0.1","localhost"].includes(window.location.hostname),n=e.iOSWrapper||e.androidWrapper;return e.crazyGames||r&&!n})(window.__FRVR.platformIs);"true"===window.__FRVR.getQueryString("forceConsent")||a||(e.config.consent={providerName:"cookiepro",config:{websiteKey:window.__FRVR.platformIs.samsungInstantPlay?"2a27de4c-12f8-4596-9a17-1283124f8823":"acd0a7d3-539e-483c-8c17-484beca00b4d"}},window.__FRVR.consent={VENDORS:{GOOGLE:755},ANALYTICS:n,AD_ANALYTICS:t,PERSONALISED_ADS:o,COOKIES:r,hasConsent:r=>e.consentProvider.hasConsentForAny(r),onConsentChanged:r=>{e.consentProvider.onConsentChanged(r)},show:()=>{e.consentProvider.consentToTerms()},isReady:()=>e.consentProvider.hasLoaded()})}(),window.FRVR){function whenLoggedIn(){let e=!0;return new Promise(((r,n)=>{FRVR.auth.isLoggedIn()?r():FRVR.auth.isLoggingIn()?FRVR.auth.addStatusChangeListener((n=>{e&&n&&(e=!1,r())})):n(new Error("Not an auto-login platform"))}))}var FRVR;setupAdConfigsForSDK(),(FRVR=window.FRVR).init(window.frvrEnv),window.FRVR.tracker.addExtraFieldFunction((function(e){e.app_build=__FRVR.cohort().configJs.build,e.app_version=__FRVR.cohort().version})),window.__FRVR.initPromise=FRVR.bootstrapper.init().then((function(){return whenLoggedIn().then((()=>FRVR.features.getFeatures([]))).catch((e=>{console.error("BOOT FRVR error",e)}))})),window.__FRVR.completePromise=new Promise(((e,r)=>{window.__FRVR.completeReady={resolve:e,reject:r}}))}!function(e){var r="/coeus.frvr.com/v1/tm5",n=[];function t(){if(e.isReady())for(;n.length>0;)F(n.shift())}(e=e||{hasConsent:function(e){return!0},onConsentChanged:function(e){},isReady:function(){return!0}}).onConsentChanged(t);var o=null,a=function(e){n.length<100&&n.push(e),o&&clearTimeout(o),o=setTimeout(t,1)},i=navigator&&"function"==typeof navigator.sendBeacon,s=!1,d={protocol_version:"f",app_version:"av",engine_version:"ev",development:"dv",app_build:"ab",cohort:"co",channel:"ch",games_played:"gp",play_session_id:"pi",play_session_count:"pc",days_elapsed:"de",facebook_player_id:"fi",facebook_context_type:"fc",facebook_entrypoint:"fe",facebook_referral_player_id:"fr",utm_source:"us",utm_medium:"um",utm_campaign:"uc",utm_term:"ut",utm_content:"uo",remote_user_id:"ru",global_user_id:"guid",device_width:"dw",device_height:"dh",non_interaction:"ni",country:"ct",event:"e",game:"g",user:"u",client_time:"t",value:"v",provider:"ao",ad_result:"ar",ad_response:"ag",ad_point:"ap",transport:"tr",web_url:"wu",retry:"r",label:"l",advertisement_id:"ai",script_version:"xv",cache_buster:"n",page_session_id:"si"},l=new function(){try{var e="__frvrLocalStorageTest__";window.localStorage.setItem(e,e),window.localStorage.removeItem(e),this.storage=window.localStorage,this.type="localStorage"}catch(e){this.storage={},this.type="in-memory"}this.setItem=function(e,r){this.storage[e]=r},this.getItem=function(e){return this.storage[e]},this.getStorageType=function(){return this.type}};function c(e){var r=e||"-";function n(){return(65536*(1+Math.random())|0).toString(16).substring(1)}var t=(new Date).getTime().toString(16).slice(0,11)+(65536*(1+Math.random())|0).toString(16).substring(1,2);return n()+n()+r+n()+r+n()+r+n()+r+t}var u="in-memory",g=c(),w=c(),p=c();function _(e,r,n){"localhost:8080"!==window.location.host&&-1==(window.location.search||"").indexOf("ci_run")&&(n=void 0!==n?n:5,e(r,(function(){if(n>0){var t=5e3*(Math.pow(2,5-n)+Math.random());r.r=5-n+1,setTimeout(_.bind(void 0,e,r,--n),t)}})))}function m(e,r,n){if(navigator.sendBeacon(e,JSON.stringify(r)))return!0;n()}function f(e,r,n){var t=new XMLHttpRequest;t.overrideMimeType&&t.overrideMimeType("text/plain; charset=UTF-8");try{t.open("POST",e,!0),t.setRequestHeader("Content-type","text/plain; charset=UTF-8"),t.withCredentials=!0,t.onreadystatechange=function(){if(4==t.readyState){var e=t.status;t=t.onreadystatechange=null,200!=(e=parseInt(e))&&204!=e?n():s=!0}},t.send(JSON.stringify(r))}catch(e){n()}}function v(e,r,n){r.n=Math.random();var t=document.createElement("img");t.onload=function(){s=!0,t.onerror=t.onload=null},t.onerror=function(){n(),t.onerror=null},t.src=e+"?"+function(e){var r=[];for(var n in e)r.push(encodeURIComponent(n)+"="+(void 0!==e[n]&&null!=e[n]?encodeURIComponent(e[n]):""));return r.join("&")}(r),document.body.appendChild(t)}function R(e,r){return i&&s?(r.transport="bcn",m.bind(void 0,e)):XMLHttpRequest?(r.transport="xhr",f.bind(void 0,e)):(r.transport="img",v.bind(void 0,e+"/i"))}function h(e){var r={};for(var n in e)void 0!==e[n]&&null!=e[n]&&(r[d[n]||n]=e[n]);return r}function b(){if(!e.hasConsent(e.COOKIES))return p;var r=l.getItem("pageSessionId");return r||(r=p,l.setItem("pageSessionId",r)),r}window.__FRVR.globalUserId=function(){if(!e.hasConsent(e.COOKIES))return g;var r;if(document&&document.cookie){var n=document.cookie.match("^(?:.*_frvr=([^;]*)).*$");r=n&&n[1]||g;var t=new Date;t.setDate(t.getDate()+730),document.cookie="_frvr="+r+"; path=/; expires="+new Date(t).toUTCString()+"; domain="+function(){for(var e=document.location.hostname.split("."),r=e.length-1;r>=0;r--){var n=e.slice(r).join(".");if(document.cookie="get_tld=test;domain=."+n+";",document.cookie.indexOf("get_tld")>-1)return document.cookie="get_tld=;domain=."+n+";expires=Thu, 01 Jan 1970 00:00:01 GMT;",n}return""}()+";",u="cookie"}else(r=l.getItem("globalUserId"))||(r=g,l.setItem("globalUserId",r)),u=l.getStorageType();return r};var y=[],S=void 0;function F(e){for(var n=e.channel,t=window.__FRVR.globalUserId(),o=(b(),0);o<y.length;o++)y[o](e);var a="unknown://";document&&document.location&&document.location.protocol&&(a=document.location.protocol),a=S||a;var i=void 0;document&&document.location&&document.location.href&&(i=document.location.href);var s=[a,r,e.context||"_unspecified_",t].join("/");e.app_version=e.app_version||"0.0.0",e.app_build=e.app_build||"000000",e.channel=n||e.channel,e.web_url=i,e.script_version="2.0.0",e.protocol_version=5,e.page_session_id=e.page_session_id||b(),e.play_session_id=e.play_session_id||null,e.cache_buster=Math.random(),e.global_user_id=t,e.global_user_id_source=u;var d=60*(new Date).getTimezoneOffset()*1e3;e.client_time=new Date(Date.now()-d).toISOString().slice(0,-1),_(R(s,e),h(e))}exports=window.__FRVR.analytics={},exports.logDiscoveryPageView=function(e){(e=e||{}).event="discovery_page_view",a(e)},exports.logAdImpression=function(e){(e=e||{}).event="ad_impression",a(e)},exports.setProtocolOverride=function(e){S=e},exports.getPageSessionId=b,exports.getPlaySessionId=function(){if(!e.hasConsent(e.COOKIES))return w;var r=l.getItem("playSessionId");return r&&parseInt(l.getItem("playSessionIdTimeStamp"))+18e5<Date.now()&&(r=null),r||(r=w,l.setItem("playSessionId",r)),l.setItem("playSessionIdTimeStamp",Date.now()),r},exports.compressContext=h,exports.extraFieldFunctions=y,exports.logEvent=function(e,r){"object"==typeof e&&(r=e,e="__unspecified"),(r=r||{}).event=e,a(r)}}(window.__FRVR.consent),window.__FRVR.initPromise.then((()=>{exports=window.__FRVR.analytics||{},exports.compressContext=e=>e,exports.extraFieldFunctions=FRVR.tracker.extraFieldFunctions,exports.logEvent=FRVR.tracker.logEvent})),window.__FRVR.initPromise.then((()=>{var e=window.__FRVR,r=e.cohort().buildJson||{};e.fsxBuildId=r.fsxBuildId;try{e.XSEngineBranch=r.repos["@frvraps/frvr-xs"].branch}catch(e){console.warn("Could not determine __FRVR.XSEngineBranch")}try{e.XSEngineBranch&&0===e.XSEngineBranch.indexOf("release/")&&(e.XSEngineVersion=e.XSEngineBranch.slice(8))}catch(e){}e.analytics.extraFieldFunctions.push((function(r){r.context=e.cohort().name||"_no_game_",r.app_build=e.cohort().configJs.build,r.app_version=e.cohort().version,r.channel=e.getChannel()})),(window.androidWrapper||window.iOSWrapper)&&e.analytics.setProtocolOverride?.("https://"),window.FRVR||e.analytics.logEvent("page_loading")})),window.version=window.__FRVR.cohort().version,window.gameid=window.__FRVR.cohort().name,window.gaPath=window.__FRVR.cohort().gaPath,window.vpath=window.__FRVR.cohort().vpath,window.spath=window.__FRVR.cohort().spath,window.extsize=window.__FRVR.cohort().jsSize,window._jsonData=window.__FRVR.cohort().moreJson,window.LEGACY_COORD_SYSTEM=!1,window.initTime=window.__FRVR.startTime;var preloader=document.createElement("preloader");if(document.body.appendChild(preloader),!window.console||!console.log){var fn=function(){};console={log:fn,debug:fn,info:fn,warn:fn,error:fn}}Host={Localize:{languages:window.__FRVR.cohort().supportedLanguages},dataUrlsSupported:function(){var e=document.createElement("canvas");return e.toDataURL&&0==e.toDataURL("image/png").indexOf("data:image/png")}()},function(e,r,n,t){var o="GameAnalytics";e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)}}(window,document),window.embeddedFiles={},window.embedFiles=function(e,r){for(var n=0;n<e.length;n++){var t=r[n];window.embeddedFiles[e[n]]=t}},window.embeddedAssets={},window.loadAssets=function(e,r,n){for(var t=0;t<e.length;t++){var o=e[t],a=r[t];window.embeddedAssets[o]=a?[a,n[t]]:n[t]}},function(){var e=0;window.htmlprogress=function(r,n){e=Math.max(n/r,e)};var r=0,n=setInterval((function(){e<.5&&(e+=(.5-e)/100),r+=(e-r)/10,window.__FRVR.platformSpecificProgress&&window.__FRVR.platformSpecificProgress(r)}),50);window.htmlclean=function(){window.__FRVR.gameIsLoaded=!0,preloader&&preloader.parentNode&&preloader.parentNode.removeChild(preloader),clearInterval(n),window.__FRVR.platformSpecificCleanup&&window.__FRVR.platformSpecificCleanup()}}(),function(){"use strict";var e,r;if(!window.FBInstant&&!window.GSInstant){var n="|q|T~(a(a(a_^L_|P(5|P(5{F)>{F)>`o(5`o(5^!<W^!<W^K_^L]&^K[`{g[^{g[N^K?n^K?o^L?n^L[z|P]c|P^o^L^o^K]&^K?Z{x?E{8>@{3>4{l>h{L>``}?O`-?S`N?V](=5^N<-^L<-|P=n|P=n{P=2{P>D{7>x|v?f|I?Z{x>L`x=n`x=n^!>K^!>6^+>6`z>L`x|k{x|P{8{{{3{&{l{s{L|H`}|Y`-|d`N|g](`*^N^?^L^?|P`y|P`y{P`!{P{O{7{7|v|q|I|k{x{V`x`y`x`y^!{V^!{-^+{-`z{V`x~<><X_|o=i|o?h`+[|]![$|D)-^HEkq=hM;k+;k_[/<t~<>)+(D[+<u]2)T`2),`6=i`6=6`1=]`q>O|E),uCzx7p<1P;kE;k~,!x:nq=oE;k/.k~[/<t`T[$?U<tmAl~<>)+(DEBl~<O(j(T`j>Y^??A]=?T]M>9[9>f[o=;[K=i?D>|?X?m?.?[?.?[[d[i[<[4]#[$[/<t~<>_(p[/<u?p>N>/[4<N[I=^=i?D).?M)4?@(w]GY8k^g~[/<t<j(![X=icAl~)&_<>6Al~)I(i)9?E).>4)Z>I(<=o(!)`<[<U<m<<<Y=e<1=1<-=*=L=`=i~)&_<>=2=><<>^)f=|){<=)^<[(v?B([?v)t?^<O[I=2=>[/<t~_<N<>=p(!)B(Ucmj=A(w?C";-1==location.search.indexOf("theme=light")&&(-1!=location.search.indexOf("theme=dark")||window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&preloader.classList&&preloader.classList.add&&(preloader.classList.add("dark"),n=n.replace("(a(a(a","<><><>")),e=function(e,r){function n(e){for(var r={},n=0;n<e.length;n++)r[e[n]]=n;return r}var t=n("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/!#$&*-,.:;@()<=>?[]^`{|}"),o=n("()<=>?[]^`{|}"),a=0;function i(){var e,n,i=r[a++];switch(i){case"_":e=0;break;case"~":e=1;break;case"%":e=149932;break;case"'":e=-149932;break;case"@":e=(e=t[r[a++]]+74*t[r[a++]]+5476*t[r[a++]]+405224*t[r[a++]])/100-149932;break;default:e=void 0!==(n=o[i])?88*n+t[r[a++]]:(e=t[i]+74*t[r[a++]]+5476*t[r[a++]])/100-2026}return e}function s(){return i()?"rgb("+i()+","+i()+","+i()+")":"rgba("+i()+","+i()+","+i()+","+i()+")"}var d=document.createElement("canvas");d.width=i(),d.height=i();var l=d.getContext("2d");l.scale(1,1);for(var c,u=[d],g=0;g<e.length;g++)switch(e[g]){case"4":var w=getNewCanvasObject();w.width=i(),w.height=i(),l=w.getContext("2d"),u.push(w);break;case"b":var p=l.createPattern(l.canvas,"no-repeat"),_=u.pop();releaseCanvas(_),(l=u[u.length-1].getContext("2d")).fillStyle=p;break;case"t":c=l.createLinearGradient(i(),i(),i(),i());break;case"D":c=l.createRadialGradient(i(),i(),i(),i(),i(),i());break;case"8":c.addColorStop(i(),s());break;case"F":l.fillStyle=c;break;case"f":l.save();break;case"/":l.bezierCurveTo(i(),i(),i(),i(),i(),i());break;case"p":l.strokeStyle=s();break;case"w":l.lineCap="butt";break;case"y":l.lineJoin="miter";break;case"9":l.miterLimit=i();break;case"6":l.fillStyle=s();break;case"n":l.beginPath();break;case"q":l.closePath();break;case"o":l.fill();break;case"P":l.stroke();break;case"r":l.restore();break;case"2":l.arc(i(),i(),i(),i(),i(),1===i());break;case"m":l.moveTo(i(),i());break;case"l":l.lineTo(i(),i());break;case"5":l.quadraticCurveTo(i(),i(),i(),i());break;case"C":l.clip();break;case"E":l.lineWidth=i();break;case"A":l.transform(i(),i(),i(),i(),i(),i());break;case"u":l.translate(i(),i());break;case"V":l.scale(i(),i());break;case"0":l.rotate(i());break;case"K":l.globalAlpha=i();break;case"G":l.strokeStyle=c;break;default:console.error("unhandled",e[g])}return a=0,i(),i(),d}("6nmllllllllllmlllllllllllm/l//llll/lmlll/m/l//llll/lmlll/o6nm/l2mo6nm//l22mot88Fnm//l//mo6nm/lll/mot88Fnm/l//o6nm/ll/lmo6nm/o",n);var t=document.createElement("loadbar");setTimeout((function(){t&&(t.style.display="block")}),500),r=document.createElement("div"),preloader.appendChild(t),t.appendChild(r),preloader.appendChild(e)}var o=0,a=0;function i(){if(!window.FBInstant&&!window.GSInstant){var r=document.documentElement.clientWidth,n=Math.min(window.innerHeight,document.documentElement.clientHeight);if(o!=r||a!=n){o=r,a=n;var i=.6*Math.min(r,n)>>0,s=.978260869*i>>0,d=(n-1.15*s)/2>>0;t.style.width=e.style.width=i+"px",e.style.height=s+"px",t.style.left=e.style.left=((r-i)/2>>0)+"px",e.style.top=d+"px",t.style.height=(i/40>>0)+"px",t.style.top=d+1.15*s+"px"}}}i(),window.__FRVR.platformSpecificProgress=function(e){r&&(r.style.width=(100*e>>0)+"%"),i()},window.__FRVR.platformSpecificCleanup=function(){e&&(e.width=e.height=1),t=r=e=preloader=null}}();</script>
-      <canvas id="gameCanvas"></canvas>
-      <script>var cs=document.getElementById("gameCanvas").style;cs.width=cs.height="100%";</script>
+                            .container2 .btn {
+                              position: absolute;
+                              top: 70%;
+                              left: 50%;
+                              transform: translate(-50%, -50%);
+                              -ms-transform: translate(-50%, -50%);
+                              background-color: transparent;
+                              color: white;
+                              font-size: 16px;
+                              padding: 12px 24px;
+                              border: none;
+                              cursor: pointer;
+                              border-radius: 5px;
+                              text-align: center;
+                              font: 700 24px Torus,sans-serif;
+                            }
+                            button.play_game_btn {
+                                position: absolute;
+                                top: 46%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                -ms-transform: translate(-50%, -50%);
+                                background-color: transparent;
+                                color: white;
+                                padding: 12px 24px;
+                                border: none;
+                                cursor: pointer;
+                                border-radius: 5px;
+                                text-align: center;
+                            }
+                            .container2 .btn:hover {
+                              background-color: grey;
+                            }
+                            .noinstall { z-index: +100000000;display: inline-block; background: #ff7914;/* top: 7.6em; */ position: absolute; padding: 3px 5px; left: 6px; color: #fff; font-size: 14px; }
+                        </style>
+                <div class="gameDetails_100">              
+                  <div  style="padding-top:0"  class="gameplay">            
+                    <div class="gameWrapper">                
+                      <center id="game_center_id">
+                        <form  class="start-game-class" name="start-game-form" id="start-game-id" method="post" action="">
+                          <div class="container2"><button id="imgbutton" name="imgbutton">
+                            <!-- <div class="noinstall">No Install !</div> -->
+                            <img id='game_img_btn' width='600' height='400' src='https://slides.cricketgamesatme.com/slide/5210_slide.jpg' fetchpriority='high' class='image' alt='Cricket World Cup' style='border:none'/>                          </button>
+                          <input type="hidden" name="playid" value="5210"/>
+                                                    <button id="startbutton" class="playButton bounceBtn"><span>Play Now</span></button>
+                           <h2 class="gameHeading">Cricket World Cup Game</h2>
+                          <div id="overlaylayer" class="overlay"></div>
+                                                    </div>
+                          
+                        </form>
+                      </center>
+                    </div> 
+                   
+                                      </div>             
+            </div>                
+                
+                      <!-- *** Ratings *** -->
 
-        <div id="overlay"></div>
 
-        <div id="overlay"></div>
-
-      <content itemscope="" itemtype="https://schema.org/VideoGame">
-  <h1 itemprop="name">Cricket FRVR</h1>
-  <meta itemprop="url" content="https://cricket.frvr.com/">
-  <div itemprop="author" itemscope="" itemtype="http://schema.org/Organization">
-    <p style="margin-top:0px"><span itemprop="name"><a itemprop="url" href="http://frvr.com/">By FRVR</a></span></p>
+<div class="gameFooter">
+  <div class="gameSeclogo">
+    <img id='game_img_btn' width='50' height='50' style='width:50px;height:50px' src='https://thumbs.cricketgamesatme.com/thumbs/5210_thumb.jpg' fetchpriority='high' class='image' alt='Cricket World Cup' style='border:none'/>      <h2>Cricket World Cup</h2>
   </div>
 
-  <metadata>
-    <!--<img itemprop="image" src="" data-original="/game/./i/web/icon196x196.png"/>-->
-    <meta itemprop="playMode" content="SinglePlayer">
-    <p>Genre: <span itemprop="genre"></span></p>
+  <div class="otherOptions">
+    <div class="shareBox">
+      <div class="shareWith">
 
-    <link itemprop="applicationCategory" content="Game">
-    <link itemprop="applicationSubCategory" content="Board, Puzzle">
-    <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-      <meta itemprop="price" content="$0">
-      <meta itemprop="priceCurrency" content="USD">
-      <link itemprop="availability" href="http://schema.org/InStock">
-    </span>
-    <meta itemprop="contentRating" content="Everyone">
-    <meta itemprop="playMode" content="SinglePlayer">
-  </metadata>
+            <a id="whatsapp_share"  href="whatsapp://send?text=Check%20this%20out%3A%20https%3A%2F%2Fwww.cricketgamesatme.com%2Fgames%2Fcricket-world-cup?utm_source=whatsapp-share%26utm_medium=whatsapp" class="social-share-btn atmbutton small whatsapp" data-action="share/whatsapp/share data-props="whatsapp" data-rel="external">
+      <img src="/images/wa-white-icon.svg" alt="Game 1" width="24" height="24"/>                                               
+    </a>
+    
+        
+    <a id="facebook_share" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.cricketgamesatme.com%2Fgames%2Fcricket-world-cup&amp;src=sdkpreparse" target="_blank" class="social-share-btn atmbutton small facebook" data-props="facebook" data-rel="external">
+        <img src="/images/fb-white-icon.svg" alt="Game 1" width="24" height="24"/>
+    </a>
+    <a id="twitter_share" href="https://twitter.com/intent/tweet?text=Cricket-world-cup&amp;url=https%3A%2F%2Fwww.cricketgamesatme.com%2Fgames%2Fcricket-world-cup" target="_blank" class="social-share-btn atmbutton small twitter" data-props="twitter" data-rel="external">
+        <img src="/images/tw-white-icon.svg" alt="Game 1" width="24" height="24"/>
+    </a>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <font id="error1"><font onClick="if (!window.__cfRLUnblockHandlers) return false; showDivlike('5210','1','10','Likes','0','0','0','5077','0')" data-cf-modified-4eaaa7005eb6b59442c0723f-=""><img id="like" class="pointer" src="https://image.cricketgamesatme.com/icons/like.png"></font></font>
 
-  <p>In Cricket FRVR, you're star batter of your team, and your goal is to stay on guard as players try to hit your team's wicket with the ball. Try to score a run by hitting the ball and then run to the other end of the field before the field team can return the ball.</p>
-<p>If you hit the ball to the edge of the field, your team will be awarded four runs, and it's called Four. The shot with the highest score is a Six, so try hitting the ball over the edge without touching the ground to score!</p>
-Hit the ball. Control the field. Become a Cricket legend!
-  <p><a href=".">Please enable JavaScript to play now!</a></p>
+        <span class="icon-thumb_bk"><font style="font-size:12px;margin-top: 2px;position: absolute;z-index: 999;margin-left: 0px;display: block;">100%</font></span>
 
-  <h2>More information</h2>
-  <ul>
-    <li><a href="//frvr.com/">FRVR Website</a></li>
-    <li><a href="http://news.frvr.com">FRVR News</a></li>
-    <li><a href="//twitter.com/frvrgames"></a></li>
-    <li><a href="//www.facebook.com/frvrgames"></a></li>
-    <li><a href="//plus.google.com/+Frvrgames">FRVR on Google+</a></li>
-  </ul>
-  <h2>More great games</h2>
-  <ul>
+        <!-- <img src="/images/icon-like.svg" alt="Game 1" width="30" height="30"/> -->
+      </li>
+      <li>      
+        <font id="error2"><font onClick="if (!window.__cfRLUnblockHandlers) return false; showDivdislike('5210','1','10','Dislikes','0','','','5077','0')" data-cf-modified-4eaaa7005eb6b59442c0723f-=""><img id="like" class="pointer" src="https://image.cricketgamesatme.com/icons/dislike.png"></font></font>
 
-  </ul>
-  <h2>More platforms</h2>
-  <ul>
+        <span class="icon-thumb_bk dislikeTxt"><font style="font-size:12px;margin-top: 2px;position: absolute;z-index: 999;margin-left: 0px;display: block;">0%</font></span>
+        <!-- <img src="/images/icon-dislike.svg" width="30" height="30" alt="Game 1"/> -->        
+      </li>
+      <li>
+            <div  class="gamebottom2">
+            <table cellpadding="0" cellspacing="10" border="0">
+            <tr style="border: 0px solid #ff0000; line-height: 25px;">
+            <td style="padding: 0px; " valign="middle" width="107px" height="25px" bgcolor="#c0c0c0" class="tdmap">
+            
+            <div id="starfill"  ><div id="starfilldiv" style="width: 74%; background: #f8881b; height: 25px" ><div style="width: 107px">&nbsp;</div></div></div>
+            
+            <div style="margin-top: -25px; cursor: pointer" >
+              <img src="https://image.cricketgamesatme.com/star1.png" alt="rating" usemap="#starmap" >
+              </div>
+            <map name="starmap" id="mapcord">
+              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(0.5)" coords="0,0,10,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(0.5,'info@cricketgamesatme.com','5210');" alt="Star Rating 0.5" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
+              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(1.0)" coords="11,0,21,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(1,'info@cricketgamesatme.com','5210');" alt="Star Rating 1" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
+              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(1.5)" coords="22,0,31,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(1.5,'info@cricketgamesatme.com','5210');" alt="Star Rating 1.5" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
+              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(2.0)" coords="32,0,42,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(2,'info@cricketgamesatme.com','5210');" alt="Star Rating 2" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
+              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(2.5)" coords="43,0,52,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(2.5,'info@cricketgamesatme.com','5210');" alt="2.5" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
+              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(3.0)" coords="53,0,64,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(3,'info@cricketgamesatme.com','5210');" alt="Star Rating 3" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
+              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(3.5)" coords="65,0,76,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(3.5,'info@cricketgamesatme.com','5210');" alt="Star Rating 3.5" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
+              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(4.0)" coords="77,0,86,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(4,'info@cricketgamesatme.com','5210');" alt="Star Rating 4" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
+              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(4.5)" coords="87,0,96,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(4.5,'info@cricketgamesatme.com','5210');" alt="Star Rating 4.5" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
+              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(5.0)" coords="97,0,107,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(5,'info@cricketgamesatme.com','5210');" alt="Star Rating 5" data-cf-modified-4eaaa7005eb6b59442c0723f-="">        
+            </map>
+            </td>
+            <td style="padding: 0px; color: #003d58; " valign="bottom" align="left">
+              <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+              <meta itemProp="ratingValue" content="3.7" />
+              <meta itemProp="reviewCount" content="797" /> 
 
-  </ul>
+                            </div>
+            </td>
+            
+            <!-- <td style="padding: 0px; width: 15px" valign="bottom">&nbsp;</td> -->
+            </tr>
+            
+            <tr>
+              
+              <td align="left" colspan="2"  style="color: #003d58">
+                <output type="text" style="font-size: 8pt" size="100" name="checkurl" id="checkurl" readonly></output>
+                <div id="stardisplay"></div>
+              
+              </td>
+            </tr>
+            </table>
+          </div>  
+      </li>
+      <li class="reportLink">
+                      <span id="reportgame">  
+              <div class="tooltip">Report
+                <!-- <span class="tooltiptext">Report a Game</span> -->
+              </div>
+            </span>
+                      <div class="cricket_report_game">
+              <div id="report-game-popup-reason" class="report_game__popup reportPopup">
+                    <div class="popup-box">
+                        <div class="report_game__popup-circle"></div>
+                        <div class="report_game__popup-triangle"></div>
+                        <div id="report-game-popup-thankyou" class="report_game__popup-thankyou hidden">
+                            <div class="report_game__popup-header">
+                              <h3 class="box-title ellipsis">Thanks a million</h3>
+                            </div>
+                            <p class="report_game__popup-description">We'll get to work on fixing the game. If necessary, please contact our <font class="zendesk">support team</font> if you need further assistance.</p>
+                        </div>
+                        <div id="report-game-popup-select" class="report_game__popup-select">
+                            <div class="report_game__popup-header">
+                                <h3 class="box-title ellipsis">Report Game</h3>
+                            </div>
+                            <p class="report_game__popup-description">What kind of problem have you encountered?</p>
+                            <form id="report-game-form" method="POST">
+                                <ul class="report_game__popup-reasons">
+                                    <li class="report_game__popup-item">
+                                        <label><input type="radio" name="reason" value="1" required="">It's not starting.</label>
+                                    </li>
+                                    <li class="report_game__popup-item">
+                                        <label><input type="radio" name="reason" value="2">It stopped working.</label>
+                                    </li>
+                                    <li class="report_game__popup-item">
+                                        <label><input type="radio" name="reason" value="3">Delayed loading.</label>
+                                    </li>
+                                    <li class="report_game__popup-item">
+                                        <label><input type="radio" name="reason" value="4">Game not responding.</label>
+                                    </li>
+                                    <li class="report_game__popup-item">
+                                        <label><input type="radio" name="reason" value="5">Instructions not clear!</label>
+                                    </li>
+                                    <li class="report_game__popup-item">
+                                        <label><input type="radio" name="reason" value="6">Other</label>
+                                    </li>
+                                    <li class="report_game__popup-item">
+                                        <textarea id="other_comment" name="other_comment" style="display: none;height: 43px;width: 100%; margin: 5px 0 8px 0;"></textarea>
+                                    </li>
+                                    <script type="4eaaa7005eb6b59442c0723f-text/javascript">
+                                      $(document).ready(function() {
+                              $("input[name$='reason']").click(function() {
+                                  var test = $(this).val(); 
+                                  console.log(typeof test+' other clicked:'+test);
+                                 if(test == '6'){
+                                  $("#other_comment").show();
+                                }
+                                else{
+                                  $("#other_comment").hide();
+                                }
 
-  <p><a href="//frvr.com/">Always get the greatest new games </a></p>
-</content>
+                              });
+                          });
+                                    </script>
+                                </ul>
+                              <div class="report_game__popup-footer">
+                        <input type="hidden" name="reportgameid" id="reportgameid" value="5210">
+                        <input type="hidden" name="reportgameurl" id="reportgameurl" 
+                        value="cricket-world-cup">
+                                <button id="report-game-submit" class="small button" aria-label="Send Feedback">Send Feedback</button>
+                              </div>
+                            </form>
+                        </div>                              
+                    </div>
+                    <a class="report_game__popup-close" id="report-game-popup-close">
+                        <span class="icon--grey-cross"><img src="/images/close.svg" width="24px" height="24px" alt="Close" /></span>
+                    </a>
+                </div>
+            </div>
+                  </li>
+            <li class="share">
+        <img src="/images/icon-share.svg" width="30" height="30" alt="Game 1"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+  const Obj_maxbtn = document.getElementById("maxbtn");
+  Obj_maxbtn.addEventListener("click", () => {
+    console.log('maxbtn clicked');
+    fullScreen('url');
+  });
+</script>
+<style type="text/css">
+.cricket_report_game{z-index: 2; position: absolute;display: inline-block; margin: 0 0 0 4px;width: 32px;height: 32px;vertical-align: top;font-size: 13px;   display: none;}
+.cricket_report_game .report_game__popup {/*border: 2px solid #0065a0;*/border-radius: 4px; box-shadow: 0 0 10px #888;    border-radius: 4px; background-color: #fff; position: absolute;top: 0px;left: 32px;  color: #363636;width: 13em;display: none; }
+.cricket_report_game .report_game__popup {
+        /*border: 2px solid #0065a0;*/
+    border-radius: 4px;
+    box-shadow: 0 0 10px #888;
+        border-radius: 4px;
+    background-color: #fff;
+    position: absolute;
+        top: 0px;
+    left: 32px;
+      color: #363636;
+}
+.cricket_report_game .report_game__popup .popup-box {
+    overflow: hidden;
+    background-color: rgba(0,101,160,0.1);
+    margin: 0;
+    padding: 0;
+}
+.cricket_report_game .report_game__popup-circle {
+   /*  position: absolute;
+   width: 350px;
+   height: 300px;
+   background-color: #fff;
+   border-radius: 50%;
+   top: -140px;
+   left: -60px;
+   z-index: -1; */
+}
+.cricket_report_game .report_game__popup-triangle {
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border-bottom: 200px solid #0065a0;
+    opacity: 0.2;
+    border-left: 155px solid transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.cricket_report_game .report_game__popup-select {
+    min-width: 155px;
+    margin: 0 auto;
+    padding: 5px 12px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #888;
+    border: none;
+}
+.cricket_report_game .report_game__popup-header .box-title {
+    margin: 0 0 10px;
+    color: #363636;
+}
+.box-title {
+    margin-bottom: 0;
+    color: #0065a0;
+    line-height: 1.5;
+}
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+.cricket_report_game .report_game__popup-description {
+    margin: 0 0 10px;
+}
+.cricket_report_game .report_game__popup-reasons {
+    text-align: left;
+    margin: 0 0 10px;
+    display: inline-block;
+}
+.cricket_report_game .report_game__popup-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin: 0 0 5px;
+    white-space: nowrap;
+}
+.cricket_report_game .report_game__popup-select form label {
+    width: auto;
+    margin: 0;
+    font-size: 12px;
+    display:flex;
+    align-items: center;
+}
+form label {
+    clear: left;
+    float: left;
+    width: 45%;
+    margin-bottom: .75em;
+}
+.cricket_report_game .report_game__popup-item input {
+    margin: 0 5px 0 0;
+}
+form input[type="radio"] {
+    position: relative;
+    right: 0.3em;
+    margin-bottom: .75em;
+}
+.cricket_report_game .report_game__popup-footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
 
-      <script>!function(){function n(n){return function(o,e,t,i,a){e instanceof Error&&(a=e,e=void 0);var r=window.__FRVR.cohort().configJs,d=(((a=a||new Error(o)).stack||"").split("\n")[1]||"").split(":"),s=d.pop()||void 0,w=d.pop()||void 0;t=t||a.lineNumber||a.lineno||a.line||w||"",i=i||a.columnNumber||a.colno||a.column||s||"",e=e||a.sourceURL||"",o=o||a.message||a.toString&&a.toString()||"";var c=function(n){var o=[],e=(n&&n.stack||"").split("\n");e.shift();for(var t=0;t<e.length;t++)o.push(e[t].replace(/^\s*at\s+/g,"").replace(/(https?:\/\/[^\/]+)?/g,"").replace(/https?:\/\/[^\/]+/g,"").replace(/\/?game\/[^\/]+\/[^\/]+/g,"").replace(/:?<anonymous>:?/g,"").replace(/^([^ ]+)\s+\(/g,"$1(").replace(/^([0-9]+:[0-9]+$)/g,"($1)"));return o}(a)||[],g=e+": "+t+": "+i;window.Host&&Host.Log&&Host.Log(n+" Error: "+o+": "+g+"\nStack: "+c.join("\n")),console.error(n+" Error",o+": "+g,a),g+=": "+c.join("|").substr(0,150);var l=r.id+" "+r.version+" "+r.build+" "+n+" Error",p=Date.now()-(window.__FRVR.startTime||0);window.gax&&(gax("send","event",l,o,g,p),gax("send","exception",{exDescription:l+": "+o+": "+g}))}}window.onerror=n("JavaScript"),window.__FRVR.createErrorHandler=n;var o=n("Promise");window.onunhandledrejection=function(n){var e=n&&n.reason||{};o("onunhandledrejection error",void 0,void 0,void 0,e)}}(),function(){var n=window.__FRVR.cohort().configJs;window.ga=function(){console.warn("Stubbed ga() being called:",arguments)},window.gax=function(){console.warn("Stubbed gax() being called;",arguments)},window.gaAppInfo={appId:"com.frvr."+n.id,appName:n.id,appVersion:n.version,appBuild:n.build},window.initGoogle=function(){window.dataLayer=window.dataLayer||[],window.gtag=function(){dataLayer.push(arguments)},window.gtag("js",new Date),window.gtag("set",window.gaAppInfo),window.gtag("config","G-8CR3QVSC2J")}}(),function(){var n,o,e,t,i,a;window.__FRVR.cohort().configJs;window.ga=void 0,n=window,o=document,e="script",t="gtag",n.GoogleAnalyticsObject=t,n[t]=n[t]||function(){(n[t].q=n[t].q||[]).push(arguments)},n[t].l=1*new Date,i=o.createElement(e),a=o.getElementsByTagName(e)[0],i.async=1,i.src="https://www.googletagmanager.com/gtag/js?id=G-8CR3QVSC2J",a.parentNode.insertBefore(i,a),window.gax=function(){let n=Array.from(arguments);"send"===n[0]&&n.shift(),gtag.apply(this,n)},window.ga=console.log}(),function(){var n=window.__FRVR.externalJsRequest=new XMLHttpRequest;n.addEventListener("load",(function(n){var o=document.createElement("script");o.setAttribute("id","___externalJs"),o.setAttribute("spath",window.spath),o.text=n.target.responseText,document.documentElement.appendChild(o)})),n.addEventListener("progress",(function(n){n.lengthComputable?window.htmlprogress(n.total,.7*n.loaded):window.htmlprogress(window.extsize||5e5,n.loaded)}),!1),void 0!==window.spath&&(n.open("GET",spath),n.send())}(),ga((function(){setTimeout((function(){window.__FRVR.keepurl||window.XS&&XS.is.oppoGlobal||(window.location.hash="",window.history&&window.history.replaceState instanceof Function&&window.history.replaceState({},document.title,"./"))}),5e3)}));</script>
+  /*img#game_img_btn {
+    width: 50px;
+    height: 50px;
+}*/
 
-      <script></script>
+.cricket_report_game .report_game__popup-footer button {
+    max-width: 135px;
+    font-size: 13px;
+    margin: 0 auto 10px;
+    text-transform: capitalize;
+    color: #fff;
+    box-shadow: 1px 2px 3px #888;
+    background: -webkit-linear-gradient(top,#00b8e6,#514A9D) !important;
+}
+.cricket_report_game .report_game__popup-close {
+    position: absolute;
+    top: -5px;
+         right: -13px;
 
-    <script>!function(){var e=window._jsonData||{};e.scitylana&&(ga("provide","scitylana",(function(e,n){var t=[],i=!1,a=/^&|&$/gi,r=/&tid=([^&]+)&/,o=e.get("sendHitTask");e.set("sendHitTask",(function(d){o(d),i||function(){for(var e in n){var a=n[e];("any"===e||"undefined"!=typeof XS&&XS.is[e])&&-1===t.indexOf(a)&&t.push(a)}"undefined"!=typeof XS&&XS.is&&(i=!0)}();for(var s=d.get("hitPayload")+"&cd1="+encodeURIComponent(function(e){var n=(new Date).getTime(),t=window._sl_order;t>=n?t++:t=n,window._sl_order=t;var i=document.referrer?1:0;return"sl=1&u="+(e.get("userId")||e.get("clientId"))+"&t="+t+"&r="+i}(e)),c=0;c<t.length;c++)d.set("hitPayload",("&"+s+"&").replace(r,"&tid="+t[c]+"&").replace(a,""),!0),o(d)}))})),ga("require","scitylana",e.scitylana))}(),window.initGoogle();</script>
+             width: 18px;
+    height: 18px;
+    font-size: 6px;
+    font-weight: bold;
+    border: 1px solid #0065a0;
+    border-radius: 20px;
+    color: #0065a0;
+    background-color: white;
+    z-index: 2;
+}
 
-    <span id="inline-checksum" data-checksum="0b8b5936a905d8fd6ce358815084ae5b"></span>
+.icon--grey-cross {
+    background-position: -20.59375em -2.0625em;
+    width: .875em;
+    height: .90625em;
+}
+.cricket_report_game .report_game__popup-close span {
+    font-size: 13px;
+    position: relative;
+        left: 4.5px;
+    top: -2px;
+             cursor: pointer;
+}
+span[class*="icon--"] {
+    display: inline-block;
+}
+.report_game__popup-thankyou hidden{
+  display: none;
+}
+.cricket_report_game .report_game__popup-thankyou{
+  min-width: 144px;
+    margin: 0 auto;
+    padding: 10px 12px;
+    background: #e5eff5;
+    box-shadow: 1px 2px 3px #888;
+}
+.cricket_report_game .report_game__popup-thankyou .mascot {
+    font-size: 24px;
+    margin: 0 auto;
+}
+.icon--home {
+    background-position: -15.28125em -6.46875em;
+    width: 1.875em;
+    height: 1.9375em;
+}
+.cricket_report_game .report_game__popup-header .box-title {
+    margin: 0 0 10px;
+    color: #363636;
+            font-size: 1.75em;
+    }
+.wdg_page_game h2, .wdg_page_game h3 {
+    text-transform: none;
+}
+
+.wdg_page_game h2, .wdg_page_game h3 {
+    text-transform: none;
+}
+.cricket_report_game .report_game__popup-description {
+    margin: 0 0 10px;
+}
+.cricket_report_game .report_game__popup-thankyou .zendesk {
+    text-decoration: underline;
+    color: #000;
+}
+.hidden, .is-hidden {
+    display: none !important;
+}
+/***********************************************************
+******************* Styles for tooltip *********************
+************************************************************/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+    cursor:pointer;
+    margin-left: 5px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/*Other styles*/
+.otherOptions ul li img {
+    width: unset;
+    height: unset;
+    margin-left: unset;
+    cursor: pointer;
+    opacity: unset;
+}
+.otherOptions ul li img:hover {
+    transform: unset;
+    transition: unset;
+    opacity: unset;
+}
+
+@media (max-width: 768px) {
+  .tooltip {
+    background:#ffd742 !important;
+    padding:0px 12px !important;
+  }
+}
+</style>                                     
+                                      
+                  </div>
+              </div>
+        
+      </section>
+      <section class="gameDescription">
+        <div class="container">
+          <div class="gameDescriptionInner">
+            <div class="instruction">
+              <h3>Game Instructions:</h3>
+                  </div>
+                      </div>
+        </div>
+      </section>
+
+      <section class="gameList">
+        <div class="container">
+          <h2>Recommended Cricket game</h2>
+          <ul>
+              
+                
+                  <li>
+                    <a href="https://www.cricketgamesatme.com/games/cricket-20-20-ultimate" title="Play Online Cricket 20-20 Ultimate">
+                      <img width="375" height="250" class="lazyload blur-up thumb " data-src="/images/games/slide/431_slide.jpg"  alt="Play Cricket 20-20 Ultimate"/>
+                                          <span class="new">New</span>
+                                          <div class="gameTitle">                 
+                            <h2>Cricket 20-20 Ultimate</h2>
+                        <p>
+                          Play Cricket 20-20 Ultimate and get indulged into the futuristic cricket game of tomorrow! Live your cricketing spirit now!                        </p>
+                      </div>
+                    </a>
+                  </li>     
+                  
+                
+                  <li>
+                    <a href="https://www.cricketgamesatme.com/games/chota-bheem-cricket-panga" title="Play Online Chota Bheem Cricket Panga">
+                      <img width="375" height="250" class="lazyload blur-up thumb " data-src="/images/games/slide/1629_slide.jpg"  alt="Play Chota Bheem Cricket Panga"/>
+                                          <span class="new">New</span>
+                                          <div class="gameTitle">                 
+                            <h2>Chota Bheem Cricket Panga</h2>
+                        <p>
+                          Kalia and his clan has challenged Chota Bheem and his friends. Help Chota Bheem to face more than one bowler and win this game.                        </p>
+                      </div>
+                    </a>
+                  </li>     
+                  
+                
+                  <li>
+                    <a href="https://www.cricketgamesatme.com/games/cricket-world-cup-2011" title="Play Online Cricket World Cup 2011">
+                      <img width="375" height="250" class="lazyload blur-up thumb " data-src="/images/games/slide/102_slide.jpg"  alt="Play Cricket World Cup 2011"/>
+                                          <span class="new">New</span>
+                                          <div class="gameTitle">                 
+                            <h2>Cricket World Cup 2011</h2>
+                        <p>
+                          Play Cricket World Cup 2011 and live the moments of any of the World Cup 2011 match in your own style!                        </p>
+                      </div>
+                    </a>
+                  </li>     
+                  
+                
+                  <li>
+                    <a href="https://www.cricketgamesatme.com/games/cricket-championship" title="Play Online Cricket Championship">
+                      <img width="375" height="250" class="lazyload blur-up thumb " data-src="/images/games/slide/512_slide.jpg"  alt="Play Cricket Championship"/>
+                                          <div class="gameTitle">                 
+                            <h2>Cricket Championship</h2>
+                        <p>
+                          Either bat or bowl in this multi-level free online cricket game! Play the Helicopter shot, the famous Dil-scoop, and the Uper-Cut!                        </p>
+                      </div>
+                    </a>
+                  </li>     
+                  
+                
+                  <li>
+                    <a href="https://www.cricketgamesatme.com/games/india-vs-australia" title="Play Online India Vs Australia">
+                      <img width="375" height="250" class="lazyload blur-up thumb " data-src="/images/games/slide/119_slide.jpg"  alt="Play India Vs Australia"/>
+                                          <div class="gameTitle">                 
+                            <h2>India Vs Australia</h2>
+                        <p>
+                          Choose between India and Australia and enjoy the world?s most popular free sports game series in a 5 over match!                        </p>
+                      </div>
+                    </a>
+                  </li>     
+                  
+                
+                  <li>
+                    <a href="https://www.cricketgamesatme.com/games/power-cricket-t20" title="Play Online Power Cricket T20">
+                      <img width="375" height="250" class="lazyload blur-up thumb " data-src="/images/games/slide/133_slide.jpg"  alt="Play Power Cricket T20"/>
+                                          <div class="gameTitle">                 
+                            <h2>Power Cricket T20</h2>
+                        <p>
+                          Play Power Cricket T20 and take your cricket excitement to a new level! Enjoy this most popular game in online genre!                        </p>
+                      </div>
+                    </a>
+                  </li>     
+                        </ul>
+          <a href="/" class="playButton moreBlogs">View More Games</a>
+        </div>
+      </section>
+      <section class="blog">
+        <div class="container">
+          <h2>Blogs</h2>
+          <section class="variable slider">
+                          
+            <div>
+              <a href="https://www.cricketgamesatme.com/blog/ipl-2025-season-ipl-auction-teams-and-bonus-news-for-cricket-fans" class="blogItem">
+                <img class="lazyload blur-up" data-src="/blog/images/blog/ipl-2025-season-ipl-auction-teams-and-bonus-news-for-cricket-fanssmall.jpg" alt="IPL 2025 Season: IPL auction, Teams and Bonus News for Cricket Fans" />
+                            <span class="new sm">New</span>
+                            <div class="blogTitle">
+                  <h3>IPL 2025 Season: IPL auction, Teams and Bonus News for Cricket Fans</h3>
+                </div>
+              </a>
+            </div>
+              
+            <div>
+              <a href="https://www.cricketgamesatme.com/blog/t20-world-cup-2024-full-schedule-with-details-about-venues-dates-timings-and-more" class="blogItem">
+                <img class="lazyload blur-up" data-src="/blog/images/blog/t20-world-cup-2024-full-schedule-with-details-about-venues-dates-timings-and-moresmall.jpg" alt="T20 World Cup 2024 Full Schedule with Details About Venues, Dates, Timings and More" />
+                            <span class="new sm">New</span>
+                            <div class="blogTitle">
+                  <h3>T20 World Cup 2024 Full Schedule with Details About Venues, Dates, Timings and More</h3>
+                </div>
+              </a>
+            </div>
+              
+            <div>
+              <a href="https://www.cricketgamesatme.com/blog/ipl-2024-get-ready-for-the-exciting-match-dates-teams-stadiums-venues-and-more" class="blogItem">
+                <img class="lazyload blur-up" data-src="/blog/images/blog/ipl-2024-get-ready-for-the-exciting-match-dates-teams-stadiums-venues-and-moresmall.jpg" alt="IPL 2024: Get Ready for the Exciting Match Dates, Teams, Stadiums, Venues, and More" />
+                            <span class="new sm">New</span>
+                            <div class="blogTitle">
+                  <h3>IPL 2024: Get Ready for the Exciting Match Dates, Teams, Stadiums, Venues, and More</h3>
+                </div>
+              </a>
+            </div>
+              
+            <div>
+              <a href="https://www.cricketgamesatme.com/blog/cricket-world-cup-2023-your-comprehensive-guide-to-the-ongoing-tournament-points-table-and-wishing-message" class="blogItem">
+                <img class="lazyload blur-up" data-src="/blog/images/blog/cricket-world-cup-2023-your-comprehensive-guide-to-the-ongoing-tournament-points-table-and-wishing-messagesmall.jpg" alt="Cricket World Cup 2023: Your Comprehensive Guide to the Ongoing Tournament, Points Table and Wishing Message!" />
+                            <div class="blogTitle">
+                  <h3>Cricket World Cup 2023: Your Comprehensive Guide to the Ongoing Tournament, Points Table and Wishing Message!</h3>
+                </div>
+              </a>
+            </div>
+              
+            <div>
+              <a href="https://www.cricketgamesatme.com/blog/india-asia-cup-2023-final-india-secures-a-historic-win-over-sri-lanka" class="blogItem">
+                <img class="lazyload blur-up" data-src="/blog/images/blog/aaasmall.jpg" alt="India Asia Cup 2023 Final: India Secures a Historic Win Over Sri Lanka with Mohammed Siraj 5-Wicket Haul" />
+                            <div class="blogTitle">
+                  <h3>India Asia Cup 2023 Final: India Secures a Historic Win Over Sri Lanka with Mohammed Siraj 5-Wicket Haul</h3>
+                </div>
+              </a>
+            </div>
+                        
+          </section>
+          <a href="/blog" class="playButton moreBlogs">View More Blogs</a>
+        </div>
+      </section>
+      <section class="description">
+        <div class="container">
+          <div class="descriptionInner">
+            <h1>Cricket World Cup Game Overview</h1>
+              <div>Making a presence in the team of the world?s popular cricket match tournament is just like a dream comes true for all cricket lovers. Luckily, you have got an opportunity to lead 11 players and guide them in a way so that they can win the trophy for their country. Are you ready to dare this challenge? Join Cricket World Cup game and get ready to be appeared in one of the best sports games to play online! It is not less than an unforgettable treat for your craving for cricket.</div><div>&nbsp;</div><div>You have to compete for the World Cup cricket game in this amazing cool cricket sports game. Select the nation you want to play for and dive into the pool of matchless thrill and fun! Do not take your skills lightly and get ready to play some big shots to score as many points as possible gain the victory over all your rivals! Common friends! We know that you have the skill to become the international champion.</div><div>&nbsp;</div><div>Hit balls hard while also saving your three wickets until you chase your score successfully! You will be out of the game if you lose all your three wickets. Remember you will also have a particular amount of balls to play and make your score. Play 3 different types of cricket matches and taste the victory in every match to be the world champion! Enjoy this <a href="https://www.cricketgamesatme.com/"> html5 mobile games</a> in your browser anytime you want, no downloads required!</div>          </div>
+        </div>
+      </section>
+      <div class="googleAd">          <!-- ADD Code -->
+    
+              <!-- /ADD Code -->
+      </div>
+      <!-- ======================= /Center ADD bottom ======================= -->
+            <div id="taboola-below-article-thumbnails"></div>
+      <script type="4eaaa7005eb6b59442c0723f-text/javascript">
+        window._taboola = window._taboola || [];
+        _taboola.push({
+          mode: 'thumbnails-a',
+          container: 'taboola-below-article-thumbnails',
+          placement: 'Below Article Thumbnails',
+          target_type: 'mix'
+        });
+      </script>
+            <footer class="footer">
+        <div class="container">
+                  <a id="toplogo" href="https://www.cricketgamesatme.com/" onClick="if (!window.__cfRLUnblockHandlers) return false; ga('send', 'event', { eventCategory: 'Home-Widget', eventAction: 'click', eventLabel: 'home-logo', eventValue: 2});" title="Play Free Online Cricket Games - Cricketgamesatme" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
+                    <img
+              width="400"
+              height="50"
+              class="footerLogo"
+              fetchpriority="high"
+              src="/images/atmeCricket_logo.png"
+              alt="Play Free Online Cricket Games - Cricketgamesatme"
+              title="Play Free Online Cricket Games - Cricketgamesatme"
+            />
+                  </a>
+        
+          <div class="footerLink">
+            <a href="https://www.cricketgamesatme.com">Home</a>
+            <a href="https://www.cricketgamesatme.com/blog">Blogs</a>
+            <a href="https://www.cricketgamesatme.com/games/cpl-cricket-tournament">CPL Cricket Tournament</a> 
+            <a href="https://www.cricketgamesatme.com/games/online-cricket-2011">Online Cricket 2011</a>
+            <a href="https://www.cricketgamesatme.com/games/cricket-world-cup">Cricket World Cup</a>
+            <a href="https://www.cricketgamesatme.com/games/cricket-championship">Cricket Championship</a>
+          </div>
+          <div class="footerLink">
+            Copyright © Cricketgamesatme 2025
+                      </div>
+          <div class="footerSocialLink">
+            <a
+              class="logo3"
+              href="https://www.facebook.com/FreeOnlineCricketGames1/"
+              target="_blank"
+              ><img
+                data-src="/images/social/facebook.png"
+                alt="cricketgames facebook"
+                src="/images/social/facebook.png"
+            /></a>
+            <a
+              class="logo3"
+              href="https://x.com/PlOnlineGames"
+              target="_blank"
+              ><img
+                data-src="/images/social/x.png"
+                alt="cricketgamesatme X icon"
+                src="/images/social/x.png"
+            /></a>
+            <a
+              class="logo3"
+              href="https://www.cricketgamesatme.com/blog/"
+              target="_blank"
+              ><img
+                data-src="/images/social/blogger.svg"
+                alt="cricketgames blog"
+                src="/images/social/blogger.svg"
+            /></a>
+          </div>
+        </div>
+      </footer>    </div>
+    <script type="4eaaa7005eb6b59442c0723f-text/javascript">  
+      setTimeout(function() { 
+        lazyscriptload('https://apis.google.com/js/platform.js');
+      }, 4000);
+    </script>
+    <style>
+.favclass 
+{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    display: inline-block;
+    /*margin: 50px;*/
+}
+.favclass .img-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.favclass:hover .img-top { 
+    display: inline;
+}
+</style>
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+$(function(){
+  function scrollToAnchor(aid){
+      var aTag = $("a[name='"+ aid +"']");
+      $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+  }
+  $("#link").click(function() { 
+     scrollToAnchor('gameinstruction');
+  });
+  $("#linkcomment").click(function() { 
+     scrollToAnchor('fbcomment');
+  });
+  $("#linkwalkthrough").click(function() { 
+     scrollToAnchor('walkthrough');
+  });
+});
+</script>
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+/* fullScreen() used to Maximize the Game IFRAME in the Desktop View */ 
+  var elem;
+async function fullScreen(type,orientation = 'portrait'){ //alert($(obj).attr('width'));
+console.log('nk fullscr:',type);
+let nName = "";
+
+  if(type == 'swf'){
+    nName = 'DIV';
+
+    let player = document.querySelector("#gameframe ruffle-player");
+
+    if (!player) {
+      // fallback to iframe/embed
+      player = document.querySelector("#gameframe iframe, #gameframe embed, #gameframe div");
+    }
+
+    console.log("Fullscreen element:", player?.nodeName);
+
+    if (player) {
+      if (player.requestFullscreen) {
+        player.requestFullscreen();
+      } else if (player.webkitRequestFullscreen) {
+        player.webkitRequestFullscreen();
+      } else if (player.mozRequestFullScreen) {
+        player.mozRequestFullScreen();
+      } else if (player.msRequestFullscreen) {
+        player.msRequestFullscreen();
+      }
+    }
+  }
+  else {
+    nName = 'IFRAME';
+    let iframe = document.getElementById("gameframe");
+
+    if (iframe && iframe.nodeName === 'IFRAME') {
+        elem = iframe; // fullscreen the iframe itself
+    } else if (iframe && iframe.childNodes[1] && iframe.childNodes[1].nodeName === 'EMBED') {
+        elem = iframe.childNodes[1];
+    } else {
+        elem = document.getElementById("gameframe").childNodes[3]?.firstChild;
+    }
+
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+    } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+    }
+  }
+
+  if(orientation == 'landscape') { console.log('orientationchange called');
+      if (screen.orientation && screen.orientation.lock) {
+        try {
+          console.log('locked to landscape');
+          await screen.orientation.lock("landscape");
+
+        } catch (err) {
+          console.warn("Orientation lock failed:", err);
+        }
+      }
+  }
+
+}
+
+$('#report-game-popup-close').on('click',function(){  
+    $('#report-game-popup-reason').addClass('hidden');
+    $('.cricket_report_game').hide(); 
+});
+
+$("#reportgame").on('click',function(){
+  console.log('clicked nk reportgame');
+  if($('#report-game-popup-reason').hasClass("hidden"))
+  { $('.cricket_report_game').show(); 
+    $('#report-game-popup-reason').removeClass("hidden");
+    
+  }
+  else
+  { $('.cricket_report_game').show();  $('#report-game-popup-reason').show();  }
+});
+
+/*function reportgame(gID,gUrl){*/
+$("#report-game-submit").click(function(event){
+  event.preventDefault();
+   //$('#report-game-popup-reason').show();
+   let reason = $('input[name="reason"]:checked').val();
+   let reportgameid = $('#reportgameid').val();
+   let reportgameurl = $('#reportgameurl').val();
+
+   let other_comment = $('#other_comment').val();
+   console.log('report-game-submit:', reason, reportgameid, reportgameurl);
+
+   if (!reason) {
+    // show message and stop
+    $('#errMsgReportgame').show();
+    setTimeout(function () {
+      $('#errMsgReportgame').fadeOut();
+    }, 10000);
+    // alert("Please select one option before submitting.");
+    return;
+  }
+
+$.ajax({
+  url: "https://www.cricketgamesatme.com/ajax.php",
+  type: 'post',
+    data: {gID: reportgameid, gameurl: reportgameurl, type: 'reportgame', reasonid : reason, comment : other_comment },
+  }).done(function(response) {
+    if(response)
+    { $('#report-game-popup-thankyou').removeClass('hidden');
+      $('#report-game-popup-select').css('box-shadow','none');
+      /*$('#reportgame').empty().append('<span class="tooltip"><img src="https://image.cricketgamesatme.com/icons/success.png" style="width: 32px;height: 32px" /><span class="tooltiptext">Report Submitted!</span> </span>').show();*/
+    }    
+  });
+});
+
+function reportgame(gID,gUrl){
+
+$.ajax({
+  url: "https://www.cricketgamesatme.com/ajax.php",
+  type: 'post',
+    data: {gID: gID, gameurl: gUrl, type: 'reportgame'},
+  }).done(function(response) {
+    if(response)
+    {
+      $('#reportgame').empty().append('<span class="tooltip"><img src="https://image.cricketgamesatme.com/icons/success.png" style="width: 32px;height: 32px" /><span class="tooltiptext">Report Submitted!</span> </span>').show();
+    } 
+     
+  });
+}
+
+function showDivlike(gID,catID,scatID,field,count,userlike,userdislike,gLikes,gDislikes){
+$.ajax({
+  url: "https://www.cricketgamesatme.com/dashboard_files/usergamelike.php",
+  type: 'post',
+    data: {gID: gID, catID: catID,scatID: scatID, field: field, count: count, userlike: userlike, userdislike: userdislike, gLikes: gLikes, gDislikes: gDislikes},
+  }).done(function(response) {
+     if( $("font[id=error2]").children('img').length > 0)
+    {
+      $('#error2').empty().append('<img id="like" src="https://image.cricketgamesatme.com/icons/dislike.png">');  
+    }
+     $('#error1').empty().append(response);
+  });
+}
+
+function showDivdislike(gID,catID,scatID,field,count,userlike,userdislike,gLikes,gDislikes){
+$.ajax({
+  url: "https://www.cricketgamesatme.com/dashboard_files/usergamedislike.php",
+  type: 'post',
+    data: {gID: gID, catID: catID, scatID: scatID, field: field, count: count, userlike: userlike, userdislike: userdislike, gLikes: gLikes, gDislikes: gDislikes},
+  }).done(function(response) {
+    /*if ($.trim(response)==="")
+    {
+      $('#stardisplay').empty().append("<span style='color:red;font-size:x-small !important;'>Please login to do this</span>");   
+      $("#stardisplay").show().delay(2000).fadeOut();
+    }
+    else
+    {*/   
+    if( $("font[id=error1]").children('img').length > 0)
+    {
+      $('#error1').empty().append('<img id="like" src="https://image.cricketgamesatme.com/icons/like.png">'); 
+    }  $('#error2').empty().append(response);  
+
+
+  /*}*/
+     //$('#error2').empty().append(response);
+  });
+}
+
+</script>
+
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+
+function showDivFav(gID,user_fav, catID, scatID){
+
+$.ajax({
   
+  url: "https://www.cricketgamesatme.com/dashboard_files/usergamefav.php",
+  type: 'post',
+    data: {gID: gID,catID: catID,scatID: scatID, userfav: user_fav},
+  }).done(function(response) {
+    if ($.trim(response)==="")
+    {
+      $('#stardisplay').empty().append("<span style='color:red;font-size:x-small !important;'>Please login to do this</span>");   
+      $("#stardisplay").show().delay(2000).fadeOut();
+    }
+    else
+    {    $('#error3').empty().append(response);   }
+     //$('#error3').empty().append(response);
+  });
+}
 
 
-</body></html><!--
-     Local Variables:
-     mode: web
-     End:
--->
+function star(starvalue, ratinguser, gameID) {
+    //alert(starvalue);
+   //alert(ratinguser);
+    //alert(gameID);
+  $.ajax({
+   url: "https://www.cricketgamesatme.com/setstar.php",
+    type: 'post',
+    data: {rgID: gameID, rRate: starvalue, remail_id: ratinguser},
+  }).done(function(response) {
+     $('#stardisplay').empty().append(response);
+  });
+  $("#stardisplay").show().delay(2000).fadeOut();
+  $("#checkurl").hide();
+  
+}
+
+function refreshvote(gameID) {
+  $.ajax({
+   url: "https://www.cricketgamesatme.com/getvote.php",
+    type: 'post',
+    data: {rgID: gameID},
+  }).done(function(response) {
+     $('#vote').empty().append(response);
+  });
+}
+function dstar(starvalue) {
+  $("#checkurl").show();
+  checkurl.value = starvalue+" Star";
+  stardisplay.value="";
+  var sfill = "";
+  if(starvalue > 0 )
+  {  sfill = (starvalue * 20) + "%"; }
+    else
+    {  sfill = "80%";  }
+  $('#starfilldiv').css('width',sfill);
+  /*$.ajax({
+   url: "https://www.cricketgamesatme.com/starfill.php",
+    type: 'post',
+    data: {starvalue: starvalue},
+  }).done(function(response) {
+     $('#starfill').empty().append(response);
+  });*/
+}
+function cstar(starvalue) {
+  checkurl.value = "";
+  var sfill = "";
+  if(starvalue > 0 )
+  {  sfill = (starvalue * 20) + "%"; }
+    else
+    {  sfill = "80%";  }
+  $('#starfilldiv').css('width',sfill);
+  //alert(starvalue);
+  /*$.ajax({
+   url: "https://www.cricketgamesatme.com/starfill.php",
+    type: 'post',
+    data: {starvalue: starvalue},
+  }).done(function(response) {
+     $('#starfill').empty().append(response);
+  });*/
+
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const startBtn = document.getElementById("startbutton");
+
+  if (!startBtn) return; // ✅ prevents crash
+
+  startBtn.addEventListener("click", () => {
+    document.body.style.overflow = "hidden";
+  });
+});
+</script>
+<div id="wrap"></div>
+<style type="text/css">
+.ui-datepicker { font-size: 14px; z-index: +100000000 !important }
+</style>
+<script type="4eaaa7005eb6b59442c0723f-text/javascript"> 
+	</script></div>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4eaaa7005eb6b59442c0723f-|49"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'"> 
+
+<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+/*window.onscroll = () => {
+  yHandler();
+  userHasScrolled = true;
+};
+if(!userHasScrolled)
+{
+  setTimeout(function() { yHandler();
+  }, 2000);
+}*/
+
+
+</script>
+    <script type="4eaaa7005eb6b59442c0723f-text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://www.cricketgamesatme.com/lazysizes.min.js" async type="4eaaa7005eb6b59442c0723f-text/javascript"></script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4eaaa7005eb6b59442c0723f-|49" defer></script></body>
+<div style=" display: none;" id="mask1"></div>
+</html>
