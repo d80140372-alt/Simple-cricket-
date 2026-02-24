@@ -1,2395 +1,424 @@
 
 <!DOCTYPE html>
-
-
-
-
-
-
-
-<!-- 404 Redirect -->
-<html lang="en-US" prefix="og: https://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<link rel="manifest" href="/pwa/manifest.json">
-<meta name="description" content="
-Play the online free game Cricket World Cup at cricketgamesatme.com ! We have selected this games for best excitement and thrill in you!">
-<meta name="keywords" content="Cricket World Cup, Play Free Games, Play Online Free Games, Cricket Games, Online Cricket Games, Cricket Games Online">
-
-<link rel="preload" fetchpriority="high" as="image" href="https://slides.cricketgamesatme.com/slide/5210_slide.jpg">
-<link rel="preload" fetchpriority="high" type="text/css" href="https://www.cricketgamesatme.com/css/style.css" as="style">
-<link rel="preload" fetchpriority="high" type="text/css" href="/css/mainStyle.css" as="style">
-<link rel="preload" fetchpriority="high" type="text/css" 
-href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style">
-<link rel="preload" href="https://www.cricketgamesatme.com/lazysizes.min.js" as="script"/>
-<link rel="preload" href="https://code.jquery.com/jquery-2.2.0.min.js" as="script"/>
-
-                <link rel="preload" fetchpriority="high" type="text/css" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" as="style">
-
-        <link rel="preload" href="https://code.jquery.com/jquery-1.10.1.min.js" as="script"/>
-        <link rel="preload" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js" as="script"/>
-        <link rel="preload" fetchpriority="high" type="text/css" href="/css_new/mobile_css.css" as="style">
-        <link rel="preload" fetchpriority="low" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style">
-  <meta property="fb:app_id" content="2046789315460328"/>
-    <title>Cricket World Cup Game, Cricket Games - Play Online Free</title>
-    <link rel="stylesheet" href="https://www.cricketgamesatme.com/css/style.css" />
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="4eaaa7005eb6b59442c0723f-text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="/css/mainStyle.css" as="style"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<style> 
-  .blur-up { -webkit-filter: blur(5px) !important;filter: blur(5px) !important;transition: filter 400ms, -webkit-filter 400ms !important;}
-  .blur-up.lazyloaded {-webkit-filter: blur(0) !important;filter: blur(0) !important;}
-  .bannerInner{  flex-direction: column;  width: 64%;}
-  .error { color: red; }
-
-  /*#arrow-controls{
-  position: fixed;              
-  left: 16px;
-  top: 70%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 99999;
-}*/
-.space {
-    bottom: 4.2em !important;
-    left: -12.5em !important;
-    padding: 14px !important;
-    border-radius: 50% !important;
-}
-/*#arrow-controls {
-  display: flex;
-  flex-direction: row;
-  column-gap: var(--gap, 16px);
-  align-items: center;
-}*/
-#arrow-controls {
-  position: fixed;
-  display: flex;
-  flex-direction: row;      
-  align-items: center;
-  gap: var(--gap, 16px);
-  z-index: 9999;
-}
-#arrow-controls {
-   display: flex;
-  align-items: center;
-  gap: 0; /* NEVER animate this */
-}
-
-/* HORIZONTAL joystick */
-.right-joystick {
-  transform: translateX(var(--right-offset));
-  transition: transform 0.3s ease;
-}
-
-
-/* VERTICAL joystick */
-.left-joystick {
-  transform: translateX(var(--left-offset));
-  transition: transform 0.3s ease;
-}
-
-/*#arrow-controls {
-  --gap: 16px; 
-}*/
-
-/* horizontal joystick */
-.arrow-group.horizontal {
-   display: flex;
-  flex-direction: row;
-  gap: var(--gap);
-}
-
-/* vertical joystick */
-.arrow-group.vertical {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(3, auto);
-  gap: var(--gap);
-}
-
-.arrow-group {
-  gap: var(--gap, 16px);
-}
-
-.arrow-group.horizontal {
-  transform: translateX(var(--gap));
-}
-
-.arrow-group.vertical {
-  transform: translateX(calc(-1 * var(--gap)));
-}
-
-#drag-handle {
-  width: 36px;
-  height: 36px;
-  background: #1e88e5;
-  border-radius: 50%;
-  cursor: grab;
-  touch-action: none; /* IMPORTANT for mobile */
-}
-#drag-handle::after {
-    content: "≡";
-    top: 7px;
-    position: absolute;
-    left: 13px;
-} /* 3-line grip */
-#drag-handle:active {
-  cursor: grabbing;
-}
-
-@media screen and (orientation: landscape) {
-    #arrow-controls {
-        position: fixed;
-        left: 10.5em;
-        top: 70%;
-        display: flex;
-        align-items: center;
-        pointer-events: auto;
-      }
-
-    #arrow-controls {
-      position: absolute;        /* REQUIRED for dragging */
-      display: flex;
-      align-items: center;
-      touch-action: none;
-      pointer-events: auto;
-    }
-    #arrow-controls {
-      --joystick-gap: 26px;
-    }
-  /* joystick containers */
-    .arrow-group {
-      pointer-events: auto;
-    }
-    .joystick-wrapper {
-      transition: transform 0.25s ease;
-    }
-      .arrow-group.vertical,
-    .arrow-group.horizontal {
-      gap: 16px; /* CONSTANT – never animate */
-    }
- 
-  #arrow-controls {
-    position: absolute;        /* REQUIRED for dragging */
-    touch-action: none;        /* Prevent browser gestures */
-  }
-
-  #drag-handle {
-    width: 36px;
-    height: 36px;
-    background: #1e88e5;
-    border-radius: 50%;
-    cursor: grab;
-    touch-action: none;
-    pointer-events: auto;
-    z-index: 100000;
-  }
-
-    #drag-handle:active {
-      cursor: grabbing;
-    }
-    #arrow-controls[data-state="expand"] .left {
-      transform: translateX(calc(-1.1 * var(--joystick-gap)));
-    }
-
-    #arrow-controls[data-state="expand"] .right {
-      transform: translateX(calc(1.1 * var(--joystick-gap)));
-    }
-
-    #arrow-controls[data-state="squeeze"] .left {
-      transform: translateX(calc(-0.6 * var(--joystick-gap)));
-    }
-
-    #arrow-controls[data-state="squeeze"] .right {
-      transform: translateX(calc(-0.6 * var(--joystick-gap)));
-    }
-}
-
-@media screen and (orientation: portrait) {
-    #arrow-controls {
-        position: fixed;
-        left: 10.5em;
-        top: 70%;
-        display: flex;
-        align-items: center;
-        pointer-events: auto;
-      }
-
-    #arrow-controls {
-      position: absolute;        /* REQUIRED for dragging */
-      display: flex;
-      align-items: center;
-      touch-action: none;
-      pointer-events: auto;
-    }
-    #arrow-controls {
-      --joystick-gap: 18px;  /* CLOSER joysticks */
-    }
-
-    #arrow-controls .joystick-wrapper.left {
-      transform: translateX(var(--joystick-center-pull));
-    }
-
-    #arrow-controls .joystick-wrapper.right {
-      transform: translateX(calc(-1 * var(--joystick-center-pull)));
-    }
-  /* joystick containers */
-    .arrow-group {
-      pointer-events: auto;
-    }
-    .arrow-group {
-      gap: var(--key-gap, 16px);
-    }
-    .joystick-wrapper {
-      transition: transform 0.25s ease;
-    }
-      .arrow-group.vertical,
-    .arrow-group.horizontal {
-      gap: 16px; /* CONSTANT – never animate */
-    }
- 
-  #arrow-controls {
-    position: absolute;        /* REQUIRED for dragging */
-    touch-action: none;        /* Prevent browser gestures */
-  }
-
-  #drag-handle {
-    width: 36px;
-    height: 36px;
-    background: #1e88e5;
-    border-radius: 50%;
-    cursor: grab;
-    touch-action: none;
-    pointer-events: auto;
-    z-index: 100000;
-  }
-
-    #drag-handle:active {
-      cursor: grabbing;
-    }
-    #arrow-controls[data-state="expand"] .left {
-      transform: translateX(calc(-0.9 * var(--joystick-center-pull)));
-    }
-
-    #arrow-controls[data-state="expand"] .right {
-      transform: translateX(calc(0.9 * var(--joystick-center-pull)));
-    }
-    #arrow-controls[data-state="squeeze"] .joystick-wrapper.left {
-      transform: translateX(25vw); /* move right */
-    }
-
-    #arrow-controls[data-state="squeeze"] .joystick-wrapper.right {
-      transform: translateX(-25vw); /* move left */
-    }
-   /* #arrow-controls[data-state="squeeze"] .left {
-      transform: translateX(calc(-0.45 * var(--joystick-center-pull)));
-    }
-
-    #arrow-controls[data-state="squeeze"] .right {
-      transform: translateX(calc(-0.45 * var(--joystick-center-pull)));
-    }*/
-}
-
-/* a tiny handle you drag, not the buttons */
-
-/*#drag-handle{
-  position: absolute;
-  left: 50%;
-  top: -48px;
-  transform: translateX(-50%);
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  background: rgba(33,150,243,.95);
-  color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px; line-height: 1;
-  cursor: grab;
-  touch-action: none;  
-  user-select: none;
-  font-size: 26px;
-  background: linear-gradient(270deg, rgb(66 170 255) 0%, rgb(34 130 209) 35%, #006bc0f2 100% 100%);
-}*/
-
-#drag-handle::after {
-    content: "≡";
-    top: 7px;
-    position: absolute;
-    left: 13px;
-} /* 3-line grip */
-
-.playButton2{
-    padding: 4px;
-    position: absolute;
-    display: block;
-    margin-left: 5em;
-    z-index: 999;
-    bottom: 4em;
-    right: 4.8em;
-    border-radius: 50%;
-    background: grey;
-    color: white;
-    cursor: pointer;
-    background: rgb(2,0,36);
-    background: linear-gradient(20deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(0 169 255) 100%);
-    height: 34px;
-    width: 34px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(270deg, rgb(213 29 0) 0%, rgb(216 37 0) 35%, rgb(255 179 86) 100%);
-    border: 2px solid #ffffff;
-}
-
-.playButton2:hover, .playButton2:focus, .playButton2:active{
-  background: rgb(2,0,36);
-    background: linear-gradient(20deg, rgba(0 169 255) 0%, rgba(0 169 255) 35%, rgb(9,9,121,1) 100%);
-}
-
-.arrow{
-  padding: 0.2em 0.3em;
-    position: absolute;
-    display: block;
-    margin-left: 5em;
-    border-radius: 50px 20px;
-    z-index: 999;
-    color: #fff;
-    cursor: pointer;
-    background: rgb(2,0,36);
-    background: linear-gradient(20deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(0 169 255) 100%);
-    background: linear-gradient(270deg, rgb(213 29 0) 0%, rgb(216 37 0) 35%, rgb(255 179 86) 100%);
-    border-radius: 8px;
-    border: 2px solid #ffffff;
-}
-
-.arrow:hover, .arrow:focus, .arrow:active {
-  padding: 0.3em 0.5em;
-    position: absolute;
-    display: block;
-    margin-left: 5em;
-    border-radius: 50px 20px;
-    z-index: 999;
-    color: #fff;
-    cursor: pointer;
-    background: rgb(2,0,36);
-    background: linear-gradient(20deg, rgba(0 169 255) 0%, rgba(0 169 255) 35%, rgb(9,9,121,1) 100%);
-}
-
-.arrowleft{
-    bottom: 4.5em;
-    left: -18em;
-}
-.control {
-    bottom: 4.6em;
-    left: -32em !important;
-}
-.keyL{
-  bottom: 1.6em;
-    left: -32em !important;
-}
-.arrowright{
-    bottom: 4.6em;
-    left: -6.4em;
-}
-
-.keyW{
-  bottom: 7.4em;
-  right: 5em;
-}
-
-.keyA{
-     bottom: 4.5em;
-    right: 8.4em;
-}
-.keyQ{
-     bottom: 6.5em;
-    right: 8.4em;
-    rotate: 45deg;
-}
-.keyE{
-    bottom: 6.5em;
-    right: 2.1em;
-    rotate: -45deg;
-}
-.keyS{
-  bottom: 1.4em;
-  right: 5em;
-}
-
-.keyD{
-    bottom: 4.5em;
-    right: 2.1em;
-}
-
-.material-symbols-outlined{
-  font-size: 18px !important;
-}
-
-#maximizeimg:first-child{
-  display:none;
-}
-
-       /* #game_img_btn{ display: none; position: relative;z-index: 998 } */
-    #game_center_id{ display: block; position: relative;z-index: 995 }
-    @media (max-width: 768px) { .gameHeading {bottom: 272px;} }
-
-  .overlay{top: -208px;}
-        /* Standard */
-        ruffle-player:fullscreen {
-          display: flex !important;
-          justify-content: center !important;
-          align-items: center !important;
-          width: 100% !important;
-          height: 100% !important;
-          background: #000 !important;
-        }
-
-        /* Chrome / Safari / iOS */
-        ruffle-player:-webkit-full-screen {
-          display: flex !important;
-          justify-content: center !important;
-          align-items: center !important;
-          width: 100% !important;
-          height: 100% !important;
-          background: #000 !important;
-        }
-
-        /* Firefox */
-        ruffle-player:-moz-full-screen {
-          display: flex !important;
-          justify-content: center !important;
-          align-items: center !important;
-          width: 100% !important;
-          height: 100% !important;
-          background: #000 !important;
-        }
-
-        /* Canvas inside fullscreen */
-        ruffle-player:fullscreen canvas,
-        ruffle-player:-webkit-full-screen canvas,
-        ruffle-player:-moz-full-screen canvas {
-          max-width: 100% !important;
-          max-height: 100% !important;
-          width: auto !important;
-          height: auto !important;
-          margin: auto !important;
-          display: block !important;
-          object-fit: contain !important;
-        }
-    
-  /* #play_button{ display: block; position: relative;z-index: 10000} */
-  .gameDetails{ width: 100% }
-  .gameDetails_100 {
-      margin: 0;
-      background: #000;
-      width: 100%;
-      border-radius: 30px;
-      min-height: 400px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: rgba(27, 30, 36, 0.1) 0px 8px 16px 0px;
-  }
-  .gameDetails_100 {
-        width: 100%;
-        min-height: 240px;
-        border-radius: 16px;
-        margin-bottom: 24px;
-  }
-</style>
-
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Cricket World Cup Game, Cricket Games - Play Online Free" />
-<meta property="og:description" content="
-Play the online free game Cricket World Cup at cricketgamesatme.com ! We have selected this games for best excitement and thrill in you!"/>
-<meta property="og:url" content="https://www.cricketgamesatme.com/games/cricket-world-cup" />
-<meta property="og:site_name" content="cricketgamesatme.com" />
-<meta property="og:image" content="https://slides.cricketgamesatme.com/slide/5210_slide.jpg" />
- 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:url" content="https://www.cricketgamesatme.com/games/cricket-world-cup" />
-<meta name="twitter:description" content="
-Play the online free game Cricket World Cup at cricketgamesatme.com ! We have selected this games for best excitement and thrill in you!"/>
-<meta name="twitter:title" content="Cricket World Cup Game, Cricket Games - Play Online Free" />
-<meta name="twitter:site" content="cricketgamesatme.com" />
-<meta name="twitter:image" content="https://slides.cricketgamesatme.com/slide/5210_slide.jpg" />
-<meta name="twitter:creator" content="@PlOnlineGames" />
-
-<meta content="362528583948002" property="fb:pages">
-<meta content="100009165479651" property="fb:admins">
-<meta name="robots" content="noodp, noydir"/>
-<meta name="author" content="Apay Marketing" />
-<meta name="copyright" content="Copyright © 2017 by Apay Marketing, All rights reserved." />
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-<meta http-equiv="Cache-control" content="public" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<!--<meta property="Last-Modified" content="Mon Apr 24 11:19:14 IST 2017" />-->
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<link rel="dns-prefetch" href="//ajax.googleapis.com" />
-<link rel="dns-prefetch" href="//apis.google.com" />
-<link rel="dns-prefetch" href="https://accounts.google.com" />
-<link rel="dns-prefetch" href="https://www.gstatic.com" />
-<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-<link rel="preconnect" href="//ajax.googleapis.com" />
-<link rel="preconnect" href="//apis.google.com" />
-
-<link rel="dns-prefetch" href="//fonts.googleapis.com" />
-<link rel="preconnect" href="//fonts.googleapis.com" />
-
-<!-- site speed (SEO) -->
-<link rel="preconnect" href="//image.cricketgamesatme.com" />
-<link rel="preconnect" href="//flash.cricketgamesatme.com" />
-<link rel="preconnect" href="//slides.cricketgamesatme.com" />
-
-<link rel="dns-prefetch" href="//image.cricketgamesatme.com" />
-<link rel="dns-prefetch" href="//slides.cricketgamesatme.com" />
-<!-- /site speed (SEO) -->
-
-<link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-<link rel="preconnect" href="https://www.google-analytics.com" />
-<link rel="preconnect" href="https://www.google.com" />
-<link rel="preconnect" href="https://www.googleadservices.com" />
-<link rel="preconnect" href="https://www.googletagmanager.com" />
-<link rel="preconnect" href="https://accounts.google.com" />
-<link rel="preconnect" href="https://www.gstatic.com" />
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-
-
-<link rel="icon" href="https://www.cricketgamesatme.com/images/bat_stump_ball.png" sizes="32x32">
-<link rel="apple-touch-icon" href="https://www.cricketgamesatme.com/images/bat_stump_ball.png" />
-<link rel="shortcut icon" type="image/x-icon" href="https://www.cricketgamesatme.com/images/bat_stump_ball.png" />
-
-<!-- Google tag GA4- (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BGSTYF2NT8" type="4eaaa7005eb6b59442c0723f-text/javascript"></script>
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-BGSTYF2NT8');
-</script>
-    <script type="4eaaa7005eb6b59442c0723f-text/javascript">
-      $(document).on("ready", function () {
-        $(".variable").slick({
-          dots: false,
-          infinite: true,
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 1.2, // Show 1.5 slides
-                slidesToScroll: 1,
-                centerMode: false, // Optional: set to true if you want center alignment
-                infinite: false, // Optional: prevents repeating at end
-              },
-            },
-          ],
-        });
-
-        $(".searchIcon").on("click", function (e) {
-          e.stopPropagation();
-          $(".topNav").addClass("active").show();
-        });
-
-        $(".searchWrapper").on("click", function (e) {
-          e.stopPropagation();
-        });
-
-        $(document).on("click", function () {
-          if ($(".topNav").hasClass("active")) {
-            $(".topNav").removeClass("active").hide();
-          }
-        });
-
-        $(".share").on("click", function (e) {
-          e.stopPropagation();
-          $(".shareBox").toggleClass("toggleShare");
-        });
-        $(document).on("click", function () {
-          if ($(".shareBox").hasClass("toggleShare")) {
-            $(".shareBox").removeClass("toggleShare");
-          }
-        });
-
-        //  $(document).on("click", function () {
-        //   alert("hiiiiiiiii");
-        //   $('.gameBody').addClass('overflow');
-        // });
-      });
-
-//       $(window).load(function() {
-//  alert("window is loaded");
-// });
-
-      // document.getElementById("#gameplay").addEventListener("click", function() {
-      //    alert("hiiiiiiiii");
-      //   document.body.style.overflow = "hidden";
-
-      // });
-
-    </script>
-  </head>
-  <body class="gameBody">
-    <div class="main">
-      <header class="header">
-        <div class="container">
-          <div class="headerInner">
-            <div class="logo">
-              <a id="toplogo" href="https://www.cricketgamesatme.com/" onClick="if (!window.__cfRLUnblockHandlers) return false; ga('send', 'event', { eventCategory: 'Home-Widget', eventAction: 'click', eventLabel: 'home-logo', eventValue: 2});" title="Play Free Online Cricket Games - Cricketgamesatme" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
-                <img
-                  width="400"
-                  height="50"
-                  fetchpriority="high"
-                  src="/images/atmeCricket_logo.png"
-                  alt="Play Free Online Cricket Games - Cricketgamesatme"
-                  title="Play Free Online Cricket Games - Cricketgamesatme"
-                />
-              </a>
-              <div class="searchBox">
-                <img
-                  src="/images/search_black.svg"
-                  width="20"
-                  height="20"
-                  alt="Search"
-                  class="searchIcon"
-                />
-                <!-- <a href="#">
-                  <img
-                    width="30"
-                    height="30"
-                    fetchpriority="high"
-                    src="/images/userIcon.png"
-                    alt="User Icon"
-                    title="User Icon"
-                    class="userIcon"
-                  />
-                </a> -->
-              </div>
-            </div>
-            <script src="//code.jquery.com/jquery-1.12.4.min.js" type="4eaaa7005eb6b59442c0723f-text/javascript"></script>
-<a name="scrollbottomtotop"></a>
-  
-									<style>
-						.to-top { position: fixed; bottom: 20px;right: 20px; text-decoration: none; color: #fff;z-index: 999; 
-							background: #ff7914;padding: 19px 24px;display: none;border-radius: 50%; box-shadow: 0 0 10px #888;
-						}
-						.to-top:hover{ color: #151f28; background: #fff; }
-						@media screen and (max-width: 768px) and (min-width: 300px){
-							.fa-chevron-up:before{  font-size: 20px; }
-							.to-top{  padding: 13px 15px;  }
-						}
-					</style>
-					<a href="#" class="to-top"><i class="fa fa-chevron-up"></i></a>
-					<script type="4eaaa7005eb6b59442c0723f-text/javascript">            
-						$(document).ready(function() {
-							var duration = 500;
-							jQuery(window).scroll(function() {
-								if (jQuery(this).scrollTop() > 200) {
-									jQuery('.to-top').fadeIn(duration);
-								} else {
-									jQuery('.to-top').fadeOut(duration);
-								}
-							});
-
-							function scrollToAnchorTOP(aid){
-							    var aTag2 = $("a[name='"+ aid +"']");
-							    $('html,body').animate({scrollTop: aTag2.offset().top},'slow');
-							}
-							$(".to-top").click(function() { 
-							   scrollToAnchorTOP('scrollbottomtotop');
-							});
-						});
-					</script>
-			
-
-</script>
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <title>Play HandCricket.io â Online Cricket Game | Multiplayer Hand Cricket, Tournaments & Country Cup</title>
+   <meta name="keywords" content="online cricket game, cricket io, doodle cricket, play cricket online, free multiplayer cricket game, hand cricket game online, play hand cricket with friends, online hand cricket multiplayer, best hand cricket game, cricket game like IPL, hand cricket tournament, free online game">
+    <meta name="description" content="Play HandCricket.io, a free online cricket game inspired by Doodle Cricket. Compete in real-time multiplayer Cricket.io matches, challenge friends, climb leaderboards, win trophies, and contribute to your favorite team in country cup tournaments just like IPL.">
+      <link rel="canonical" href="https://www.handcricket.in/">
    
-</script>
-		
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-var filesadded="" //list of files already added
-
-var isFirebaseLoaded = false;
-var appLoaded = false;
-var messagingLoaded = false;
-
-function lazyscriptload(file) {
-    var scriptTag = document.createElement('script');
-    scriptTag.src = file;
-    scriptTag.type = 'text/javascript';
-    scriptTag.async = true;
-
-    scriptTag.onload = function() {
-        // detect firebase-app.js
-        if (file === "https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js") {
-            appLoaded = true;
-        }
-
-        // detect firebase-messaging.js
-        if (file === "https://www.gstatic.com/firebasejs/5.7.2/firebase-messaging.js") {
-            messagingLoaded = true;
-        }
-
-        // when both are loaded
-        if (appLoaded && messagingLoaded) {
-            isFirebaseLoaded = true;
-            console.log("Firebase fully loaded (app + messaging)");
-        }
-    };
-
-    document.head.appendChild(scriptTag);
-}
-
-/*let isFirebaseLoaded = false;
-function lazyscriptload(file) {
-    var scriptTag = document.createElement('script'); 
-    scriptTag.src = file; // set the src attribute
-    scriptTag.type = 'text/javascript'; // if you have an HTML5 website you may want to comment this line out
-    scriptTag.async = true; // the HTML5 async attribute
-    var headTag = document.getElementsByTagName('head')[0];
-    headTag.appendChild(scriptTag);
-    if(file == "https://www.gstatic.com/firebasejs/5.7.2/firebase.js")
-    {   isFirebaseLoaded = true;    }
-}*/
- 
-function loadjscssfile(filename, filetype){
-    if (filetype=="js"){ //if filename is a external JavaScript file
-        var fileref=document.createElement('script')
-        fileref.setAttribute("type","text/javascript")
-        fileref.setAttribute("src", filename)
-    }
-    else if (filetype=="css"){ //if filename is an external CSS file
-        var fileref=document.createElement("link")
-        fileref.setAttribute("rel", "stylesheet")
-        fileref.setAttribute("type", "text/css")
-        fileref.setAttribute("href", filename)
-    }
-    if (typeof fileref!="undefined")
-        document.getElementsByTagName("head")[0].appendChild(fileref)
-}
-
-function checkloadjscssfile(filename, filetype){
-    if (filesadded.indexOf("["+filename+"]")==-1){
-        loadjscssfile(filename, filetype)
-        filesadded+="["+filename+"]" //List of files added in the form "[filename1],[filename2],etc"
-    }
-    else
-    {    console.log("file already added!");   }  
-}
-</script>
-<style>
-body{
-	font-family: 'Lato',Calibri,Arial,sans-serif  !important;
-	}
-
-</style>
-			<nav class="topNav">
-              <ul>
-                <li class="backArrow">
-                  <img
-                    width="30"
-                    height="30"
-                    fetchpriority="high"
-                    src="/images/backArrowWhite.svg"
-                    alt="Back Arrow"
-                    title="Back Arrow"
-                  />
-                </li>
-                <li class="searchWrapper">
-                  <form method="post" id="search">
-                    <input id="search1" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" tabindex="0" aria-autocomplete="list" class="search" aria-label="Search" name="search1" type="text" placeholder="Search Games" onblur="if (!window.__cfRLUnblockHandlers) return false; return blurfunc()" data-cf-modified-4eaaa7005eb6b59442c0723f-="" />
-                    <div id="srbdisp"></div>
-                  </form>
-                </li>
-                <!-- <li class="dextopUserIcon">
-                  <a href="#">
-                    <img
-                      width="30"
-                      height="30"
-                      fetchpriority="high"
-                      src="/images/userIcon.png"
-                      alt="User Icon"
-                      title="User Icon"
-                    />
-                  </a>
-                </li> -->
-              </ul>
-            </nav>
-	
-<style>
-	#srb{ display: none; }
-	div#srbdisp {   top: 1em;  position: fixed;   left: 1em; display: none;
-    /*width: calc(300px - 0px) !important;
-    margin-top: 0 !important;
-    border: none;
-    border-radius: 8px !important;
-    background: #ffffff !important;
-    font-size: 12pt;
-    font-weight: 600;
-    z-index: 99999999;
-    position: absolute;
-    top: 52px !important;
-    box-shadow: 0px 1px 8px #88888899 !important;
-    padding: 8px 8px !important;*/
-  }
-	
-.search{background:#ffffff;	color: #888; }
-/*
-li#icon_search_btn:hover { background: #066ca3; border-radius: 50%; padding: 8px 9px 5px 9px !important;}
-div#gamenameh1 { background: transparent; padding: 30px 1em; }
-#closesearch{ font-size: 22px;padding: 4px 8px;position: absolute;right: 0.3em;cursor: pointer;color:white; }
-.notransition{ background: #ffffff; color: #888; border-radius: 5px; font-size: 13px; padding: 13px; box-shadow: 0 0 3px #07496d;margin-right: 0;
-    width: 98%; box-sizing: content-box;}
-::placeholder {
-  color: #888;
-  font-weight: bold;
-  opacity: 1; // Firefox 
-}
-:-ms-input-placeholder { // Internet Explorer 10-11 
- color: #888;font-weight: bold;
-}
-::-ms-input-placeholder { // Microsoft Edge 
- color: #888;font-weight: bold;
-}
-div#mobile_searchpanel {  background: #168ed1;  width: 100%;  height: 1em;  z-index: +10000000;  position: fixed; top: 0; left: 0; padding: 1.5em 3em 4.22em 2em; box-shadow: 3px 2px 3px #07496d; display: none; }*/
-
-/*@media screen and (orientation:landscape){
-		.notransition{	background: #ffffff; color: #888; border-radius: 5px; font-size: 13px; padding: 13px; box-shadow: 0 0 3px #07496d;
-		    margin-right: 0; width: 98%;  box-sizing: content-box;	}
-	}
-#closesearch{ font-size: 16px; padding: 4px 8px; position: absolute; right: 1em;  cursor: pointer; }
-.searchgame img { 	width: 49px; height: 40px; object-fit: cover; border-radius: 4px; margin-right: 4px; }
-.searchdisplay { width: 290px; margin-top: -8pt; padding: 0px; border: none; border-radius: 0; background: #f2f2f2; font-size: 12pt;
-    font-weight: 600; z-index: 99999999;  position: absolute; top: 3.7em; box-shadow: 0 0 10px #888; }
-.searchgame {   padding:0; background: #1a89cc; }
-.searchgame a:hover{  color: #dcd9fc; background: #514a9d; padding: 6px 5px 6px 10px; }
-.searchgame a {    color: #fff; display: block; font-size: 0.999rem; font-family: Montserrat,Arial,"Helvetica Neue",Helvetica,sans-serif;
-    font-weight: 700; line-height: 2.43; padding: 6px 5px 6px 10px; }
-*/
-		
-
-/*#mask1 {position: fixed;}
-//styles for Privacy Dialog 
-@media all and (max-width: 400px) and (min-width: 300px) {
-	.policy-validation { width: 76% !important;left:  50% !important; }
-	.policy-validation .content {
-		display: inline-block !important;
-		padding: 0 20px 0 15px !important;
-		font-size: 11px !important;
-	}
-	.policy-validation .actions {
-	    display: inline-block !important;
-		margin: 1em auto !important;
-		width: 100% !important;
-	}
-}
-@media all and (max-width: 800px) and (min-width: 400px) {
-	.policy-validation .content {
-		display: inline-block !important;
-		padding: 0 20px 0 15px !important;
-		font-size: 11px !important;
-	}
-	.policy-validation .actions {
-	     display: inline-block !important;
-		margin: 1em auto !important;
-		width: 100% !important;
-	}
-	.policy-validation { width: 76% !important;left:  50% !important; }
-}
-.policy-validation {
-    margin-left: -25%;
-    width: 50%;
-}
-.policy-validation {
-    -webkit-box-shadow: 0 3px 10px 0 rgba(0,0,0,0.34);
-    -moz-box-shadow: 0 3px 10px 0 rgba(0,0,0,0.34);
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.34);
-    background-color: #fff;
-    border: 1px solid #bbb;
-    border-radius: 5px;
-    bottom: 20px;
-    display: table;
-    left: 63%;
-    margin-left: -38%;
-    padding: 10px;
-    position: fixed;
-    vertical-align: middle;
-    width: 50%;
-    z-index: 100000;
-    display: none;
-}
-.policy-validation .logo {
-    display: table-cell;
-    padding: 5px 10px 0 6px;
-    vertical-align: middle;
-    width: 250px;
-}
-.policy-validation .content {
-    color: #000;
-    display: table-cell;
-    font-size: 12px;
-    line-height: 15px;
-    padding: 0 5px 10px;
-    vertical-align: middle;
-}
-.policy-validation .content {
-    padding: 0 5px;
-}
-.policy-validation .actions {
-    box-sizing: border-box;
-    display: table-row;
-    padding: 0 10px;
-    text-align: center;
-    vertical-align: middle;
-    width: 90px;
-}
-.policy-validation .actions {
-    display: table-cell;
-    padding: 0 5px;
-}
-.policy-validation .actions a {
-    background: #514A9D;
-    border-radius: 3px;
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    font-weight: bold;
-    letter-spacing: .4px;
-    margin: 10px auto 0;
-    padding: 5px 8px;
-    width: 70px;
-}
-.policy-validation .actions a {
-    margin: 0;
-    width: auto;
-}
-.policy-validation .content a {
-    color: #514A9D;
-    font-weight: bold;
-}
-// privacy dialog ends here 
-nav #login-content1 {    width: 12em;right: 4px; padding: 0;top: 2.2em; }
-nav #login-content1 a {			
-    color: #003d53;
-    padding: 0.6em 1.3em;
-    display: inline-block;
-    width: 100%;
-}
-nav #login-content1 a:hover {
-    background: #514A9D;
-    color: #fff;
-}
-nav #login1 span {color: #fff;font-size: 12px;}
-nav.menu ul {
-    padding: 0;
-    margin: 0;
-}
-nav.menu li {
-    list-style-type: none;
-    margin: 0;
-    display: inline-block;
-    padding: 0 8px;
-}
-nav #login-trigger, nav #signup a, nav #login-trigger1, nav #signup1 a{ background:transparent; }
-.zerogrid .wrap-col{margin:0px;}*/
-
-</style>
-
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-/******** Code to stop search box animation when ajax request doing *******/
-$(function(){
-	});	
-
-$(document).ready(function() {
-  $('#search').submit(function(e) {
-    var searchitem = $('#search1').val().trim();
-    // STOP submit if empty or only spaces
-    if (searchitem.length === 0) {
-        e.preventDefault();
-        return false;
-    }
-
-    // Build final search URL (limit to 3 words)
-    var words = searchitem.split(/\s+/);  // handles multiple spaces
-    var fwords = [];
-    var words_length = (words.length > 3) ? 3 : words.length;
-
-    for (var i = 0; i < words_length; i++) {
-        fwords[i] = words[i];
-    }
-    var finalsearch = fwords.join("-");
-    // Set form action
-    $(this).attr('action', 'https://www.cricketgamesatme.com/search/' + finalsearch);
-    return true;
-  });
-});
-/*$(document).ready(function() {
-  $('#search').submit(function(e) { 
-  	var finalsearch = "";
-  	var searchitem = $('#search1').val();
-	var words = searchitem.split(" "); var fwords = new Array();
-	var words_length = (words.length > 3 )? 3 : words.length;
-	for (var i = 0; i < words_length ; i++) {
-	    fwords[i] = words[i];
-	}
-	finalsearch = fwords.join("-");
-    $(this).attr('action', 'https://www.cricketgamesatme.com/search/' + finalsearch);  
-    return true;
-  });
-});*/
-</script>
-
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-	</script>
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-let ajaxReq = null;
-let ajaxBusy = false;
-
-function ajaxmail(form1) {
-    if (ajaxBusy) {
-        // Abort previous request
-        if (ajaxReq) ajaxReq.abort();
-    }
-
-    ajaxBusy = true;
-
-    ajaxReq = $.ajax({
-        url: "https://www.cricketgamesatme.com/searchgames.php",
-        type: "POST",
-        data: {
-            sr: form1.search1.value
-        },
-        timeout: 5000
-    })
-    .done(function (response) {
-        if (response) {
-            $('#srbdisp').empty().show().append(response);
-        }
-    })
-    .fail(function (xhr, status) {
-        if (status !== "abort") {
-            console.error("AJAX error:", status);
-        }
-    })
-    .always(function () {
-        ajaxBusy = false;
-    });
-
-    return false;
-}
-
-
-/*function ajaxmail(form1)
-  {
-    $.ajax({
-	  url: "/searchgames.php",
-	  type: 'post',
-	  data: 'sr='+form1.search1.value,
-	  }).done(function(response) {
-      if (response != null) {
-    	  $('#srbdisp').empty().show().append(response);
-      }
-	});
-
-    return false;
-  }*/
-</script>
-
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-  let searchAjax = null;
-let debounceTimer = null;
-
-$(document).ready(function () {
-
-    $("#search1").on("keyup", function (e) {
-
-        // ESC key clears search
-        if (e.keyCode === 27) {
-            $(this).val("");
-        }
-
-        const sr1 = $(this).val().trim();
-
-        // Hide results if empty
-        if (sr1.length === 0) {
-            $("#srbdisp").hide().removeAttr("style").empty();
-            if (searchAjax) searchAjax.abort();
-            return;
-        }
-
-        // Debounce typing (IMPORTANT)
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => {
-            runSearch(sr1);
-        }, 400); // 400ms delay
-    });
-
-});
-
-/**
- * SINGLE search function
- * No duplicate AJAX calls
- */
-function runSearch(sr1) {
-
-    // Abort previous request
-    if (searchAjax) {
-        searchAjax.abort();
-    }
-
-    searchAjax = $.ajax({
-        url: "https://www.cricketgamesatme.com/search.php",
-        type: "POST",
-        data: { sr: sr1 },
-        timeout: 5000
-    })
-    .done(function (response) {
-        if (response) {
-            $("#srbdisp").empty().show().html(response);
-        }
-    })
-    .fail(function (xhr, status) {
-        if (status !== "abort") {
-            console.error("Search AJAX error:", status);
-        }
-    });
-}
-/*$(document).ready(function(){
-  $("#search1").keyup(function(d){
-    blurfunc();
-    var sr = document.getElementById("search1");
-	var sr1 = sr.value
-	if(d.keyCode==27)
-	{
-		sr1 = "";
-	}
-	if(sr1=="'")
-	{
-		sr1 = "";
-	}
-	sr1 = sr1.replace(/'/g, "&#146;");
-	console.log('search:', sr1);
-
-  if (sr1.length === 0) {
-        $("#srbdisp").hide().removeAttr("style").empty();
-        return; // stop here (no ajax)
-    }
-
-	$.ajax({
-	  url: "/search.php",
-	  type: 'post',
-	  data: {sr: sr1,},
-	  }).done(function(response) {
-      if (response != null) {
-    	  $('#srbdisp').empty().show().append(response);
-      }
-	});
-
-	
-  });
-});*/
-/*function blurfunc() {
-    var sr1 = $("#search1").val().trim(); // remove spaces from both ends
-
-    console.log("search:", sr1); // debug
-
-    // If input is empty or only spaces → hide and reset results
-    if (sr1.length === 0) {
-      console.log('removeing results div:'+ sr1.length);
-        $("#srbdisp").hide().removeAttr("style").empty();
-        return false;  // do not run AJAX
-    }
-
-    // Otherwise → run AJAX search
-    $.ajax({
-        url: "https://www.cricketgamesatme.com/search.php",
-        type: "post",
-        data: { sr: sr1 }
-    }).done(function(response) {
-        if (response) {
-            $("#srbdisp").show().html(response);
-        }
-    });
-
-    return false;
-}*/
-/*function blurfunc() {
-    var blogName = document.getElementById("search1");
-    var sr1 = blogName.value.trim(); // take current text
-
-    // If the textbox is empty → clear styles + hide box
-    if (sr1.length === 0) {
-
-        // Remove inline styles applied to div#srbdisp
-        $("#srbdisp").removeAttr("style");   // removes display:block, padding, etc
-        $("#srbdisp").hide();                // hide results box
-        $('#srbdisp').empty();               // also clear old search results
-
-        return false; // no AJAX call required
-    }
-
-    // Otherwise → perform AJAX search
-    $.ajax({
-        url: "https://www.cricketgamesatme.com/search.php",
-        type: 'post',
-        data: { sr: sr1 }
-    }).done(function(response) {
-        if (response !== null && response !== undefined) {
-            $('#srbdisp').show().empty().append(response);
-        }
-    });
-
-    return false;
-}*/
-/*function blurfunc()
+<script type="application/ld+json">
 {
-	var blogName = document.getElementById("search1");
-	sr1 = "";
-	
-	$.ajax({
-	  url: "https://www.cricketgamesatme.com/search.php",
-	  type: 'post',
-	  data: {sr: sr1,},
-	  }).done(function(response) {
-      alert('res:'+response);
-      if (response != null) {
-        $('#srbdisp').empty().show().append(response);
-      }
-      else{
-        $('#srbdisp').hide();
-        $('.searchdisplay').hide();
-      }
-	});
-	
-	return false;
-}*/
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "HandCricket.io",
+  "url": "https://www.handcricket.in/",
+  "description": "HandCricket.io is a free online cricket game inspired by Doodle Cricket and classic hand cricket. Play multiplayer Cricket.io matches in your browser, challenge friends, score runs, win tournaments, and enjoy the ultimate online cricket game experience.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "HandCricket.io",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.handcricket.in/favicon-32x32.png"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.handcricket.in/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
 </script>
 
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-	 
-$(function(){ 
-	$('.scrollcontainer2').mouseover(function(){
-		$('.overlay2').css('opacity','1');
-	});
-	$('.scrollcontainer2').mouseout(function(){
-		$('.overlay2').css('opacity','0');
-	});
-  
-});
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is HandCricket.io?",
+
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HandCricket.io is an online cricket game inspired by the fun of Doodle Cricket and classic hand cricket. Play fast-paced Cricket.io matches solo, with friends, or global players directly in your browser!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to Play HandCricket.io?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Select a mode â Random Match, Play with Friend, or Tournament. Do the toss and choose to Bat or Bowl first. Batting: Pick a number (1â6). If it differs from your opponentâs, you score runs. Same number = Out! Bowling: Guess your opponentâs number (1â6). Win matches, earn coins, and rise in rank in this Cricket.io experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I play Hand Cricket online with friends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! In Play with Friend mode, create a private room, share the code, and enjoy a fun online cricket game session together â just like old-school hand cricket, but online!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does HandCricket.io have tournaments and leagues?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Join or host tournaments and compete for prizes and ranks in Cricket.io leagues. Participate in Country Cups and IPL-style team events where every match counts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is HandCricket.io free to play?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! HandCricket.io is a 100% free online cricket game playable in any browser â no downloads, no installs, just pure cricket fun!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the 2D and 3D modes in HandCricket.io?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Toggle between 2D Classic and 3D Immersive modes anytime. Enjoy Doodle Cricket-style visuals or cinematic 3D stadiums â all designed for smooth browser play."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the coin and reward system work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Earn coins for runs, wins, and tournament participation. Unlock ranks (Bronze â God), cosmetic rewards, and league promotions. Use coins to host tournaments or join premium matches in this online cricket game."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I chat with other players?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Use Global Chat to interact with the cricket community or Team Chat for private squad discussions. Celebrate victories and coordinate strategies in your Cricket.io matches!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes HandCricket.io different from Doodle Cricket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While Doodle Cricket is a single-player game, HandCricket.io adds real-time multiplayer, tournaments, leagues, coins, and rewards â all in a free online cricket game experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I leave a match midway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you quit after the toss or mid-match, you automatically lose and entry coins are deducted. Stay until the end to earn rewards and climb the online cricket game leaderboards!"
+      }
+    }
+  ]
+}
 </script>
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-	</script>
-	
-             </div>
-        </div>
-      </header>
-      <div class="googleAd">          <!-- ADD Code-->          
-          <font id="topadd1"></font>
-            
-          <!-- /ADD Code-->
-      </div>
-      <section class="banner">
-        <div class="container">
-          <div style="justify-content: space-between;">
-          <div class="bannerInner">
 
-            <ul class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-              <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a id="breadcrumbid" href="https://www.cricketgamesatme.com/" itemprop="item"><span itemprop="name">Games</span></a><meta itemprop="position" content="1" /></li>
-              <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Cricket World Cup</span><meta itemprop="position" content="4" /></li>
-            </ul>
-              <meta itemprop="url" content="https://www.cricketgamesatme.com/games/cricket-world-cup">
-             
-                          
-                        
-                              <!-- <img src="/images/games/slide/5211_slide.jpg" alt="Game 1" /> -->
-                
-                                                        <link rel="preload" as="image" href="https://slides.cricketgamesatme.com/slide/5210_slide.jpg">
-                      <link rel="preload" type="text/css" href="https://www.cricketgamesatme.com/css_new/game_url_responsive.css" as="style">
-                        <link rel="stylesheet" href="https://www.cricketgamesatme.com/css_new/game_url_responsive.css" media="all"/>
-                        <style>
-                          .button {
-                            width: 96.9%;
-                            max-width: 18em;
-                                min-width: 8em;
-                          }
-                          p img#game_img_btn {                              
-                              width: auto;
-                              min-width: 27em;
-                              min-height: 20em;
-                              margin: 0 auto;
-                            display: block;
-                              }
-                               .container2 {
-                              position: relative;
-                              width: 100%;
-                              max-width: 400px;
-                            }
-
-                            .container2 img {
-                              width: 100%;
-                              height: auto;
-                            }
-
-                            .container2 .btn {
-                              position: absolute;
-                              top: 70%;
-                              left: 50%;
-                              transform: translate(-50%, -50%);
-                              -ms-transform: translate(-50%, -50%);
-                              background-color: transparent;
-                              color: white;
-                              font-size: 16px;
-                              padding: 12px 24px;
-                              border: none;
-                              cursor: pointer;
-                              border-radius: 5px;
-                              text-align: center;
-                              font: 700 24px Torus,sans-serif;
-                            }
-                            button.play_game_btn {
-                                position: absolute;
-                                top: 46%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                -ms-transform: translate(-50%, -50%);
-                                background-color: transparent;
-                                color: white;
-                                padding: 12px 24px;
-                                border: none;
-                                cursor: pointer;
-                                border-radius: 5px;
-                                text-align: center;
-                            }
-                            .container2 .btn:hover {
-                              background-color: grey;
-                            }
-                            .noinstall { z-index: +100000000;display: inline-block; background: #ff7914;/* top: 7.6em; */ position: absolute; padding: 3px 5px; left: 6px; color: #fff; font-size: 14px; }
-                        </style>
-                <div class="gameDetails_100">              
-                  <div  style="padding-top:0"  class="gameplay">            
-                    <div class="gameWrapper">                
-                      <center id="game_center_id">
-                        <form  class="start-game-class" name="start-game-form" id="start-game-id" method="post" action="">
-                          <div class="container2"><button id="imgbutton" name="imgbutton">
-                            <!-- <div class="noinstall">No Install !</div> -->
-                            <img id='game_img_btn' width='600' height='400' src='https://slides.cricketgamesatme.com/slide/5210_slide.jpg' fetchpriority='high' class='image' alt='Cricket World Cup' style='border:none'/>                          </button>
-                          <input type="hidden" name="playid" value="5210"/>
-                                                    <button id="startbutton" class="playButton bounceBtn"><span>Play Now</span></button>
-                           <h2 class="gameHeading">Cricket World Cup Game</h2>
-                          <div id="overlaylayer" class="overlay"></div>
-                                                    </div>
-                          
-                        </form>
-                      </center>
-                    </div> 
-                   
-                                      </div>             
-            </div>                
-                
-                      <!-- *** Ratings *** -->
+    <link rel="preload" href="/fonts/LuckiestGuy-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 
-<div class="gameFooter">
-  <div class="gameSeclogo">
-    <img id='game_img_btn' width='50' height='50' style='width:50px;height:50px' src='https://thumbs.cricketgamesatme.com/thumbs/5210_thumb.jpg' fetchpriority='high' class='image' alt='Cricket World Cup' style='border:none'/>      <h2>Cricket World Cup</h2>
-  </div>
-
-  <div class="otherOptions">
-    <div class="shareBox">
-      <div class="shareWith">
-
-            <a id="whatsapp_share"  href="whatsapp://send?text=Check%20this%20out%3A%20https%3A%2F%2Fwww.cricketgamesatme.com%2Fgames%2Fcricket-world-cup?utm_source=whatsapp-share%26utm_medium=whatsapp" class="social-share-btn atmbutton small whatsapp" data-action="share/whatsapp/share data-props="whatsapp" data-rel="external">
-      <img src="/images/wa-white-icon.svg" alt="Game 1" width="24" height="24"/>                                               
-    </a>
     
-        
-    <a id="facebook_share" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.cricketgamesatme.com%2Fgames%2Fcricket-world-cup&amp;src=sdkpreparse" target="_blank" class="social-share-btn atmbutton small facebook" data-props="facebook" data-rel="external">
-        <img src="/images/fb-white-icon.svg" alt="Game 1" width="24" height="24"/>
-    </a>
-    <a id="twitter_share" href="https://twitter.com/intent/tweet?text=Cricket-world-cup&amp;url=https%3A%2F%2Fwww.cricketgamesatme.com%2Fgames%2Fcricket-world-cup" target="_blank" class="social-share-btn atmbutton small twitter" data-props="twitter" data-rel="external">
-        <img src="/images/tw-white-icon.svg" alt="Game 1" width="24" height="24"/>
-    </a>
+    <base href="/">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="language" content="English">
+    <meta name="author" content="Handcricket.io Team">
+    <meta name="theme-color" content="#e76f51" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="robots" content="index, follow">
+       
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  
+  
+   
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+     <style>
+      /* Local Font Definitions */
+
+      *{
+    margin:auto auto;
+    box-sizing: border-box;
+    color: #264653;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight:500;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transform-origin: 50% 50%;
+    line-height: 1;
+
+}
+        *::-webkit-scrollbar {
+   display: none;
+  }
+/* full screen */
+#full-screen-button{
+    position: absolute;
+    bottom: max(2.206vw,12px) ;
+    right:  max(2.206vw,12px) ;
+    width: max(2.941vw, 30px);
+    background: #ffffffe1;
+    border-radius: max(0.588vw,6px);
+    cursor: pointer;
+    z-index: 10;
+    border: 2px solid #f4a361;
+    transition: 0.3s all;
+}
+#full-screen-button:hover{
+    background-color:#f4a361;
+    scale: 1.1;
+}
+
+  
+  /* **** */
+#root{
+    width: 100%;
+    min-height: 100svh;
+    height: 100svh;
+    position: relative;
+}
+.loader-container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:50%;
+    height: fit-content;
+    margin: 0px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+
+    z-index:1;
+ }
+  .loader-container p{
+  color: beige;
+ }
+ .start-loader{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid beige ; /* Light grey */
+    border-top: 4px solid #264653; /* Blue */
+    animation: spin 2s infinite;
+}
+#higher-container{
+    position: relative;
+    min-height: 100svh;
+    background-color:#8D8D7F;
+    border-bottom: 2px solid #264653;
+}
+#lower-container{
+    background-color: #f4a361;
+    
+}
+#lower-container *{
+    font-family: "Rubik", sans-serif;
+    
+}
+#lower-container p{
+    text-indent: 60px;
+}
+
+.handcricket-summary-faq{
+    width: 80%;
+    padding: 40px 0px;
+    text-align: left;
+}
+.handcricket-faq h5{
+    margin: 0px;
+    font-family: inherit;
+    /* font-family: 'Montserrat', sans-serif !important; */
+}
+
+.logos>a{
+
+    height: 40px;
+   }
+   .logos>a>svg{
+    border-radius: 5px;
+   }
+.logos>a>svg:hover{
+    fill:#f4a361 ;
+    stroke:#f4a361;
+    background-color: #264653;
+   }
+
+
+body{
+
+    text-align: center;
+}
+
+ 
+ 
+
+@media screen and (max-width:800px){
+
+    #full-screen-button{
+        top: max(2.206vw,12px) ;
+        bottom: initial;
+    }
+    }
+
+
+
+  </style>
+    <script type="module" crossorigin src="/static/index-DvV7LLB8.js"></script>
+    <link rel="modulepreload" crossorigin href="/static/react-vendor-NvXYC3aE.js">
+    <link rel="modulepreload" crossorigin href="/static/socket-vendor-TjCxX7sJ.js">
+    <link rel="stylesheet" crossorigin href="/static/index-2jpNidca.css">
+  </head>
+  <body>
+ <noscript>
+  <p>Play HandCricket.io â a free <strong>online cricket game</strong> inspired by <strong>Doodle Cricket</strong>. Challenge friends in real-time multiplayer <strong>Cricket.io</strong> matches, climb leaderboards, win trophies, and compete in IPL-style country tournaments. No downloads needed â play hand cricket instantly in your browser!</p>
+  You need to enable JavaScript to run this app.
+</noscript>       
+        <div class="loader-container">
+      <div class="start-loader"></div>
+      <p class>Travelling to the Stadium</p>
+    </div>
+    <div id="higher-container">
+      <div id="modal"></div>
+      <!-- <img  id="full-screen-button" onclick="fullScreenFunc()" src="../svg-public/fullscreen.svg"> -->
+      <div id="root">
+    
       </div>
     </div>
-    <ul>
-      <li>
-        <font id="error1"><font onClick="if (!window.__cfRLUnblockHandlers) return false; showDivlike('5210','1','10','Likes','0','0','0','5077','0')" data-cf-modified-4eaaa7005eb6b59442c0723f-=""><img id="like" class="pointer" src="https://image.cricketgamesatme.com/icons/like.png"></font></font>
+   
 
-        <span class="icon-thumb_bk"><font style="font-size:12px;margin-top: 2px;position: absolute;z-index: 999;margin-left: 0px;display: block;">100%</font></span>
 
-        <!-- <img src="/images/icon-like.svg" alt="Game 1" width="30" height="30"/> -->
-      </li>
-      <li>      
-        <font id="error2"><font onClick="if (!window.__cfRLUnblockHandlers) return false; showDivdislike('5210','1','10','Dislikes','0','','','5077','0')" data-cf-modified-4eaaa7005eb6b59442c0723f-=""><img id="like" class="pointer" src="https://image.cricketgamesatme.com/icons/dislike.png"></font></font>
+    <div id="lower-container" class="remove-margin-container-auto d-flex justify-content-center">
+      <div  class="handcricket-summary-faq ">
+        <div class="handcricket-summary d-flex flex-direction-column flex-gap-50">
+          <div class="handcricket-faq d-flex flex-direction-column flex-gap-20 align-items-center" >
+            <h1>Handcricket.io</h1>
+            <p>Looking for a fun and competitive online cricket game? Handcricket.io offers an exciting multiplayer hand cricket experience right in your browser. No downloads or app required. Play hand cricket online with friends, compete in real-time matches, and support your favorite team in tournaments inspired by the IPL.</p>
+            <p>Whether you love cricket games or want to play quick hand cricket matches online, Handcricket.io provides a smooth and engaging platform with leaderboards, trophies, and country cup challenges.</p>
+          </div>
+      <div class="handcricket-faq d-flex flex-direction-column align-items-center flex-gap-20 " >
+     
 
-        <span class="icon-thumb_bk dislikeTxt"><font style="font-size:12px;margin-top: 2px;position: absolute;z-index: 999;margin-left: 0px;display: block;">0%</font></span>
-        <!-- <img src="/images/icon-dislike.svg" width="30" height="30" alt="Game 1"/> -->        
-      </li>
-      <li>
-            <div  class="gamebottom2">
-            <table cellpadding="0" cellspacing="10" border="0">
-            <tr style="border: 0px solid #ff0000; line-height: 25px;">
-            <td style="padding: 0px; " valign="middle" width="107px" height="25px" bgcolor="#c0c0c0" class="tdmap">
-            
-            <div id="starfill"  ><div id="starfilldiv" style="width: 74%; background: #f8881b; height: 25px" ><div style="width: 107px">&nbsp;</div></div></div>
-            
-            <div style="margin-top: -25px; cursor: pointer" >
-              <img src="https://image.cricketgamesatme.com/star1.png" alt="rating" usemap="#starmap" >
-              </div>
-            <map name="starmap" id="mapcord">
-              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(0.5)" coords="0,0,10,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(0.5,'info@cricketgamesatme.com','5210');" alt="Star Rating 0.5" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
-              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(1.0)" coords="11,0,21,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(1,'info@cricketgamesatme.com','5210');" alt="Star Rating 1" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
-              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(1.5)" coords="22,0,31,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(1.5,'info@cricketgamesatme.com','5210');" alt="Star Rating 1.5" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
-              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(2.0)" coords="32,0,42,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(2,'info@cricketgamesatme.com','5210');" alt="Star Rating 2" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
-              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(2.5)" coords="43,0,52,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(2.5,'info@cricketgamesatme.com','5210');" alt="2.5" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
-              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(3.0)" coords="53,0,64,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(3,'info@cricketgamesatme.com','5210');" alt="Star Rating 3" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
-              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(3.5)" coords="65,0,76,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(3.5,'info@cricketgamesatme.com','5210');" alt="Star Rating 3.5" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
-              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(4.0)" coords="77,0,86,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(4,'info@cricketgamesatme.com','5210');" alt="Star Rating 4" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
-              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(4.5)" coords="87,0,96,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(4.5,'info@cricketgamesatme.com','5210');" alt="Star Rating 4.5" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
-              <area shape="rect" refreshvote(5210); onMouseOver="if (!window.__cfRLUnblockHandlers) return false; dstar(5.0)" coords="97,0,107,25" onMouseOut="if (!window.__cfRLUnblockHandlers) return false; cstar(3.7);" onClick="if (!window.__cfRLUnblockHandlers) return false; star(5,'info@cricketgamesatme.com','5210');" alt="Star Rating 5" data-cf-modified-4eaaa7005eb6b59442c0723f-="">        
-            </map>
-            </td>
-            <td style="padding: 0px; color: #003d58; " valign="bottom" align="left">
-              <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-              <meta itemProp="ratingValue" content="3.7" />
-              <meta itemProp="reviewCount" content="797" /> 
+        <h4>Frequently Asked Questions (FAQ)</h4>
+<div class="d-flex flex-direction-column flex-gap-20">
 
-                            </div>
-            </td>
-            
-            <!-- <td style="padding: 0px; width: 15px" valign="bottom">&nbsp;</td> -->
-            </tr>
-            
-            <tr>
-              
-              <td align="left" colspan="2"  style="color: #003d58">
-                <output type="text" style="font-size: 8pt" size="100" name="checkurl" id="checkurl" readonly></output>
-                <div id="stardisplay"></div>
-              
-              </td>
-            </tr>
-            </table>
-          </div>  
-      </li>
-      <li class="reportLink">
-                      <span id="reportgame">  
-              <div class="tooltip">Report
-                <!-- <span class="tooltiptext">Report a Game</span> -->
-              </div>
-            </span>
-                      <div class="cricket_report_game">
-              <div id="report-game-popup-reason" class="report_game__popup reportPopup">
-                    <div class="popup-box">
-                        <div class="report_game__popup-circle"></div>
-                        <div class="report_game__popup-triangle"></div>
-                        <div id="report-game-popup-thankyou" class="report_game__popup-thankyou hidden">
-                            <div class="report_game__popup-header">
-                              <h3 class="box-title ellipsis">Thanks a million</h3>
-                            </div>
-                            <p class="report_game__popup-description">We'll get to work on fixing the game. If necessary, please contact our <font class="zendesk">support team</font> if you need further assistance.</p>
-                        </div>
-                        <div id="report-game-popup-select" class="report_game__popup-select">
-                            <div class="report_game__popup-header">
-                                <h3 class="box-title ellipsis">Report Game</h3>
-                            </div>
-                            <p class="report_game__popup-description">What kind of problem have you encountered?</p>
-                            <form id="report-game-form" method="POST">
-                                <ul class="report_game__popup-reasons">
-                                    <li class="report_game__popup-item">
-                                        <label><input type="radio" name="reason" value="1" required="">It's not starting.</label>
-                                    </li>
-                                    <li class="report_game__popup-item">
-                                        <label><input type="radio" name="reason" value="2">It stopped working.</label>
-                                    </li>
-                                    <li class="report_game__popup-item">
-                                        <label><input type="radio" name="reason" value="3">Delayed loading.</label>
-                                    </li>
-                                    <li class="report_game__popup-item">
-                                        <label><input type="radio" name="reason" value="4">Game not responding.</label>
-                                    </li>
-                                    <li class="report_game__popup-item">
-                                        <label><input type="radio" name="reason" value="5">Instructions not clear!</label>
-                                    </li>
-                                    <li class="report_game__popup-item">
-                                        <label><input type="radio" name="reason" value="6">Other</label>
-                                    </li>
-                                    <li class="report_game__popup-item">
-                                        <textarea id="other_comment" name="other_comment" style="display: none;height: 43px;width: 100%; margin: 5px 0 8px 0;"></textarea>
-                                    </li>
-                                    <script type="4eaaa7005eb6b59442c0723f-text/javascript">
-                                      $(document).ready(function() {
-                              $("input[name$='reason']").click(function() {
-                                  var test = $(this).val(); 
-                                  console.log(typeof test+' other clicked:'+test);
-                                 if(test == '6'){
-                                  $("#other_comment").show();
-                                }
-                                else{
-                                  $("#other_comment").hide();
-                                }
+  <div class="d-flex flex-direction-column flex-gap-5">
+    <h5>What is HandCricket.io?</h5>
+    <p>HandCricket.io is an <strong>online cricket game</strong> inspired by the fun of <strong>Doodle Cricket</strong> and classic hand cricket. Play fast-paced <strong>Cricket.io</strong> matches solo, with friends, or global players directly in your browser!</p>
+  </div>
 
-                              });
-                          });
-                                    </script>
-                                </ul>
-                              <div class="report_game__popup-footer">
-                        <input type="hidden" name="reportgameid" id="reportgameid" value="5210">
-                        <input type="hidden" name="reportgameurl" id="reportgameurl" 
-                        value="cricket-world-cup">
-                                <button id="report-game-submit" class="small button" aria-label="Send Feedback">Send Feedback</button>
-                              </div>
-                            </form>
-                        </div>                              
-                    </div>
-                    <a class="report_game__popup-close" id="report-game-popup-close">
-                        <span class="icon--grey-cross"><img src="/images/close.svg" width="24px" height="24px" alt="Close" /></span>
-                    </a>
-                </div>
-            </div>
-                  </li>
-            <li class="share">
-        <img src="/images/icon-share.svg" width="30" height="30" alt="Game 1"
-        />
-      </li>
+  <div class="d-flex flex-direction-column flex-gap-5">
+    <h5>How to Play HandCricket.io?</h5>
+    <ul class="p">
+      <li>Select a mode â Random Match, Play with Friend, or Tournament.</li>
+      <li>Do the toss â call Heads or Tails. Winner chooses Bat or Bowl first.</li>
+      <li><strong>Batting:</strong> Pick a number (1â6). If it differs from your opponentâs, you score runs. Same number = Out!</li>
+      <li><strong>Bowling:</strong> Guess your opponentâs number (1â6). If both match, you take a wicket!</li>
+      <li>Win matches, earn coins, and rise in rank in this <strong>Cricket.io</strong> experience.</li>
     </ul>
   </div>
+
+  <div class="d-flex flex-direction-column flex-gap-5">
+    <h5>Can I play Hand Cricket online with friends?</h5>
+    <p>Yes! In <strong>Play with Friend</strong> mode, create a private room, share the code, and enjoy a fun <strong>online cricket game</strong> session together â just like old-school hand cricket, but online!</p>
+  </div>
+
+  <div class="d-flex flex-direction-column flex-gap-5">
+    <h5>Does HandCricket.io have tournaments and leagues?</h5>
+    <p>Absolutely. Join or host tournaments and compete for prizes and ranks in <strong>Cricket.io leagues</strong>. Participate in <strong>Country Cups</strong> and IPL-style team events where every match counts.</p>
+  </div>
+
+  <div class="d-flex flex-direction-column flex-gap-5">
+    <h5>Is HandCricket.io free to play?</h5>
+    <p>Yes! HandCricket.io is a 100% free <strong>online cricket game</strong> playable in any browser â no downloads, no installs, just pure cricket fun!</p>
+  </div>
+
+  <div class="d-flex flex-direction-column flex-gap-5">
+    <h5>What are the 2D and 3D modes in HandCricket.io?</h5>
+    <p>Toggle between <strong>2D Classic</strong> and <strong>3D Immersive</strong> modes anytime. Enjoy <strong>Doodle Cricket</strong>-style visuals or cinematic 3D stadiums â all designed for smooth browser play.</p>
+  </div>
+
+  <div class="d-flex flex-direction-column flex-gap-5">
+    <h5>How does the coin and reward system work?</h5>
+    <p>Earn coins for runs, wins, and tournament participation. Unlock ranks (Bronze â God), cosmetic rewards, and league promotions. Use coins to host tournaments or join premium matches in this <strong>online cricket game</strong>.</p>
+  </div>
+
+  <div class="d-flex flex-direction-column flex-gap-5">
+    <h5>Can I chat with other players?</h5>
+    <p>Yes! Use <strong>Global Chat</strong> to interact with the cricket community or <strong>Team Chat</strong> for private squad discussions. Celebrate victories and coordinate strategies in your <strong>Cricket.io</strong> matches!</p>
+  </div>
+
+  <div class="d-flex flex-direction-column flex-gap-5">
+    <h5>What makes HandCricket.io different from Doodle Cricket?</h5>
+    <p>While <strong>Doodle Cricket</strong> is a single-player game, HandCricket.io adds real-time multiplayer, tournaments, leagues, coins, and rewards â all in a free <strong>online cricket game</strong> experience.</p>
+  </div>
+
+  <div class="d-flex flex-direction-column flex-gap-5">
+    <h5>What happens if I leave a match midway?</h5>
+    <p>If you quit after the toss or mid-match, you automatically lose and entry coins are deducted. Stay until the end to earn rewards and climb the <strong>online cricket game</strong> leaderboards!</p>
+  </div>
+
 </div>
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-  const Obj_maxbtn = document.getElementById("maxbtn");
-  Obj_maxbtn.addEventListener("click", () => {
-    console.log('maxbtn clicked');
-    fullScreen('url');
-  });
-</script>
-<style type="text/css">
-.cricket_report_game{z-index: 2; position: absolute;display: inline-block; margin: 0 0 0 4px;width: 32px;height: 32px;vertical-align: top;font-size: 13px;   display: none;}
-.cricket_report_game .report_game__popup {/*border: 2px solid #0065a0;*/border-radius: 4px; box-shadow: 0 0 10px #888;    border-radius: 4px; background-color: #fff; position: absolute;top: 0px;left: 32px;  color: #363636;width: 13em;display: none; }
-.cricket_report_game .report_game__popup {
-        /*border: 2px solid #0065a0;*/
-    border-radius: 4px;
-    box-shadow: 0 0 10px #888;
-        border-radius: 4px;
-    background-color: #fff;
-    position: absolute;
-        top: 0px;
-    left: 32px;
-      color: #363636;
-}
-.cricket_report_game .report_game__popup .popup-box {
-    overflow: hidden;
-    background-color: rgba(0,101,160,0.1);
-    margin: 0;
-    padding: 0;
-}
-.cricket_report_game .report_game__popup-circle {
-   /*  position: absolute;
-   width: 350px;
-   height: 300px;
-   background-color: #fff;
-   border-radius: 50%;
-   top: -140px;
-   left: -60px;
-   z-index: -1; */
-}
-.cricket_report_game .report_game__popup-triangle {
-    width: 0;
-    height: 0;
-    z-index: -1;
-    border-bottom: 200px solid #0065a0;
-    opacity: 0.2;
-    border-left: 155px solid transparent;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-.cricket_report_game .report_game__popup-select {
-    min-width: 155px;
-    margin: 0 auto;
-    padding: 5px 12px;
-    border-radius: 4px;
-    box-shadow: 0 0 10px #888;
-    border: none;
-}
-.cricket_report_game .report_game__popup-header .box-title {
-    margin: 0 0 10px;
-    color: #363636;
-}
-.box-title {
-    margin-bottom: 0;
-    color: #0065a0;
-    line-height: 1.5;
-}
-.ellipsis {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 100%;
-}
-.cricket_report_game .report_game__popup-description {
-    margin: 0 0 10px;
-}
-.cricket_report_game .report_game__popup-reasons {
-    text-align: left;
-    margin: 0 0 10px;
-    display: inline-block;
-}
-.cricket_report_game .report_game__popup-item {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    margin: 0 0 5px;
-    white-space: nowrap;
-}
-.cricket_report_game .report_game__popup-select form label {
-    width: auto;
-    margin: 0;
-    font-size: 12px;
-    display:flex;
-    align-items: center;
-}
-form label {
-    clear: left;
-    float: left;
-    width: 45%;
-    margin-bottom: .75em;
-}
-.cricket_report_game .report_game__popup-item input {
-    margin: 0 5px 0 0;
-}
-form input[type="radio"] {
-    position: relative;
-    right: 0.3em;
-    margin-bottom: .75em;
-}
-.cricket_report_game .report_game__popup-footer {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
 
-  /*img#game_img_btn {
-    width: 50px;
-    height: 50px;
-}*/
 
-.cricket_report_game .report_game__popup-footer button {
-    max-width: 135px;
-    font-size: 13px;
-    margin: 0 auto 10px;
-    text-transform: capitalize;
-    color: #fff;
-    box-shadow: 1px 2px 3px #888;
-    background: -webkit-linear-gradient(top,#00b8e6,#514A9D) !important;
-}
-.cricket_report_game .report_game__popup-close {
-    position: absolute;
-    top: -5px;
-         right: -13px;
-
-             width: 18px;
-    height: 18px;
-    font-size: 6px;
-    font-weight: bold;
-    border: 1px solid #0065a0;
-    border-radius: 20px;
-    color: #0065a0;
-    background-color: white;
-    z-index: 2;
-}
-
-.icon--grey-cross {
-    background-position: -20.59375em -2.0625em;
-    width: .875em;
-    height: .90625em;
-}
-.cricket_report_game .report_game__popup-close span {
-    font-size: 13px;
-    position: relative;
-        left: 4.5px;
-    top: -2px;
-             cursor: pointer;
-}
-span[class*="icon--"] {
-    display: inline-block;
-}
-.report_game__popup-thankyou hidden{
-  display: none;
-}
-.cricket_report_game .report_game__popup-thankyou{
-  min-width: 144px;
-    margin: 0 auto;
-    padding: 10px 12px;
-    background: #e5eff5;
-    box-shadow: 1px 2px 3px #888;
-}
-.cricket_report_game .report_game__popup-thankyou .mascot {
-    font-size: 24px;
-    margin: 0 auto;
-}
-.icon--home {
-    background-position: -15.28125em -6.46875em;
-    width: 1.875em;
-    height: 1.9375em;
-}
-.cricket_report_game .report_game__popup-header .box-title {
-    margin: 0 0 10px;
-    color: #363636;
-            font-size: 1.75em;
-    }
-.wdg_page_game h2, .wdg_page_game h3 {
-    text-transform: none;
-}
-
-.wdg_page_game h2, .wdg_page_game h3 {
-    text-transform: none;
-}
-.cricket_report_game .report_game__popup-description {
-    margin: 0 0 10px;
-}
-.cricket_report_game .report_game__popup-thankyou .zendesk {
-    text-decoration: underline;
-    color: #000;
-}
-.hidden, .is-hidden {
-    display: none !important;
-}
-/***********************************************************
-******************* Styles for tooltip *********************
-************************************************************/
-.tooltip {
-    position: relative;
-    display: inline-block;
-    /* border-bottom: 1px dotted black; */
-    cursor:pointer;
-    margin-left: 5px;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-    
-    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-    opacity: 0;
-    transition: opacity 1s;
-}
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-/*Other styles*/
-.otherOptions ul li img {
-    width: unset;
-    height: unset;
-    margin-left: unset;
-    cursor: pointer;
-    opacity: unset;
-}
-.otherOptions ul li img:hover {
-    transform: unset;
-    transition: unset;
-    opacity: unset;
-}
-
-@media (max-width: 768px) {
-  .tooltip {
-    background:#ffd742 !important;
-    padding:0px 12px !important;
-  }
-}
-</style>                                     
-                                      
-                  </div>
-              </div>
+      
         
-      </section>
-      <section class="gameDescription">
-        <div class="container">
-          <div class="gameDescriptionInner">
-            <div class="instruction">
-              <h3>Game Instructions:</h3>
-                  </div>
-                      </div>
-        </div>
-      </section>
 
-      <section class="gameList">
-        <div class="container">
-          <h2>Recommended Cricket game</h2>
-          <ul>
-              
-                
-                  <li>
-                    <a href="https://www.cricketgamesatme.com/games/cricket-20-20-ultimate" title="Play Online Cricket 20-20 Ultimate">
-                      <img width="375" height="250" class="lazyload blur-up thumb " data-src="/images/games/slide/431_slide.jpg"  alt="Play Cricket 20-20 Ultimate"/>
-                                          <span class="new">New</span>
-                                          <div class="gameTitle">                 
-                            <h2>Cricket 20-20 Ultimate</h2>
-                        <p>
-                          Play Cricket 20-20 Ultimate and get indulged into the futuristic cricket game of tomorrow! Live your cricketing spirit now!                        </p>
-                      </div>
-                    </a>
-                  </li>     
-                  
-                
-                  <li>
-                    <a href="https://www.cricketgamesatme.com/games/chota-bheem-cricket-panga" title="Play Online Chota Bheem Cricket Panga">
-                      <img width="375" height="250" class="lazyload blur-up thumb " data-src="/images/games/slide/1629_slide.jpg"  alt="Play Chota Bheem Cricket Panga"/>
-                                          <span class="new">New</span>
-                                          <div class="gameTitle">                 
-                            <h2>Chota Bheem Cricket Panga</h2>
-                        <p>
-                          Kalia and his clan has challenged Chota Bheem and his friends. Help Chota Bheem to face more than one bowler and win this game.                        </p>
-                      </div>
-                    </a>
-                  </li>     
-                  
-                
-                  <li>
-                    <a href="https://www.cricketgamesatme.com/games/cricket-world-cup-2011" title="Play Online Cricket World Cup 2011">
-                      <img width="375" height="250" class="lazyload blur-up thumb " data-src="/images/games/slide/102_slide.jpg"  alt="Play Cricket World Cup 2011"/>
-                                          <span class="new">New</span>
-                                          <div class="gameTitle">                 
-                            <h2>Cricket World Cup 2011</h2>
-                        <p>
-                          Play Cricket World Cup 2011 and live the moments of any of the World Cup 2011 match in your own style!                        </p>
-                      </div>
-                    </a>
-                  </li>     
-                  
-                
-                  <li>
-                    <a href="https://www.cricketgamesatme.com/games/cricket-championship" title="Play Online Cricket Championship">
-                      <img width="375" height="250" class="lazyload blur-up thumb " data-src="/images/games/slide/512_slide.jpg"  alt="Play Cricket Championship"/>
-                                          <div class="gameTitle">                 
-                            <h2>Cricket Championship</h2>
-                        <p>
-                          Either bat or bowl in this multi-level free online cricket game! Play the Helicopter shot, the famous Dil-scoop, and the Uper-Cut!                        </p>
-                      </div>
-                    </a>
-                  </li>     
-                  
-                
-                  <li>
-                    <a href="https://www.cricketgamesatme.com/games/india-vs-australia" title="Play Online India Vs Australia">
-                      <img width="375" height="250" class="lazyload blur-up thumb " data-src="/images/games/slide/119_slide.jpg"  alt="Play India Vs Australia"/>
-                                          <div class="gameTitle">                 
-                            <h2>India Vs Australia</h2>
-                        <p>
-                          Choose between India and Australia and enjoy the world?s most popular free sports game series in a 5 over match!                        </p>
-                      </div>
-                    </a>
-                  </li>     
-                  
-                
-                  <li>
-                    <a href="https://www.cricketgamesatme.com/games/power-cricket-t20" title="Play Online Power Cricket T20">
-                      <img width="375" height="250" class="lazyload blur-up thumb " data-src="/images/games/slide/133_slide.jpg"  alt="Play Power Cricket T20"/>
-                                          <div class="gameTitle">                 
-                            <h2>Power Cricket T20</h2>
-                        <p>
-                          Play Power Cricket T20 and take your cricket excitement to a new level! Enjoy this most popular game in online genre!                        </p>
-                      </div>
-                    </a>
-                  </li>     
-                        </ul>
-          <a href="/" class="playButton moreBlogs">View More Games</a>
         </div>
-      </section>
-      <section class="blog">
-        <div class="container">
-          <h2>Blogs</h2>
-          <section class="variable slider">
-                          
-            <div>
-              <a href="https://www.cricketgamesatme.com/blog/ipl-2025-season-ipl-auction-teams-and-bonus-news-for-cricket-fans" class="blogItem">
-                <img class="lazyload blur-up" data-src="/blog/images/blog/ipl-2025-season-ipl-auction-teams-and-bonus-news-for-cricket-fanssmall.jpg" alt="IPL 2025 Season: IPL auction, Teams and Bonus News for Cricket Fans" />
-                            <span class="new sm">New</span>
-                            <div class="blogTitle">
-                  <h3>IPL 2025 Season: IPL auction, Teams and Bonus News for Cricket Fans</h3>
-                </div>
-              </a>
-            </div>
-              
-            <div>
-              <a href="https://www.cricketgamesatme.com/blog/t20-world-cup-2024-full-schedule-with-details-about-venues-dates-timings-and-more" class="blogItem">
-                <img class="lazyload blur-up" data-src="/blog/images/blog/t20-world-cup-2024-full-schedule-with-details-about-venues-dates-timings-and-moresmall.jpg" alt="T20 World Cup 2024 Full Schedule with Details About Venues, Dates, Timings and More" />
-                            <span class="new sm">New</span>
-                            <div class="blogTitle">
-                  <h3>T20 World Cup 2024 Full Schedule with Details About Venues, Dates, Timings and More</h3>
-                </div>
-              </a>
-            </div>
-              
-            <div>
-              <a href="https://www.cricketgamesatme.com/blog/ipl-2024-get-ready-for-the-exciting-match-dates-teams-stadiums-venues-and-more" class="blogItem">
-                <img class="lazyload blur-up" data-src="/blog/images/blog/ipl-2024-get-ready-for-the-exciting-match-dates-teams-stadiums-venues-and-moresmall.jpg" alt="IPL 2024: Get Ready for the Exciting Match Dates, Teams, Stadiums, Venues, and More" />
-                            <span class="new sm">New</span>
-                            <div class="blogTitle">
-                  <h3>IPL 2024: Get Ready for the Exciting Match Dates, Teams, Stadiums, Venues, and More</h3>
-                </div>
-              </a>
-            </div>
-              
-            <div>
-              <a href="https://www.cricketgamesatme.com/blog/cricket-world-cup-2023-your-comprehensive-guide-to-the-ongoing-tournament-points-table-and-wishing-message" class="blogItem">
-                <img class="lazyload blur-up" data-src="/blog/images/blog/cricket-world-cup-2023-your-comprehensive-guide-to-the-ongoing-tournament-points-table-and-wishing-messagesmall.jpg" alt="Cricket World Cup 2023: Your Comprehensive Guide to the Ongoing Tournament, Points Table and Wishing Message!" />
-                            <div class="blogTitle">
-                  <h3>Cricket World Cup 2023: Your Comprehensive Guide to the Ongoing Tournament, Points Table and Wishing Message!</h3>
-                </div>
-              </a>
-            </div>
-              
-            <div>
-              <a href="https://www.cricketgamesatme.com/blog/india-asia-cup-2023-final-india-secures-a-historic-win-over-sri-lanka" class="blogItem">
-                <img class="lazyload blur-up" data-src="/blog/images/blog/aaasmall.jpg" alt="India Asia Cup 2023 Final: India Secures a Historic Win Over Sri Lanka with Mohammed Siraj 5-Wicket Haul" />
-                            <div class="blogTitle">
-                  <h3>India Asia Cup 2023 Final: India Secures a Historic Win Over Sri Lanka with Mohammed Siraj 5-Wicket Haul</h3>
-                </div>
-              </a>
-            </div>
-                        
-          </section>
-          <a href="/blog" class="playButton moreBlogs">View More Blogs</a>
+        <div class="d-flex flex-direction-column flex-gap-10 align-items-center">
+          <p class="bold-font">To report an issue, share feedback, or get in touch with us, feel free to connect.</p>
+          <div class='logos d-flex flex-gap-10' ><a href='https://www.instagram.com/_the_unknown_engineer_/' target="_blank"><svg class="reset-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
+          </a><a href='https://www.linkedin.com/in/joseph-sol-mony-t-09ab94176/' target='_blank'><svg class="reset-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg></a>
+          <a href='mailto:josephsolmony29@gmail.com'><svg class="reset-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path></svg></a></div>
         </div>
-      </section>
-      <section class="description">
-        <div class="container">
-          <div class="descriptionInner">
-            <h1>Cricket World Cup Game Overview</h1>
-              <div>Making a presence in the team of the world?s popular cricket match tournament is just like a dream comes true for all cricket lovers. Luckily, you have got an opportunity to lead 11 players and guide them in a way so that they can win the trophy for their country. Are you ready to dare this challenge? Join Cricket World Cup game and get ready to be appeared in one of the best sports games to play online! It is not less than an unforgettable treat for your craving for cricket.</div><div>&nbsp;</div><div>You have to compete for the World Cup cricket game in this amazing cool cricket sports game. Select the nation you want to play for and dive into the pool of matchless thrill and fun! Do not take your skills lightly and get ready to play some big shots to score as many points as possible gain the victory over all your rivals! Common friends! We know that you have the skill to become the international champion.</div><div>&nbsp;</div><div>Hit balls hard while also saving your three wickets until you chase your score successfully! You will be out of the game if you lose all your three wickets. Remember you will also have a particular amount of balls to play and make your score. Play 3 different types of cricket matches and taste the victory in every match to be the world champion! Enjoy this <a href="https://www.cricketgamesatme.com/"> html5 mobile games</a> in your browser anytime you want, no downloads required!</div>          </div>
-        </div>
-      </section>
-      <div class="googleAd">          <!-- ADD Code -->
-    
-              <!-- /ADD Code -->
-      </div>
-      <!-- ======================= /Center ADD bottom ======================= -->
-            <div id="taboola-below-article-thumbnails"></div>
-      <script type="4eaaa7005eb6b59442c0723f-text/javascript">
-        window._taboola = window._taboola || [];
-        _taboola.push({
-          mode: 'thumbnails-a',
-          container: 'taboola-below-article-thumbnails',
-          placement: 'Below Article Thumbnails',
-          target_type: 'mix'
-        });
-      </script>
-            <footer class="footer">
-        <div class="container">
-                  <a id="toplogo" href="https://www.cricketgamesatme.com/" onClick="if (!window.__cfRLUnblockHandlers) return false; ga('send', 'event', { eventCategory: 'Home-Widget', eventAction: 'click', eventLabel: 'home-logo', eventValue: 2});" title="Play Free Online Cricket Games - Cricketgamesatme" data-cf-modified-4eaaa7005eb6b59442c0723f-="">
-                    <img
-              width="400"
-              height="50"
-              class="footerLogo"
-              fetchpriority="high"
-              src="/images/atmeCricket_logo.png"
-              alt="Play Free Online Cricket Games - Cricketgamesatme"
-              title="Play Free Online Cricket Games - Cricketgamesatme"
-            />
-                  </a>
         
-          <div class="footerLink">
-            <a href="https://www.cricketgamesatme.com">Home</a>
-            <a href="https://www.cricketgamesatme.com/blog">Blogs</a>
-            <a href="https://www.cricketgamesatme.com/games/cpl-cricket-tournament">CPL Cricket Tournament</a> 
-            <a href="https://www.cricketgamesatme.com/games/online-cricket-2011">Online Cricket 2011</a>
-            <a href="https://www.cricketgamesatme.com/games/cricket-world-cup">Cricket World Cup</a>
-            <a href="https://www.cricketgamesatme.com/games/cricket-championship">Cricket Championship</a>
-          </div>
-          <div class="footerLink">
-            Copyright © Cricketgamesatme 2025
-                      </div>
-          <div class="footerSocialLink">
-            <a
-              class="logo3"
-              href="https://www.facebook.com/FreeOnlineCricketGames1/"
-              target="_blank"
-              ><img
-                data-src="/images/social/facebook.png"
-                alt="cricketgames facebook"
-                src="/images/social/facebook.png"
-            /></a>
-            <a
-              class="logo3"
-              href="https://x.com/PlOnlineGames"
-              target="_blank"
-              ><img
-                data-src="/images/social/x.png"
-                alt="cricketgamesatme X icon"
-                src="/images/social/x.png"
-            /></a>
-            <a
-              class="logo3"
-              href="https://www.cricketgamesatme.com/blog/"
-              target="_blank"
-              ><img
-                data-src="/images/social/blogger.svg"
-                alt="cricketgames blog"
-                src="/images/social/blogger.svg"
-            /></a>
-          </div>
+        <div class="text-align-center d-flex flex-gap-20 justify-content-center">        <a  href="https://icons8.com/" target="_blank" rel="noopener noreferrer">Icons by Icons8</a>
+ 
+          <a href="../PrivacyPolicy.html" target='_blank'>Privacy Policy</a> <a href="../Disclaimer.html" target='_blank'>Disclaimer</a>
         </div>
-      </footer>    </div>
-    <script type="4eaaa7005eb6b59442c0723f-text/javascript">  
-      setTimeout(function() { 
-        lazyscriptload('https://apis.google.com/js/platform.js');
-      }, 4000);
-    </script>
-    <style>
-.favclass 
-{
-    width: 25px;
-    height: 25px;
-    position: relative;
-    display: inline-block;
-    /*margin: 50px;*/
-}
-.favclass .img-top {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-.favclass:hover .img-top { 
-    display: inline;
-}
-</style>
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-$(function(){
-  function scrollToAnchor(aid){
-      var aTag = $("a[name='"+ aid +"']");
-      $('html,body').animate({scrollTop: aTag.offset().top},'slow');
-  }
-  $("#link").click(function() { 
-     scrollToAnchor('gameinstruction');
-  });
-  $("#linkcomment").click(function() { 
-     scrollToAnchor('fbcomment');
-  });
-  $("#linkwalkthrough").click(function() { 
-     scrollToAnchor('walkthrough');
-  });
-});
-</script>
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-/* fullScreen() used to Maximize the Game IFRAME in the Desktop View */ 
-  var elem;
-async function fullScreen(type,orientation = 'portrait'){ //alert($(obj).attr('width'));
-console.log('nk fullscr:',type);
-let nName = "";
+        </div>
+      
+        <!-- <a href="upi://pay?pa=8838806110@ibl&amp;pn=Hand Cricket.io &amp;cu=INR" class="upi-pay1">Pay Now !</a> -->
 
-  if(type == 'swf'){
-    nName = 'DIV';
-
-    let player = document.querySelector("#gameframe ruffle-player");
-
-    if (!player) {
-      // fallback to iframe/embed
-      player = document.querySelector("#gameframe iframe, #gameframe embed, #gameframe div");
-    }
-
-    console.log("Fullscreen element:", player?.nodeName);
-
-    if (player) {
-      if (player.requestFullscreen) {
-        player.requestFullscreen();
-      } else if (player.webkitRequestFullscreen) {
-        player.webkitRequestFullscreen();
-      } else if (player.mozRequestFullScreen) {
-        player.mozRequestFullScreen();
-      } else if (player.msRequestFullscreen) {
-        player.msRequestFullscreen();
-      }
-    }
-  }
-  else {
-    nName = 'IFRAME';
-    let iframe = document.getElementById("gameframe");
-
-    if (iframe && iframe.nodeName === 'IFRAME') {
-        elem = iframe; // fullscreen the iframe itself
-    } else if (iframe && iframe.childNodes[1] && iframe.childNodes[1].nodeName === 'EMBED') {
-        elem = iframe.childNodes[1];
-    } else {
-        elem = document.getElementById("gameframe").childNodes[3]?.firstChild;
-    }
-
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen();
-    } else if (elem.mozRequestFullScreen) {
-        elem.mozRequestFullScreen();
-    } else if (elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
-    }
-  }
-
-  if(orientation == 'landscape') { console.log('orientationchange called');
-      if (screen.orientation && screen.orientation.lock) {
-        try {
-          console.log('locked to landscape');
-          await screen.orientation.lock("landscape");
-
-        } catch (err) {
-          console.warn("Orientation lock failed:", err);
-        }
-      }
-  }
-
-}
-
-$('#report-game-popup-close').on('click',function(){  
-    $('#report-game-popup-reason').addClass('hidden');
-    $('.cricket_report_game').hide(); 
-});
-
-$("#reportgame").on('click',function(){
-  console.log('clicked nk reportgame');
-  if($('#report-game-popup-reason').hasClass("hidden"))
-  { $('.cricket_report_game').show(); 
-    $('#report-game-popup-reason').removeClass("hidden");
-    
-  }
-  else
-  { $('.cricket_report_game').show();  $('#report-game-popup-reason').show();  }
-});
-
-/*function reportgame(gID,gUrl){*/
-$("#report-game-submit").click(function(event){
-  event.preventDefault();
-   //$('#report-game-popup-reason').show();
-   let reason = $('input[name="reason"]:checked').val();
-   let reportgameid = $('#reportgameid').val();
-   let reportgameurl = $('#reportgameurl').val();
-
-   let other_comment = $('#other_comment').val();
-   console.log('report-game-submit:', reason, reportgameid, reportgameurl);
-
-   if (!reason) {
-    // show message and stop
-    $('#errMsgReportgame').show();
-    setTimeout(function () {
-      $('#errMsgReportgame').fadeOut();
-    }, 10000);
-    // alert("Please select one option before submitting.");
-    return;
-  }
-
-$.ajax({
-  url: "https://www.cricketgamesatme.com/ajax.php",
-  type: 'post',
-    data: {gID: reportgameid, gameurl: reportgameurl, type: 'reportgame', reasonid : reason, comment : other_comment },
-  }).done(function(response) {
-    if(response)
-    { $('#report-game-popup-thankyou').removeClass('hidden');
-      $('#report-game-popup-select').css('box-shadow','none');
-      /*$('#reportgame').empty().append('<span class="tooltip"><img src="https://image.cricketgamesatme.com/icons/success.png" style="width: 32px;height: 32px" /><span class="tooltiptext">Report Submitted!</span> </span>').show();*/
-    }    
-  });
-});
-
-function reportgame(gID,gUrl){
-
-$.ajax({
-  url: "https://www.cricketgamesatme.com/ajax.php",
-  type: 'post',
-    data: {gID: gID, gameurl: gUrl, type: 'reportgame'},
-  }).done(function(response) {
-    if(response)
-    {
-      $('#reportgame').empty().append('<span class="tooltip"><img src="https://image.cricketgamesatme.com/icons/success.png" style="width: 32px;height: 32px" /><span class="tooltiptext">Report Submitted!</span> </span>').show();
-    } 
-     
-  });
-}
-
-function showDivlike(gID,catID,scatID,field,count,userlike,userdislike,gLikes,gDislikes){
-$.ajax({
-  url: "https://www.cricketgamesatme.com/dashboard_files/usergamelike.php",
-  type: 'post',
-    data: {gID: gID, catID: catID,scatID: scatID, field: field, count: count, userlike: userlike, userdislike: userdislike, gLikes: gLikes, gDislikes: gDislikes},
-  }).done(function(response) {
-     if( $("font[id=error2]").children('img').length > 0)
-    {
-      $('#error2').empty().append('<img id="like" src="https://image.cricketgamesatme.com/icons/dislike.png">');  
-    }
-     $('#error1').empty().append(response);
-  });
-}
-
-function showDivdislike(gID,catID,scatID,field,count,userlike,userdislike,gLikes,gDislikes){
-$.ajax({
-  url: "https://www.cricketgamesatme.com/dashboard_files/usergamedislike.php",
-  type: 'post',
-    data: {gID: gID, catID: catID, scatID: scatID, field: field, count: count, userlike: userlike, userdislike: userdislike, gLikes: gLikes, gDislikes: gDislikes},
-  }).done(function(response) {
-    /*if ($.trim(response)==="")
-    {
-      $('#stardisplay').empty().append("<span style='color:red;font-size:x-small !important;'>Please login to do this</span>");   
-      $("#stardisplay").show().delay(2000).fadeOut();
-    }
-    else
-    {*/   
-    if( $("font[id=error1]").children('img').length > 0)
-    {
-      $('#error1').empty().append('<img id="like" src="https://image.cricketgamesatme.com/icons/like.png">'); 
-    }  $('#error2').empty().append(response);  
-
-
-  /*}*/
-     //$('#error2').empty().append(response);
-  });
-}
-
-</script>
-
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-
-function showDivFav(gID,user_fav, catID, scatID){
-
-$.ajax({
+        
+    </div>
+    </div>
+   
+  </body>
   
-  url: "https://www.cricketgamesatme.com/dashboard_files/usergamefav.php",
-  type: 'post',
-    data: {gID: gID,catID: catID,scatID: scatID, userfav: user_fav},
-  }).done(function(response) {
-    if ($.trim(response)==="")
-    {
-      $('#stardisplay').empty().append("<span style='color:red;font-size:x-small !important;'>Please login to do this</span>");   
-      $("#stardisplay").show().delay(2000).fadeOut();
-    }
-    else
-    {    $('#error3').empty().append(response);   }
-     //$('#error3').empty().append(response);
-  });
-}
-
-
-function star(starvalue, ratinguser, gameID) {
-    //alert(starvalue);
-   //alert(ratinguser);
-    //alert(gameID);
-  $.ajax({
-   url: "https://www.cricketgamesatme.com/setstar.php",
-    type: 'post',
-    data: {rgID: gameID, rRate: starvalue, remail_id: ratinguser},
-  }).done(function(response) {
-     $('#stardisplay').empty().append(response);
-  });
-  $("#stardisplay").show().delay(2000).fadeOut();
-  $("#checkurl").hide();
+  <!-- Vite entry point - must be type="module" -->
   
-}
+  <!-- Other scripts -->
+  <script src="./indexmain.js" defer></script>
+  <link rel="manifest" href="/manifest.json" />
+  <script src="https://accounts.google.com/gsi/client" defer></script>
 
-function refreshvote(gameID) {
-  $.ajax({
-   url: "https://www.cricketgamesatme.com/getvote.php",
-    type: 'post',
-    data: {rgID: gameID},
-  }).done(function(response) {
-     $('#vote').empty().append(response);
-  });
-}
-function dstar(starvalue) {
-  $("#checkurl").show();
-  checkurl.value = starvalue+" Star";
-  stardisplay.value="";
-  var sfill = "";
-  if(starvalue > 0 )
-  {  sfill = (starvalue * 20) + "%"; }
-    else
-    {  sfill = "80%";  }
-  $('#starfilldiv').css('width',sfill);
-  /*$.ajax({
-   url: "https://www.cricketgamesatme.com/starfill.php",
-    type: 'post',
-    data: {starvalue: starvalue},
-  }).done(function(response) {
-     $('#starfill').empty().append(response);
-  });*/
-}
-function cstar(starvalue) {
-  checkurl.value = "";
-  var sfill = "";
-  if(starvalue > 0 )
-  {  sfill = (starvalue * 20) + "%"; }
-    else
-    {  sfill = "80%";  }
-  $('#starfilldiv').css('width',sfill);
-  //alert(starvalue);
-  /*$.ajax({
-   url: "https://www.cricketgamesatme.com/starfill.php",
-    type: 'post',
-    data: {starvalue: starvalue},
-  }).done(function(response) {
-     $('#starfill').empty().append(response);
-  });*/
-
-}
-document.addEventListener("DOMContentLoaded", () => {
-  const startBtn = document.getElementById("startbutton");
-
-  if (!startBtn) return; // ✅ prevents crash
-
-  startBtn.addEventListener("click", () => {
-    document.body.style.overflow = "hidden";
-  });
-});
-</script>
-<div id="wrap"></div>
-<style type="text/css">
-.ui-datepicker { font-size: 14px; z-index: +100000000 !important }
-</style>
-<script type="4eaaa7005eb6b59442c0723f-text/javascript"> 
-	</script></div>
-<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4eaaa7005eb6b59442c0723f-|49"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'"> 
-
-<script type="4eaaa7005eb6b59442c0723f-text/javascript">
-/*window.onscroll = () => {
-  yHandler();
-  userHasScrolled = true;
-};
-if(!userHasScrolled)
-{
-  setTimeout(function() { yHandler();
-  }, 2000);
-}*/
-
-
-</script>
-    <script type="4eaaa7005eb6b59442c0723f-text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="https://www.cricketgamesatme.com/lazysizes.min.js" async type="4eaaa7005eb6b59442c0723f-text/javascript"></script>
-<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4eaaa7005eb6b59442c0723f-|49" defer></script></body>
-<div style=" display: none;" id="mask1"></div>
 </html>
